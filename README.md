@@ -32,30 +32,26 @@ npm run start
 ## Project Structure
 
 ```
-.
-├── public/                 # Static assets
-│   └── assets/images/      # Images
-├── src/
-│   ├── background/         # Background components
-│   ├── button/             # Button components
-│   ├── cta/                # CTA components
-│   ├── data/               # Data (products, etc.)
-│   ├── feature/            # Feature components
-│   ├── footer/             # Footer components
-│   ├── hero/               # Hero components
-│   ├── layout/             # Layout components (Meta, etc.)
-│   ├── navigation/         # Navbar components
-│   ├── pages/              # Pages
-│   │   ├── index.tsx       # Home
-│   │   ├── about.tsx       # About Us
-│   │   ├── contact.tsx     # Contact
-│   │   └── products/       # Products
-│   ├── templates/          # Page templates
-│   ├── styles/             # Global styles
-│   └── utils/              # Utilities & config
-├── tailwind.config.js      # Tailwind config
-├── next.config.js          # Next.js config
-└── tsconfig.json           # TypeScript config
+src/
+├── components/         # Reusable components
+│   ├── Layout.tsx      # Main layout (Navbar + Footer)
+│   ├── Button.tsx      # Button component
+│   ├── Meta.tsx        # SEO meta tags
+│   ├── ProductCard.tsx # Product card
+│   └── Section.tsx     # Page section wrapper
+├── data/               # Data (products, etc.)
+│   └── products.ts     # Product definitions
+├── pages/              # Pages
+│   ├── index.tsx       # Home
+│   ├── about.tsx       # About Us
+│   ├── contact.tsx     # Contact
+│   └── products/       # Products
+│       ├── index.tsx   # Product list
+│       └── [slug].tsx  # Product detail
+├── styles/             # Global styles
+│   └── global.css      # Tailwind + custom styles
+└── utils/              # Utilities & config
+    └── AppConfig.ts    # Site configuration
 ```
 
 ## Pages
@@ -78,7 +74,8 @@ export const AppConfig = {
   title: '狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家',
   description: '...',
   locale: 'zh-CN',
-  keywords: '狗弟爱学无人机,狗弟工作室,...',
+  keywords: '...',
+  siteUrl: 'https://godi-drone.com',  // For SEO canonical URLs
 };
 ```
 
@@ -87,7 +84,8 @@ export const AppConfig = {
 - **Favicon**: Replace files in `public/`
 - **Global styles**: Edit `src/styles/global.css`
 - **Products**: Edit `src/data/products.ts`
-- **Page content**: Edit components in `src/templates/`
+- **Layout**: Edit `src/components/Layout.tsx` for navbar/footer
+- **Page content**: Edit page files in `src/pages/`
 
 ## Scripts
 

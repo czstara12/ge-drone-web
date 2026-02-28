@@ -32,30 +32,26 @@ npm run start
 ## 项目结构
 
 ```
-.
-├── public/                 # 静态资源
-│   └── assets/images/      # 图片
-├── src/
-│   ├── background/         # 背景组件
-│   ├── button/             # 按钮组件
-│   ├── cta/                # CTA 组件
-│   ├── data/               # 数据（产品信息等）
-│   ├── feature/            # 特性展示组件
-│   ├── footer/             # 页脚组件
-│   ├── hero/               # Hero 组件
-│   ├── layout/             # 布局组件（Meta 等）
-│   ├── navigation/         # 导航栏组件
-│   ├── pages/              # 页面
-│   │   ├── index.tsx       # 首页
-│   │   ├── about.tsx       # 关于我们
-│   │   ├── contact.tsx     # 联系我们
-│   │   └── products/       # 产品页
-│   ├── templates/          # 页面模板
-│   ├── styles/             # 全局样式
-│   └── utils/              # 工具函数 & 配置
-├── tailwind.config.js      # Tailwind 配置
-├── next.config.js          # Next.js 配置
-└── tsconfig.json           # TypeScript 配置
+src/
+├── components/         # 可复用组件
+│   ├── Layout.tsx      # 主布局（导航栏 + 页脚）
+│   ├── Button.tsx      # 按钮组件
+│   ├── Meta.tsx        # SEO meta 标签
+│   ├── ProductCard.tsx # 产品卡片
+│   └── Section.tsx     # 页面区块容器
+├── data/               # 数据
+│   └── products.ts     # 产品定义
+├── pages/              # 页面
+│   ├── index.tsx       # 首页
+│   ├── about.tsx       # 关于我们
+│   ├── contact.tsx     # 联系我们
+│   └── products/       # 产品页
+│       ├── index.tsx   # 产品列表
+│       └── [slug].tsx  # 产品详情
+├── styles/             # 全局样式
+│   └── global.css      # Tailwind + 自定义样式
+└── utils/              # 工具 & 配置
+    └── AppConfig.ts    # 站点配置
 ```
 
 ## 页面
@@ -76,9 +72,10 @@ npm run start
 export const AppConfig = {
   site_name: '狗弟爱学无人机',
   title: '狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家',
-  description: '狗弟爱学无人机是狗弟工作室旗下教育科研无人机品牌...',
+  description: '...',
   locale: 'zh-CN',
-  keywords: '狗弟爱学无人机,狗弟工作室,...',
+  keywords: '...',
+  siteUrl: 'https://godi-drone.com',  // 用于 SEO canonical URL
 };
 ```
 
@@ -87,7 +84,8 @@ export const AppConfig = {
 - **网站图标**: 替换 `public/` 下的 favicon 文件
 - **全局样式**: 编辑 `src/styles/global.css`
 - **产品数据**: 编辑 `src/data/products.ts`
-- **页面内容**: 编辑 `src/templates/` 下的组件
+- **布局**: 编辑 `src/components/Layout.tsx` 修改导航栏/页脚
+- **页面内容**: 编辑 `src/pages/` 下的页面文件
 
 ## 常用命令
 
