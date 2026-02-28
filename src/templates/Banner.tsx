@@ -7,8 +7,8 @@ import { Section } from '../layout/Section';
 const Banner = () => (
   <Section>
     <CTABanner
-      title="准备好提升您的空中作业效率了吗？"
-      subtitle="立即联系我们，获取专业的无人机解决方案报价。"
+      title="准备好开启无人机教学与科研之旅了吗？"
+      subtitle="联系我们获取产品资料、课程方案和定制报价。"
       button={
         <Link href="/contact">
           <Button>立即咨询</Button>

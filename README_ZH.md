@@ -1,6 +1,10 @@
-# ZFly 无人机官网
+# 狗弟爱学无人机官网
 
-基于 Next.js 14 + Tailwind CSS + TypeScript 构建的企业展示网站。
+**狗弟工作室**旗下教育科研无人机品牌官方网站。
+
+基于 Next.js 14 + Tailwind CSS + TypeScript 构建。
+
+[English](README.md)
 
 ## 技术栈
 
@@ -70,10 +74,11 @@ npm run start
 
 ```typescript
 export const AppConfig = {
-  site_name: 'ZFly Drones',
-  title: 'ZFly - 专业的工业级无人机制造商',
-  description: 'ZFly 专注于研发和制造高性能工业级、消费级和专业航拍无人机...',
+  site_name: '狗弟爱学无人机',
+  title: '狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家',
+  description: '狗弟爱学无人机是狗弟工作室旗下教育科研无人机品牌...',
   locale: 'zh-CN',
+  keywords: '狗弟爱学无人机,狗弟工作室,...',
 };
 ```
 

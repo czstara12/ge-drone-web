@@ -4,26 +4,26 @@ import { Section } from '../layout/Section';
 const VerticalFeatures = () => (
   <Section
     title="核心优势"
-    description="为什么选择 ZFly 作为您的空中合作伙伴？我们致力于提供最可靠、最智能的飞行平台。"
+    description="为什么选择 ZFly 作为您的教育科研合作伙伴？我们专注于为教学与研究提供最专业的无人机平台。"
   >
     <VerticalFeatureRow
-      title="超长续航与稳定性"
-      description="采用先进的动力系统与空气动力学设计，确保在复杂气象条件下依然保持长达 50 分钟的稳定飞行，覆盖更广阔的作业区域。"
-      image="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=industrial%20drone%20flying%20in%20sky%20long%20endurance%20stable%20high%20tech&image_size=landscape_4_3"
-      imageAlt="Long endurance drone flight"
+      title="开放的二次开发平台"
+      description="全系列产品支持 PX4/ArduPilot 开源飞控，提供完整的 SDK 和 ROS2 接口，让学生和研究人员专注于算法创新而非底层适配。"
+      image="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=open%20source%20drone%20development%20programming%20code%20screen%20lab&image_size=landscape_4_3"
+      imageAlt="Open source drone development"
     />
     <VerticalFeatureRow
-      title="高清图传与智能避障"
-      description="配备 4K/8K 级云台相机与 360 度全向避障系统，让每一次飞行都安全、清晰，捕捉每一个关键细节。"
-      image="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=drone%20camera%20lens%20close%20up%20high%20tech%20sensor%20obstacle%20avoidance&image_size=landscape_4_3"
-      imageAlt="High definition drone camera"
+      title="完善的课程与教材配套"
+      description="配套从小学到研究生的分层课程体系，包含教案、实验指导书、在线视频和仿真环境，降低教学门槛，快速开课。"
+      image="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=students%20learning%20drone%20programming%20classroom%20education&image_size=landscape_4_3"
+      imageAlt="Drone education classroom"
       reverse
     />
     <VerticalFeatureRow
-      title="行业级应用解决方案"
-      description="无论是电力巡检、农业植保还是安防救援，我们都提供定制化的软硬件一体化方案，无缝对接您的业务工作流。"
-      image="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=drone%20inspecting%20power%20lines%20industrial%20application&image_size=landscape_4_3"
-      imageAlt="Industrial drone application"
+      title="安全可靠的飞行体验"
+      description="室内光流定位、全向桨叶保护罩、低电量自动返航，确保教学和实验环境下的飞行安全，让师生放心使用。"
+      image="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=safe%20indoor%20drone%20flying%20protected%20propellers%20classroom&image_size=landscape_4_3"
+      imageAlt="Safe indoor drone flight"
     />
   </Section>
 );

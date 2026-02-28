@@ -30,11 +30,11 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'探索未来的飞行\n'}
-            <span className="text-primary-500">ZFly 工业级无人机</span>
+            {'让科研与教育\n'}
+            <span className="text-primary-500">在空中起飞</span>
           </>
         }
-        description="专为严苛环境设计，提供卓越的航拍、测绘与巡检解决方案。重新定义空中生产力。"
+        description="专为高校科研与 STEM 教育打造的无人机平台，从入门教学到前沿研究，助力培养下一代航空人才。"
         button={
           <Link href="/products">
             <Button xl>查看产品系列</Button>
