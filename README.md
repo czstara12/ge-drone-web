@@ -60,9 +60,21 @@ src/
 |------|-------------|
 | `/` | Home |
 | `/products` | Product List |
-| `/products/[slug]` | Product Detail |
+| `/products/liyumen-x8` | Liyumen-X8 Survey Drone |
+| `/products/sanhao` | Sanhao Indoor Navigation Platform |
+| `/products/wuhao` | Wuhao Competition & Research Platform |
 | `/about` | About Us |
 | `/contact` | Contact |
+
+## Products
+
+Currently featuring 3 real products:
+
+| Product | Category | Highlights |
+|---------|----------|------------|
+| Liyumen-X8 | Professional Survey | Odin1 sensor module, RTK positioning, 21min flight |
+| Sanhao (三好学生) | Education/Competition | 2D Lidar SLAM, YOLO detection, Ubuntu + ROS |
+| Wuhao (五好学生) | Competition/Research | 3 navigation modes, 13th-gen i5, Intel sensor suite |
 
 ## Configuration
 
