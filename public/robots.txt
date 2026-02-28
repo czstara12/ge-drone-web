@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://zfly-drone.com
+Host: https://gd-drone.com
 
 # Sitemaps
-Sitemap: https://zfly-drone.com/sitemap.xml
+Sitemap: https://gd-drone.com/sitemap.xml
