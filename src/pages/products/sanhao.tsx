@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../../components/Button';
@@ -106,10 +107,13 @@ const SanhaoProduct = () => (
 
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-blue-400/20 blur-3xl" />
-            <img
+            <Image
               src="/images/products/sanhao-drone.jpg"
               alt="三好学生 室内导航无人机"
+              width={500}
+              height={400}
               className="relative mx-auto w-full max-w-lg rounded-lg drop-shadow-2xl"
+              priority
             />
           </div>
         </div>

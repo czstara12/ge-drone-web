@@ -9,21 +9,27 @@ import { AppConfig } from '../utils/AppConfig';
 type FeatureRowProps = {
   title: string;
   description: string;
-  image: string;
+  icon: string;
+  color: string;
   reverse?: boolean;
 };
 
 const FeatureRow = ({
   title,
   description,
-  image,
+  icon,
+  color,
   reverse,
 }: FeatureRowProps) => (
   <div
     className={`flex flex-col items-center gap-8 md:flex-row ${reverse ? 'md:flex-row-reverse' : ''}`}
   >
     <div className="md:w-1/2">
-      <img src={image} alt={title} className="rounded-lg shadow-md" />
+      <div
+        className={`flex aspect-[4/3] items-center justify-center rounded-lg ${color}`}
+      >
+        <span className="text-8xl">{icon}</span>
+      </div>
     </div>
     <div className="md:w-1/2">
       <h3 className="text-3xl font-semibold text-gray-900">{title}</h3>
@@ -62,18 +68,21 @@ const Index = () => (
         <FeatureRow
           title="开放的二次开发平台"
           description="全系列产品支持 PX4/ArduPilot 开源飞控，提供完整的 SDK 和 ROS2 接口，让学生和研究人员专注于算法创新而非底层适配。"
-          image="https://placehold.co/600x400/e2e8f0/475569?text=开源开发"
+          icon="🔧"
+          color="bg-gradient-to-br from-blue-100 to-blue-200"
         />
         <FeatureRow
           title="完善的课程与教材配套"
           description="配套从小学到研究生的分层课程体系，包含教案、实验指导书、在线视频和仿真环境，降低教学门槛，快速开课。"
-          image="https://placehold.co/600x400/e2e8f0/475569?text=课程体系"
+          icon="📚"
+          color="bg-gradient-to-br from-green-100 to-green-200"
           reverse
         />
         <FeatureRow
           title="安全可靠的飞行体验"
           description="室内光流定位、全向桨叶保护罩、低电量自动返航，确保教学和实验环境下的飞行安全，让师生放心使用。"
-          image="https://placehold.co/600x400/e2e8f0/475569?text=安全可靠"
+          icon="🛡️"
+          color="bg-gradient-to-br from-amber-100 to-amber-200"
         />
       </div>
     </Section>

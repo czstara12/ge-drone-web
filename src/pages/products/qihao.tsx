@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../../components/Button';
@@ -155,10 +156,13 @@ const QihaoProduct = () => (
 
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-orange-400/20 blur-3xl" />
-            <img
+            <Image
               src="/images/products/qihao-drone.jpg"
               alt="七好学生 通用无人机平台"
+              width={500}
+              height={400}
               className="relative mx-auto w-full max-w-lg rounded-lg drop-shadow-2xl"
+              priority
             />
           </div>
         </div>
@@ -197,22 +201,30 @@ const QihaoProduct = () => (
 
       <div className="grid items-center gap-8 md:grid-cols-2">
         <div className="overflow-hidden rounded-xl shadow-lg">
-          <img
-            src="/images/products/qihao-folded.jpg"
-            alt="七好学生 折叠状态"
-            className="w-full"
-          />
+          <div className="relative aspect-[4/3]">
+            <Image
+              src="/images/products/qihao-folded.jpg"
+              alt="七好学生 折叠状态"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">折叠状态</span>
             <span className="ml-2 text-gray-500">30 × 26 cm</span>
           </div>
         </div>
         <div className="overflow-hidden rounded-xl shadow-lg">
-          <img
-            src="/images/products/qihao-outdoor.jpg"
-            alt="七好学生 户外飞行"
-            className="w-full"
-          />
+          <div className="relative aspect-[4/3]">
+            <Image
+              src="/images/products/qihao-outdoor.jpg"
+              alt="七好学生 户外飞行"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">展开状态</span>
             <span className="ml-2 text-gray-500">85 cm 轴距</span>
