@@ -26,9 +26,9 @@ const FeatureRow = ({
   >
     <div className="md:w-1/2">
       <div
-        className={`flex aspect-[4/3] items-center justify-center rounded-lg ${color}`}
+        className={`flex aspect-[4/3] items-center justify-center rounded-lg shadow-lg ${color}`}
       >
-        <span className="text-8xl">{icon}</span>
+        <span className="text-[120px] drop-shadow-md">{icon}</span>
       </div>
     </div>
     <div className="md:w-1/2">
