@@ -69,7 +69,7 @@ src/
 
 ## Products
 
-Currently featuring 4 real products:
+Currently featuring 5 real products:
 
 | Product | Category | Highlights |
 |---------|----------|------------|
@@ -77,6 +77,7 @@ Currently featuring 4 real products:
 | Sanhao (三好学生) | Education/Competition | 2D Lidar SLAM, YOLO detection, Ubuntu + ROS |
 | Wuhao (五好学生) | Competition/Research | 3 navigation modes, 13th-gen i5, Intel sensor suite |
 | Feisi Sim (飞思仿真平台) | Simulation Software | XTDrone + PX4 + Gazebo + ROS, WSL2-based |
+| Qihao (七好学生) | General Platform | 40min flight, foldable, Livox Mid-360, NUC13/Orin NX |
 
 ## Configuration
 

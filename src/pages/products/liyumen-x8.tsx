@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../../components/Button';
@@ -113,10 +114,13 @@ const LiyumenX8 = () => (
 
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-primary-500/20 blur-3xl" />
-            <img
+            <Image
               src="/images/products/drone-product-real.jpg"
               alt="鲤鱼门-X8 勘测无人机"
+              width={500}
+              height={400}
               className="relative mx-auto w-full max-w-lg rounded-lg drop-shadow-2xl"
+              priority
             />
           </div>
         </div>
@@ -182,9 +186,11 @@ const LiyumenX8 = () => (
 
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div className="flex justify-center">
-          <img
+          <Image
             src="/images/products/odin1-product.png"
             alt="Odin1 传感器模组"
+            width={384}
+            height={300}
             className="max-w-sm drop-shadow-2xl"
           />
         </div>
@@ -220,10 +226,12 @@ const LiyumenX8 = () => (
         <p className="mt-2 text-gray-600">飞行性能展示</p>
       </div>
 
-      <div className="overflow-hidden rounded-2xl shadow-xl">
-        <img
+      <div className="relative overflow-hidden rounded-2xl shadow-xl">
+        <Image
           src="/images/products/flight-performance-drone.png"
           alt="鲤鱼门-X8 飞行展示"
+          width={1200}
+          height={600}
           className="w-full"
         />
       </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import type { Product } from '../data/products';
@@ -13,12 +14,14 @@ const ProductCard = ({ product }: ProductCardProps) => (
     className="block overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
   >
     <div className="relative h-64 overflow-hidden bg-gray-200">
-      <img
+      <Image
         src={product.image}
         alt={product.name}
-        className="size-full object-cover transition-transform duration-500 hover:scale-105"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-transform duration-500 hover:scale-105"
       />
-      <div className="absolute right-4 top-4 rounded bg-primary-500 px-2 py-1 text-xs font-bold text-white">
+      <div className="absolute right-4 top-4 z-10 rounded bg-primary-500 px-2 py-1 text-xs font-bold text-white">
         {product.category}
       </div>
     </div>

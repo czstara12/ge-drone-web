@@ -1,4 +1,5 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../../components/Button';
@@ -24,11 +25,14 @@ const ProductDetail = ({ product }: ProductDetailProps) => (
       <div className="overflow-hidden rounded-xl bg-white shadow-xl">
         <div className="md:flex">
           {/* Image */}
-          <div className="relative h-96 bg-gray-200 md:h-auto md:w-1/2">
-            <img
+          <div className="relative h-96 bg-gray-200 md:h-auto md:min-h-[400px] md:w-1/2">
+            <Image
               src={product.image}
               alt={product.name}
-              className="size-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
             />
           </div>
 
