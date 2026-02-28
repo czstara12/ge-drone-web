@@ -9,108 +9,148 @@ import { AppConfig } from '../../utils/AppConfig';
 
 // 核心参数
 const coreSpecs = [
-  { label: '续航时间', value: '7min', desc: '4.0kg 满载工况' },
-  { label: '悬停精度', value: '±1cm', desc: '水平/垂直双向' },
-  { label: '最大载重', value: '1.6kg', desc: '强劲动力系统' },
-  { label: '处理器', value: 'i5-13代', desc: '12核16线程 4.6GHz' },
+  { label: '整机重量', value: '~3kg', desc: '含电池' },
+  { label: '最大载重', value: '3-4kg', desc: '可挂载大容量电池' },
+  { label: '定位精度', value: '1-3cm', desc: '厘米级精度' },
+  { label: '续航时间', value: '7-20min', desc: '根据电池容量' },
 ];
 
-// 三种导航方案
-const navModes = [
+// 硬件模块
+const modules = [
   {
-    icon: '🌐',
-    title: 'Egoplanner',
-    subtitle: '三维导航方案',
-    desc: '基于深度相机的 3D 环境感知，支持复杂三维空间的自主导航和避障',
-    features: ['3D 环境建模', '实时路径规划', '动态避障'],
+    icon: '🎮',
+    name: 'Holybro Pixhawk 4',
+    category: '飞控',
+    desc: 'PM06 电源模块，稳定顺手',
   },
   {
     icon: '📡',
-    title: '2D 激光雷达',
-    subtitle: 'Lidar SLAM',
-    desc: '高精度 360° 激光扫描，适合结构化室内环境的精确定位导航',
-    features: ['40m 测距', '9200 次/秒采样', '0.391° 角度分辨率'],
+    name: 'Livox Mid-360',
+    category: '3D 激光雷达',
+    desc: '三维点云，精准定位建图',
   },
   {
-    icon: '👁️',
-    title: 'T265 双目',
-    subtitle: '视觉里程计',
-    desc: 'Intel 实感技术，V-SLAM 视觉定位，163° 鱼眼广角覆盖',
-    features: ['6DoF 姿态输出', 'Myriad 2 VPU', '快速运动追踪'],
+    icon: '💻',
+    name: 'Intel NUC 13 i5',
+    category: '机载电脑',
+    desc: '13 代 i5 / 16GB / 512GB SSD',
+  },
+  {
+    icon: '📷',
+    name: 'Intel D435',
+    category: '深度相机',
+    desc: 'RGB-D 深度感知',
+  },
+  {
+    icon: '🎥',
+    name: '星光级摄像头',
+    category: 'USB 相机',
+    desc: '1080P 无畸变',
+  },
+  {
+    icon: '🕹️',
+    name: 'RadioMaster POCKET',
+    category: '遥控器',
+    desc: '美国手，便携设计',
+  },
+  {
+    icon: '⚡',
+    name: '四合一电调 ×2',
+    category: '电调',
+    desc: '60A，共轴双桨专用',
+  },
+  {
+    icon: '🔋',
+    name: '6S 电池',
+    category: '电源',
+    desc: '5200~22000mAh 可选',
   },
 ];
 
-// 产品功能
-const functions = [
-  { icon: '🚀', title: '一键起飞降落', desc: '简化操作流程' },
-  { icon: '🗺️', title: 'SLAM 导航定位', desc: '多方案可选' },
-  { icon: '🛡️', title: '自主避障规划', desc: '实时路径优化' },
-  { icon: '🤖', title: 'YOLO 识别', desc: 'AI 物体检测' },
-  { icon: '📦', title: '舵机投放', desc: '竞赛任务支持' },
-  { icon: '🎯', title: '激光标定', desc: '精准目标指示' },
+// 导航方案
+const navModes = [
+  {
+    icon: '🗺️',
+    title: 'Mid-360 点云 + Ego-Planner',
+    desc: 'Mid-360 提供定位和点云数据，基于航点程序进行 Ego-Planner 飞行',
+  },
+  {
+    icon: '📷',
+    title: 'Mid-360 + D435 深度',
+    desc: 'Mid-360 定位，D435 深度相机提供深度图像，Ego-Planner 避障飞行',
+  },
+  {
+    icon: '🎯',
+    title: 'Mid-360 + RViz 打点',
+    desc: '基于 RViz 交互式打点进行 Ego-Planner 飞行',
+  },
+  {
+    icon: '✈️',
+    title: 'Mid-360 无避障导航',
+    desc: 'Mid-360 定位，直接航线飞行',
+  },
+];
+
+// 续航表
+const flightTimes = [
+  { battery: '6S 5200mAh', time: '约 7 分钟', note: '标配电池' },
+  { battery: '6S 12000mAh', time: '约 13 分钟', note: '中容量' },
+  { battery: '6S 22000mAh', time: '约 20 分钟', note: '大容量（2.65kg）' },
 ];
 
 // 飞行器参数
 const droneSpecs = [
-  { label: '整机重量', value: '2.4 kg' },
-  { label: '最大起飞重量', value: '4.0 kg' },
-  { label: '最大功耗', value: '500W' },
-  { label: '最大俯仰角', value: '20°' },
-  { label: '最大平飞速度', value: '3 m/s' },
-  { label: '工作环境温度', value: '0℃ ~ 45℃' },
+  { label: '整机重量', value: '约 3 kg' },
+  { label: '最大起飞重量', value: '4 kg' },
+  { label: '最大平飞速度', value: '2.5 m/s' },
+  { label: '轴距', value: '360 mm' },
+  { label: '外形尺寸', value: '50 × 50 cm' },
+  { label: '定位精度', value: '1 - 3 cm' },
 ];
 
-// 机架参数
-const frameSpecs = [
-  { label: '最大轴距', value: '360mm' },
-  { label: '外形尺寸', value: '500 × 500 × 350 mm' },
-  { label: '材质', value: '碳纤维 + 玻璃纤维' },
+// 产品特点
+const features = [
+  {
+    icon: '🔄',
+    title: '共轴双桨设计',
+    desc: '同轴反转双桨，动力冗余，载重能力强',
+  },
+  {
+    icon: '🛡️',
+    title: '高安全性',
+    desc: '全碳纤维保护框架，防撞防摔',
+  },
+  {
+    icon: '⚖️',
+    title: '超稳定飞行',
+    desc: '厘米级定位精度，飞行特稳',
+  },
+  {
+    icon: '🧠',
+    title: '强劲算力',
+    desc: '13 代 i5 处理器，满足复杂算法',
+  },
 ];
-
-// 传感器参数
-const sensorSpecs = {
-  lidar: [
-    { label: '测量半径（白色）', value: '25m' },
-    { label: '测量半径（黑色）', value: '11m' },
-    { label: '输出数据分辨率', value: '15mm' },
-    { label: '测量/采样频率', value: '5400 次/s' },
-    { label: '抗环境光', value: '60KLux' },
-  ],
-  depth: [
-    { label: '型号', value: 'Intel D430' },
-    { label: '操作范围', value: '0.2m ~ 10m' },
-    { label: '深度分辨率', value: '1280×800' },
-    { label: '视野角度', value: 'H:87° V:58°' },
-    { label: '尺寸', value: '71×14×11 mm' },
-  ],
-  t265: [
-    { label: '技术', value: 'V-SLAM' },
-    { label: '处理器', value: 'Movidius Myriad 2 VPU' },
-    { label: '镜头', value: 'OV9282 鱼眼 ×2' },
-    { label: '视野角度', value: '163°±5°' },
-    { label: '接口', value: 'USB 2.0 / 3.1' },
-  ],
-};
 
 const WuhaoProduct = () => (
   <Layout>
     <Meta
       title={`五好学生 竞赛科研无人机 - ${AppConfig.site_name}`}
-      description="五好学生室内无人机学习及竞赛通用开发平台，搭载 13 代 Intel i5 处理器，提供 3 种自主导航方案，专为高阶竞赛和科研打造。"
+      description="五好学生共轴双桨设计无人机，高安全性、强载重、超稳定。搭载 Mid-360 激光雷达和 Intel NUC 13 i5，多种导航方案，专为竞赛科研打造。"
     />
 
     {/* Hero Section */}
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-gray-900 py-20 text-white">
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 py-20 text-white">
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute left-1/4 top-1/4 size-96 rounded-full bg-purple-500 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 size-64 rounded-full bg-indigo-500 blur-3xl" />
+        <div className="absolute left-1/4 top-1/4 size-96 rounded-full bg-purple-400 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 size-64 rounded-full bg-indigo-400 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-screen-xl px-4">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <div className="mb-4 inline-block rounded-full bg-purple-500/30 px-4 py-1 text-sm font-semibold">
-              竞赛科研旗舰平台
+              共轴双桨 · 高安全性
             </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
               五好学生
@@ -119,8 +159,8 @@ const WuhaoProduct = () => (
               </span>
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-purple-100">
-              极致性能、开发空间和动力。提供 3 种无 GPS 限制的自主导航方案，
-              搭载 13 代 Intel i5 处理器，专为高阶竞赛和前沿科研打造。
+              共轴双桨设计带来超强载重能力和稳定性。搭载 Mid-360 三维激光雷达和
+              Intel NUC 13 i5，支持多种导航方案，专为高阶竞赛和科研打造。
             </p>
 
             <div className="mb-8 grid grid-cols-2 gap-4">
@@ -137,15 +177,25 @@ const WuhaoProduct = () => (
               ))}
             </div>
 
-            <Link href="/contact">
-              <Button xl>立即咨询</Button>
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/contact">
+                <Button xl>立即咨询</Button>
+              </Link>
+              <a
+                href="https://www.bilibili.com/video/BV1bm4y1N7u1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-md border-2 border-white/50 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+              >
+                📺 共轴双桨介绍
+              </a>
+            </div>
           </div>
 
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-purple-500/20 blur-3xl" />
+            <div className="absolute inset-0 rounded-full bg-purple-400/20 blur-3xl" />
             <Image
-              src="/images/products/wuhao-drone.jpg"
+              src="/images/products/wuhao-angle.jpg"
               alt="五好学生 竞赛科研无人机"
               width={500}
               height={400}
@@ -161,7 +211,7 @@ const WuhaoProduct = () => (
     <Section className="bg-gray-50">
       <div className="mb-12 text-center">
         <h2 className="text-3xl font-bold text-gray-900">核心参数</h2>
-        <p className="mt-2 text-gray-600">旗舰级性能配置</p>
+        <p className="mt-2 text-gray-600">强载重、超稳定、高精度</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
@@ -180,226 +230,253 @@ const WuhaoProduct = () => (
       </div>
     </Section>
 
-    {/* 三种导航方案 - 核心卖点 */}
+    {/* 产品特点 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">三种导航方案</h2>
-        <p className="mt-2 text-gray-600">灵活切换，适配不同场景需求</p>
-      </div>
-
-      <div className="grid gap-8 md:grid-cols-3">
-        {navModes.map((mode) => (
-          <div
-            key={mode.title}
-            className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg"
-          >
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
-              <div className="mb-2 text-4xl">{mode.icon}</div>
-              <h3 className="text-2xl font-bold">{mode.title}</h3>
-              <p className="text-purple-200">{mode.subtitle}</p>
-            </div>
-            <div className="p-6">
-              <p className="mb-4 text-gray-600">{mode.desc}</p>
-              <ul className="space-y-2">
-                {mode.features.map((f, idx) => (
-                  <li
-                    key={idx}
-                    className="flex items-center text-sm text-gray-700"
-                  >
-                    <span className="mr-2 text-purple-500">✓</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
-
-    {/* 产品功能 */}
-    <Section className="bg-gray-50">
-      <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">产品功能</h2>
-        <p className="mt-2 text-gray-600">竞赛全流程功能覆盖</p>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-6">
-        {functions.map((func) => (
-          <div
-            key={func.title}
-            className="rounded-lg bg-white p-4 text-center shadow-sm"
-          >
-            <div className="mb-2 text-2xl">{func.icon}</div>
-            <h3 className="font-bold text-gray-900">{func.title}</h3>
-            <p className="text-xs text-gray-500">{func.desc}</p>
-          </div>
-        ))}
-      </div>
-    </Section>
-
-    {/* 传感器详情 */}
-    <Section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-      <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold">传感器配置</h2>
-        <p className="mt-2 text-gray-400">Intel 全家桶，专业级感知能力</p>
-      </div>
-
-      <div className="grid gap-8 md:grid-cols-3">
-        {/* 激光雷达 */}
-        <div className="rounded-lg border border-gray-700 bg-gray-800/50 p-6">
-          <h3 className="mb-4 text-xl font-bold text-purple-400">
-            📡 2D 激光雷达
-          </h3>
-          <ul className="space-y-3">
-            {sensorSpecs.lidar.map((spec) => (
-              <li key={spec.label} className="flex justify-between text-sm">
-                <span className="text-gray-400">{spec.label}</span>
-                <span className="font-medium">{spec.value}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* 深度相机 */}
-        <div className="rounded-lg border border-gray-700 bg-gray-800/50 p-6">
-          <h3 className="mb-4 text-xl font-bold text-purple-400">
-            📷 Intel D430 深度相机
-          </h3>
-          <ul className="space-y-3">
-            {sensorSpecs.depth.map((spec) => (
-              <li key={spec.label} className="flex justify-between text-sm">
-                <span className="text-gray-400">{spec.label}</span>
-                <span className="font-medium">{spec.value}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* T265 */}
-        <div className="rounded-lg border border-gray-700 bg-gray-800/50 p-6">
-          <h3 className="mb-4 text-xl font-bold text-purple-400">
-            👁️ Intel T265 双目里程计
-          </h3>
-          <ul className="space-y-3">
-            {sensorSpecs.t265.map((spec) => (
-              <li key={spec.label} className="flex justify-between text-sm">
-                <span className="text-gray-400">{spec.label}</span>
-                <span className="font-medium">{spec.value}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </Section>
-
-    {/* 飞行器规格 */}
-    <Section>
-      <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">飞行器规格</h2>
-        <p className="mt-2 text-gray-600">工业级设计标准</p>
+        <h2 className="text-3xl font-bold text-gray-900">产品特点</h2>
+        <p className="mt-2 text-gray-600">共轴双桨带来的独特优势</p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
-        <div className="rounded-xl bg-gray-50 p-6">
-          <h3 className="mb-4 text-xl font-bold text-gray-900">飞行器参数</h3>
-          <div className="grid grid-cols-2 gap-4">
-            {droneSpecs.map((spec) => (
-              <div
-                key={spec.label}
-                className="rounded-lg bg-white p-4 shadow-sm"
-              >
-                <div className="text-sm text-gray-500">{spec.label}</div>
-                <div className="text-lg font-bold text-gray-900">
-                  {spec.value}
-                </div>
-              </div>
-            ))}
+        {features.map((feature) => (
+          <div
+            key={feature.title}
+            className="flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
+          >
+            <div className="shrink-0 text-4xl">{feature.icon}</div>
+            <div>
+              <h3 className="mb-2 text-xl font-bold text-purple-700">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">{feature.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 稳定飞行视频 */}
+      <div className="mt-8 rounded-xl bg-purple-50 p-6 text-center">
+        <p className="mb-3 text-purple-800">🎬 超稳定定点飞行效果展示</p>
+        <a
+          href="https://www.bilibili.com/video/BV1o3411G7dx/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-purple-600 underline hover:text-purple-700"
+        >
+          观看 B 站视频 →
+        </a>
+      </div>
+    </Section>
+
+    {/* 产品展示 */}
+    <Section className="bg-gray-50">
+      <div className="mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900">产品展示</h2>
+        <p className="mt-2 text-gray-600">全碳纤维保护框架</p>
+      </div>
+
+      <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="overflow-hidden rounded-xl shadow-lg">
+          <div className="relative aspect-[4/3]">
+            <Image
+              src="/images/products/wuhao-full.jpg"
+              alt="五好学生 整体图"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="bg-gray-100 p-4 text-center">
+            <span className="font-semibold text-gray-700">整体视角</span>
+            <span className="ml-2 text-gray-500">D435 深度相机</span>
           </div>
         </div>
-
-        <div className="rounded-xl bg-gray-50 p-6">
-          <h3 className="mb-4 text-xl font-bold text-gray-900">机架 & 动力</h3>
-          <div className="mb-6 space-y-3">
-            {frameSpecs.map((spec) => (
-              <div
-                key={spec.label}
-                className="flex justify-between rounded-lg bg-white p-3 shadow-sm"
-              >
-                <span className="text-gray-600">{spec.label}</span>
-                <span className="font-medium text-gray-900">{spec.value}</span>
-              </div>
-            ))}
+        <div className="overflow-hidden rounded-xl shadow-lg">
+          <div className="relative aspect-[4/3]">
+            <Image
+              src="/images/products/wuhao-angle.jpg"
+              alt="五好学生 角度图"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
-          <h4 className="mb-3 font-bold text-gray-700">动力系统</h4>
-          <div className="grid grid-cols-3 gap-3">
-            <div className="rounded-lg bg-white p-3 text-center shadow-sm">
-              <div className="text-xs text-gray-500">电机</div>
-              <div className="font-bold">2812</div>
-              <div className="text-xs text-gray-400">1115KV</div>
-            </div>
-            <div className="rounded-lg bg-white p-3 text-center shadow-sm">
-              <div className="text-xs text-gray-500">螺旋桨</div>
-              <div className="font-bold">8寸</div>
-              <div className="text-xs text-gray-400">204×4</div>
-            </div>
-            <div className="rounded-lg bg-white p-3 text-center shadow-sm">
-              <div className="text-xs text-gray-500">电调</div>
-              <div className="font-bold">50A</div>
-              <div className="text-xs text-gray-400">6S</div>
-            </div>
+          <div className="bg-gray-100 p-4 text-center">
+            <span className="font-semibold text-gray-700">俯视角度</span>
+            <span className="ml-2 text-gray-500">Mid-360 激光雷达</span>
           </div>
         </div>
       </div>
     </Section>
 
-    {/* 为什么选择五好学生 */}
-    <Section className="bg-purple-50">
+    {/* 硬件模块 */}
+    <Section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">
-          为什么选择五好学生？
-        </h2>
+        <h2 className="text-3xl font-bold">硬件模块</h2>
+        <p className="mt-2 text-gray-400">旗舰级组件配置</p>
       </div>
 
-      <div className="mx-auto max-w-4xl">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <div className="mb-2 text-2xl">🏆</div>
-            <h3 className="mb-2 font-bold text-gray-900">竞赛针对性强</h3>
-            <p className="text-sm text-gray-600">
-              自带投放模块、激光标定模块，专为无人机竞赛设计，省去自行搭建的麻烦
-            </p>
+      <div className="grid gap-6 md:grid-cols-4">
+        {modules.map((mod) => (
+          <div
+            key={mod.name}
+            className="rounded-lg border border-gray-700 bg-gray-800/50 p-5"
+          >
+            <div className="mb-2 flex items-center gap-3">
+              <span className="text-2xl">{mod.icon}</span>
+              <span className="text-xs text-purple-400">{mod.category}</span>
+            </div>
+            <h3 className="mb-1 font-bold text-white">{mod.name}</h3>
+            <p className="text-sm text-gray-400">{mod.desc}</p>
           </div>
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <div className="mb-2 text-2xl">🔧</div>
-            <h3 className="mb-2 font-bold text-gray-900">接线规范易维护</h3>
-            <p className="text-sm text-gray-600">
-              告别胶布扎带临时捆绑，模块化设计，炸机后可快速修复继续参赛
-            </p>
+        ))}
+      </div>
+    </Section>
+
+    {/* 导航方案 */}
+    <Section>
+      <div className="mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900">导航方案</h2>
+        <p className="mt-2 text-gray-600">多种导航方式可选</p>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2">
+        {navModes.map((mode) => (
+          <div
+            key={mode.title}
+            className="rounded-lg border border-purple-200 bg-purple-50 p-6"
+          >
+            <div className="mb-3 text-3xl">{mode.icon}</div>
+            <h3 className="mb-2 text-lg font-bold text-purple-800">
+              {mode.title}
+            </h3>
+            <p className="text-purple-700">{mode.desc}</p>
           </div>
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <div className="mb-2 text-2xl">💻</div>
-            <h3 className="mb-2 font-bold text-gray-900">强劲算力</h3>
-            <p className="text-sm text-gray-600">
-              13 代 i5 处理器，12 核 16 线程，运行复杂 AI 算法游刃有余
-            </p>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <div className="mb-2 text-2xl">📚</div>
-            <h3 className="mb-2 font-bold text-gray-900">开发友好</h3>
-            <p className="text-sm text-gray-600">
-              Ubuntu + ROS + YOLO 全套预装，自制超便捷逻辑系统，上手即用
-            </p>
-          </div>
+        ))}
+      </div>
+
+      <div className="mt-8 rounded-xl bg-gray-100 p-6">
+        <h3 className="mb-3 text-lg font-bold text-gray-900">🗺️ 建图 & 识别</h3>
+        <ul className="space-y-2 text-gray-700">
+          <li>
+            • <strong>建图</strong>：基于 Mid-360 实时三维建图
+          </li>
+          <li>
+            • <strong>识别</strong>：USB 摄像头 + YOLO 目标检测
+          </li>
+        </ul>
+      </div>
+    </Section>
+
+    {/* 续航表 */}
+    <Section className="bg-gray-50">
+      <div className="mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900">续航能力</h2>
+        <p className="mt-2 text-gray-600">根据电池容量灵活选择</p>
+      </div>
+
+      <div className="mx-auto max-w-2xl">
+        <div className="overflow-hidden rounded-xl bg-white shadow-md">
+          <table className="w-full">
+            <thead className="bg-purple-600 text-white">
+              <tr>
+                <th className="px-6 py-4 text-left">电池规格</th>
+                <th className="px-6 py-4 text-left">悬停时间</th>
+                <th className="px-6 py-4 text-left">备注</th>
+              </tr>
+            </thead>
+            <tbody>
+              {flightTimes.map((item, idx) => (
+                <tr
+                  key={item.battery}
+                  className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                >
+                  <td className="px-6 py-4 font-medium">{item.battery}</td>
+                  <td className="px-6 py-4 text-purple-600">{item.time}</td>
+                  <td className="px-6 py-4 text-gray-500">{item.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
+      </div>
+    </Section>
+
+    {/* 详细规格 */}
+    <Section>
+      <div className="mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900">详细规格</h2>
+      </div>
+
+      <div className="mx-auto max-w-2xl rounded-xl bg-white p-6 shadow-md">
+        {droneSpecs.map((s) => (
+          <div
+            key={s.label}
+            className="flex justify-between border-b border-gray-100 py-4 last:border-0"
+          >
+            <span className="text-gray-600">{s.label}</span>
+            <span className="font-medium text-gray-900">{s.value}</span>
+          </div>
+        ))}
+      </div>
+    </Section>
+
+    {/* 发货配套 */}
+    <Section className="bg-purple-50">
+      <div className="mx-auto max-w-3xl">
+        <div className="mb-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-900">发货配套</h2>
+        </div>
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex items-start">
+            <span className="mr-2 text-purple-600">✓</span>
+            机载 NUC 软件环境，支持完全二次开发，所有代码都在机载电脑内
+          </li>
+          <li className="flex items-start">
+            <span className="mr-2 text-purple-600">✓</span>
+            完善的设备维护和使用支持，官方标准机型用户操作视频
+          </li>
+          <li className="flex items-start">
+            <span className="mr-2 text-purple-600">✓</span>
+            <strong>赠送一台备用防摔机架</strong>
+          </li>
+          <li className="flex items-start">
+            <span className="mr-2 text-purple-600">✓</span>
+            支持任意发票，可公司账户付款或 B 站工房下单
+          </li>
+        </ul>
+      </div>
+    </Section>
+
+    {/* 版本说明 */}
+    <Section>
+      <div className="mx-auto max-w-3xl rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 className="mb-4 text-lg font-bold text-gray-900">📋 版本说明</h3>
+        <p className="mb-3 text-gray-600">
+          当前为<strong>第二版</strong>，相较于第一版的升级：
+        </p>
+        <ul className="space-y-2 text-gray-700">
+          <li>
+            • 雷达从二维雷达升级到 <strong>Mid-360 三维激光雷达</strong>
+          </li>
+          <li>
+            • 移除 T265，定位方式改为 <strong>Mid-360 激光雷达定位</strong>
+          </li>
+          <li>• 其它配置保持一致</li>
+        </ul>
+        <p className="mt-4 text-sm text-gray-500">
+          💡 四好学生是五好学生的小型化版本
+        </p>
       </div>
     </Section>
 
     {/* CTA */}
     <Section className="bg-purple-600">
       <div className="text-center text-white">
-        <h2 className="mb-4 text-3xl font-bold">准备好征战无人机竞赛了吗？</h2>
-        <p className="mb-8 text-xl text-purple-100">五好学生，为冠军而生</p>
+        <h2 className="mb-4 text-3xl font-bold">准备好挑战高阶竞赛了吗？</h2>
+        <p className="mb-8 text-xl text-purple-100">
+          共轴双桨、强载重、超稳定，五好学生助你取得佳绩
+        </p>
         <Link href="/contact">
           <Button xl className="bg-white text-purple-600 hover:bg-purple-50">
             立即咨询
