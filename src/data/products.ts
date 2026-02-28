@@ -107,4 +107,27 @@ export const products: Product[] = [
       仿真框架: 'XTDrone',
     },
   },
+  {
+    id: '5',
+    slug: 'qihao',
+    name: '七好学生',
+    description:
+      '大折叠高续航通用无人机平台，40 分钟续航，搭载 Livox Mid-360 激光雷达和 NUC13/Jetson Orin NX 机载电脑，支持完全二次开发。',
+    price: '询价',
+    category: '通用平台',
+    image: '/images/products/qihao-drone.jpg',
+    features: [
+      '40 分钟超长续航',
+      'Livox Mid-360 激光雷达',
+      'NUC13/Orin NX 可选',
+      '大折叠便携设计',
+    ],
+    specs: {
+      续航时间: '40min',
+      折叠尺寸: '30×26cm',
+      展开轴距: '85cm',
+      飞控系统: 'PX4',
+      激光雷达: 'Livox Mid-360',
+    },
+  },
 ];
