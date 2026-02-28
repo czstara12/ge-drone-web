@@ -81,7 +81,8 @@ export const products: Product[] = [
     id: '4',
     slug: 'vision-v3',
     name: 'Vision V3',
-    description: '视觉算法开发平台，内置 AI 加速模块，专为机器视觉和自主导航研究打造。',
+    description:
+      '视觉算法开发平台，内置 AI 加速模块，专为机器视觉和自主导航研究打造。',
     price: '询价',
     category: '视觉研究',
     image:
