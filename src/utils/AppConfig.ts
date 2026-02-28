@@ -6,5 +6,5 @@ export const AppConfig = {
   locale: 'zh-CN',
   keywords:
     '狗弟爱学无人机,狗弟工作室,教育无人机,科研无人机,STEM教育,无人机教学,编程无人机,集群无人机',
-  siteUrl: 'https://godi-drone.com', // TODO: 替换为真实域名
+  siteUrl: 'https://gd-drone.com',
 };
