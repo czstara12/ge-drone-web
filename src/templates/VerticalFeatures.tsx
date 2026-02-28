@@ -4,7 +4,7 @@ import { Section } from '../layout/Section';
 const VerticalFeatures = () => (
   <Section
     title="核心优势"
-    description="为什么选择 ZFly 作为您的教育科研合作伙伴？我们专注于为教学与研究提供最专业的无人机平台。"
+    description="为什么选择狗弟工作室作为您的教育科研合作伙伴？我们专注于为教学与研究提供最专业的无人机平台。"
   >
     <VerticalFeatureRow
       title="开放的二次开发平台"

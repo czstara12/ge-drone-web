@@ -14,7 +14,7 @@ const Products = () => (
   <div className="text-gray-600 antialiased">
     <Meta
       title={`产品中心 - ${AppConfig.title}`}
-      description="浏览 ZFly 全系列无人机产品，包括工业巡检、农业植保和专业航拍无人机。"
+      description="浏览狗弟工作室全系列教育科研无人机产品，从入门教学到前沿科研。"
     />
 
     <Background color="bg-gray-100">
@@ -37,7 +37,7 @@ const Products = () => (
 
       <Section yPadding="pt-10 pb-20">
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-gray-900">ZFly 产品系列</h1>
+          <h1 className="text-4xl font-bold text-gray-900">产品系列</h1>
           <p className="mt-4 text-xl text-gray-500">
             满足各行业需求的专业飞行平台
           </p>

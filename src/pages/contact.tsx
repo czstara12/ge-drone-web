@@ -13,7 +13,7 @@ const Contact = () => (
   <div className="text-gray-600 antialiased">
     <Meta
       title={`联系我们 - ${AppConfig.title}`}
-      description="联系 ZFly 获取产品报价、技术支持或商务合作。"
+      description="联系狗弟工作室获取产品报价、课程方案或技术支持。"
     />
 
     <Background color="bg-gray-100">
@@ -39,7 +39,7 @@ const Contact = () => (
           <div className="mb-16 text-center">
             <h1 className="text-4xl font-bold text-gray-900">联系我们</h1>
             <p className="mt-4 text-xl text-gray-500">
-              我们期待听到您的声音，为您提供最专业的服务
+              我们期待听到您的声音，为您提供最专业的教育科研无人机服务
             </p>
           </div>
 
@@ -75,8 +75,7 @@ const Contact = () => (
                     <div>
                       <h3 className="font-bold text-gray-900">公司地址</h3>
                       <p>
-                        深圳市南山区科技园北区高新北六道 88 号 ZFly 创新大厦 10
-                        楼
+                        深圳市南山区科技园北区（具体地址待定）
                       </p>
                     </div>
                   </div>
@@ -98,8 +97,7 @@ const Contact = () => (
                     </svg>
                     <div>
                       <h3 className="font-bold text-gray-900">联系电话</h3>
-                      <p>+86 755 8888 6666</p>
-                      <p>400-123-4567 (客服热线)</p>
+                      <p>400-XXX-XXXX (客服热线)</p>
                     </div>
                   </div>
 
@@ -120,8 +118,8 @@ const Contact = () => (
                     </svg>
                     <div>
                       <h3 className="font-bold text-gray-900">电子邮箱</h3>
-                      <p>sales@zfly-drone.com (商务合作)</p>
-                      <p>support@zfly-drone.com (技术支持)</p>
+                      <p>contact@godi-studio.com (商务合作)</p>
+                      <p>support@godi-studio.com (技术支持)</p>
                     </div>
                   </div>
                 </div>
@@ -146,6 +144,20 @@ const Contact = () => (
                       id="name"
                       type="text"
                       placeholder="您的姓名"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label
+                      className="mb-2 block text-sm font-bold text-gray-700"
+                      htmlFor="org"
+                    >
+                      学校/机构
+                    </label>
+                    <input
+                      className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+                      id="org"
+                      type="text"
+                      placeholder="您所在的学校或机构"
                     />
                   </div>
                   <div className="mb-4">
@@ -187,7 +199,7 @@ const Contact = () => (
                       className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                       id="message"
                       rows={4}
-                      placeholder="请描述您的需求..."
+                      placeholder="请描述您的需求（如：课程方案咨询、产品采购、科研合作等）"
                     ></textarea>
                   </div>
                   <div className="flex items-center justify-between">

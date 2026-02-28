@@ -29,7 +29,7 @@ const ProductDetail = ({ product }: IProductDetailProps) => (
       productName={product.name}
       images={[product.image]}
       description={product.description}
-      brand="ZFly"
+      brand="狗弟工作室"
       offers={[
         {
           price: product.price === '询价' ? '0' : product.price,
@@ -38,7 +38,7 @@ const ProductDetail = ({ product }: IProductDetailProps) => (
           availability: 'https://schema.org/InStock',
           url: `${AppConfig.site_name}/products/${product.slug}`,
           seller: {
-            name: 'ZFly Drones',
+            name: '狗弟工作室',
           },
         },
       ]}
