@@ -105,7 +105,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => (
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // 排除有独立页面的产品
-  const excludeSlugs = ['liyumen-x8', 'sanhao', 'wuhao'];
+  const excludeSlugs = ['liyumen-x8', 'sanhao', 'wuhao', 'sim-platform'];
   const paths = products
     .filter((product) => !excludeSlugs.includes(product.slug))
     .map((product) => ({

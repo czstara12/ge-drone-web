@@ -84,4 +84,27 @@ export const products: Product[] = [
       导航方案: 'Egoplanner / 2D Lidar / T265',
     },
   },
+  {
+    id: '4',
+    slug: 'sim-platform',
+    name: '飞思仿真平台',
+    description:
+      '基于 WSL2 的 XTDrone 预装环境，集成 PX4、Gazebo、ROS，开箱即用的无人机仿真开发平台，支持 GPU 加速，适用于算法研究、教学演示、竞赛训练。',
+    price: '询价',
+    category: '仿真软件',
+    image: '/images/products/sim-platform.jpg',
+    features: [
+      '开箱即用，零配置',
+      'PX4 + Gazebo + ROS',
+      'NVIDIA GPU 加速',
+      '永久使用授权',
+    ],
+    specs: {
+      操作系统: 'Windows 11',
+      内存要求: '16GB 以上',
+      显卡要求: 'NVIDIA GTX 1660+',
+      预装系统: 'Ubuntu 18.04',
+      仿真框架: 'XTDrone',
+    },
+  },
 ];
