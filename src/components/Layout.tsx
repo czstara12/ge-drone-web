@@ -15,37 +15,34 @@ const navLinks = [
 ];
 
 const Layout = ({ children }: LayoutProps) => (
-  <div className="min-h-screen text-gray-600 antialiased">
+  <div className="min-h-screen bg-dark-900 text-gray-300 antialiased">
     {/* Navbar */}
-    <header className="bg-gray-100">
-      <div className="mx-auto flex max-w-screen-lg flex-wrap items-center justify-between px-3 py-6">
+    <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-dark-900/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-screen-lg flex-wrap items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="flex items-center text-3xl font-semibold text-gray-900"
+          className="flex items-center gap-2 text-2xl font-bold text-white"
         >
-          <svg
-            className="mr-1 size-11 stroke-current text-primary-500"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M0 0h24v24H0z" stroke="none" />
-            <rect x="3" y="12" width="6" height="8" rx="1" />
-            <rect x="9" y="8" width="6" height="12" rx="1" />
-            <rect x="15" y="4" width="6" height="16" rx="1" />
-            <path d="M4 20h14" />
+          {/* 无人机 SVG 图标 */}
+          <svg className="size-8 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="3" />
+            <line x1="3" y1="6" x2="7" y2="10" />
+            <line x1="21" y1="6" x2="17" y2="10" />
+            <line x1="3" y1="18" x2="7" y2="14" />
+            <line x1="21" y1="18" x2="17" y2="14" />
+            <circle cx="3" cy="6" r="2" />
+            <circle cx="21" cy="6" r="2" />
+            <circle cx="3" cy="18" r="2" />
+            <circle cx="21" cy="18" r="2" />
           </svg>
           {AppConfig.site_name}
         </Link>
 
         <nav>
-          <ul className="flex items-center gap-5 text-xl font-medium text-gray-800">
+          <ul className="flex items-center gap-6 text-base font-medium text-gray-400">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-primary-500">
+                <Link href={link.href} className="transition-colors hover:text-white">
                   {link.label}
                 </Link>
               </li>
@@ -56,41 +53,32 @@ const Layout = ({ children }: LayoutProps) => (
     </header>
 
     {/* Main Content */}
-    <main>{children}</main>
+    <main className="pt-16">{children}</main>
 
     {/* Footer */}
-    <footer className="bg-gray-100">
-      <div className="mx-auto max-w-screen-lg px-3 py-8">
+    <footer className="border-t border-white/5 bg-dark-900">
+      <div className="mx-auto max-w-screen-lg px-6 py-12">
         <div className="text-center">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="inline-flex items-center text-xl font-semibold text-gray-900"
-          >
-            <svg
-              className="mr-1 size-8 stroke-current text-primary-500"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M0 0h24v24H0z" stroke="none" />
-              <rect x="3" y="12" width="6" height="8" rx="1" />
-              <rect x="9" y="8" width="6" height="12" rx="1" />
-              <rect x="15" y="4" width="6" height="16" rx="1" />
-              <path d="M4 20h14" />
+          <Link href="/" className="inline-flex items-center gap-2 text-xl font-bold text-white">
+            <svg className="size-6 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="3" />
+              <line x1="3" y1="6" x2="7" y2="10" />
+              <line x1="21" y1="6" x2="17" y2="10" />
+              <line x1="3" y1="18" x2="7" y2="14" />
+              <line x1="21" y1="18" x2="17" y2="14" />
+              <circle cx="3" cy="6" r="2" />
+              <circle cx="21" cy="6" r="2" />
+              <circle cx="3" cy="18" r="2" />
+              <circle cx="21" cy="18" r="2" />
             </svg>
             {AppConfig.site_name}
           </Link>
 
-          {/* Nav Links */}
-          <nav className="mt-5">
-            <ul className="flex flex-wrap justify-center gap-4 text-xl font-medium text-gray-800">
+          <nav className="mt-6">
+            <ul className="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-500">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-primary-500">
+                  <Link href={link.href} className="transition-colors hover:text-white">
                     {link.label}
                   </Link>
                 </li>
@@ -98,10 +86,8 @@ const Layout = ({ children }: LayoutProps) => (
             </ul>
           </nav>
 
-          {/* Copyright */}
-          <div className="mt-8 text-sm text-gray-500">
-            © {new Date().getFullYear()} {AppConfig.site_name}. All rights
-            reserved.
+          <div className="mt-8 text-sm text-gray-600">
+            © {new Date().getFullYear()} {AppConfig.site_name}. All rights reserved.
           </div>
         </div>
       </div>
