@@ -66,13 +66,13 @@ const LocationIcon = () => (
   </svg>
 );
 
-const PhoneIcon = () => (
+const WechatIcon = () => (
   <svg className="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
-      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+      d="M8 10h.01M12 10h.01M16 10h.01M21 12a9 9 0 01-9 9H5l-2 2V12a9 9 0 0118 0z"
     />
   </svg>
 );
@@ -115,20 +115,20 @@ const Contact = () => (
               <ContactItem
                 icon={<LocationIcon />}
                 title="公司地址"
-                content="深圳市南山区科技园北区（具体地址待定）"
+                content="中国大连"
               />
               <ContactItem
-                icon={<PhoneIcon />}
-                title="联系电话"
-                content="400-XXX-XXXX (客服热线)"
+                icon={<WechatIcon />}
+                title="联系微信"
+                content="liuxiaodi404mob"
               />
               <ContactItem
                 icon={<EmailIcon />}
                 title="电子邮箱"
                 content={
                   <>
-                    <p>contact@godi-studio.com (商务合作)</p>
-                    <p>support@godi-studio.com (技术支持)</p>
+                    <p>contact@gd-drone.com (商务合作)</p>
+                    <p>support@gd-drone.com (技术支持)</p>
                   </>
                 }
               />
