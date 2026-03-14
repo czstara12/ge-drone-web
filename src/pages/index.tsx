@@ -18,7 +18,7 @@ const FeatureRow = ({ title, description, icon, reverse }: FeatureRowProps) => (
     className={`flex flex-col items-center gap-10 md:flex-row ${reverse ? 'md:flex-row-reverse' : ''}`}
   >
     <FadeIn direction={reverse ? 'right' : 'left'} className="md:w-1/2">
-      <div className="flex aspect-[4/3] items-center justify-center rounded-xl border border-white/10 bg-card-gradient shadow-glow">
+      <div className="flex aspect-[4/3] items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-primary-500/10 to-accent-400/5 shadow-glow">
         <span className="text-[100px] drop-shadow-md">{icon}</span>
       </div>
     </FadeIn>

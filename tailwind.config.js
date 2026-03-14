@@ -27,7 +27,7 @@ module.exports = {
           900: '#001a33',
         },
         dark: {
-          50:  '#e8eaf0',
+          50: '#e8eaf0',
           100: '#c5c8d6',
           200: '#9da2b8',
           300: '#757c9a',
@@ -48,11 +48,13 @@ module.exports = {
         hero: '4.5rem',
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #070a1a 0%, #0f1230 50%, #1a1f45 100%)',
-        'card-gradient': 'linear-gradient(135deg, rgba(14,165,233,0.08) 0%, rgba(56,189,248,0.04) 100%)',
+        'hero-gradient':
+          'linear-gradient(135deg, #070a1a 0%, #0f1230 50%, #1a1f45 100%)',
+        'card-gradient':
+          'linear-gradient(135deg, rgba(14,165,233,0.08) 0%, rgba(56,189,248,0.04) 100%)',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(0,128,255,0.3)',
+        glow: '0 0 20px rgba(0,128,255,0.3)',
         'glow-sm': '0 0 10px rgba(0,128,255,0.2)',
       },
     },

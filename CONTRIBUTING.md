@@ -16,17 +16,17 @@
 
 ### Type 类型
 
-| 类型 | 说明 |
-|------|------|
-| `feat` | 新功能 |
-| `fix` | Bug 修复 |
-| `docs` | 文档更新 |
-| `style` | 代码格式（不影响逻辑） |
-| `refactor` | 重构（非 feat/fix） |
-| `perf` | 性能优化 |
-| `test` | 测试相关 |
-| `chore` | 构建/工具/依赖变更 |
-| `revert` | 回滚 |
+| 类型       | 说明                   |
+| ---------- | ---------------------- |
+| `feat`     | 新功能                 |
+| `fix`      | Bug 修复               |
+| `docs`     | 文档更新               |
+| `style`    | 代码格式（不影响逻辑） |
+| `refactor` | 重构（非 feat/fix）    |
+| `perf`     | 性能优化               |
+| `test`     | 测试相关               |
+| `chore`    | 构建/工具/依赖变更     |
+| `revert`   | 回滚                   |
 
 ### 示例
 
@@ -50,13 +50,13 @@ chore: 升级 Next.js 至 14.2
 
 ### 分支命名
 
-| 分支 | 用途 |
-|------|------|
-| `main` | 生产分支，保持可部署状态 |
-| `dev` | 开发分支（可选） |
-| `feat/<name>` | 功能分支，如 `feat/swarm-page` |
-| `fix/<name>` | 修复分支，如 `fix/mobile-nav` |
-| `hotfix/<name>` | 紧急修复 |
+| 分支            | 用途                           |
+| --------------- | ------------------------------ |
+| `main`          | 生产分支，保持可部署状态       |
+| `dev`           | 开发分支（可选）               |
+| `feat/<name>`   | 功能分支，如 `feat/swarm-page` |
+| `fix/<name>`    | 修复分支，如 `fix/mobile-nav`  |
+| `hotfix/<name>` | 紧急修复                       |
 
 ### 工作流程
 
@@ -105,13 +105,13 @@ src/
 
 ### 文件命名
 
-| 类型 | 规范 | 示例 |
-|------|------|------|
+| 类型 | 规范       | 示例              |
+| ---- | ---------- | ----------------- |
 | 组件 | PascalCase | `ProductCard.tsx` |
-| 页面 | kebab-case | `about.tsx` |
-| 工具 | camelCase | `formatDate.ts` |
-| 样式 | kebab-case | `global.css` |
-| 数据 | camelCase | `products.ts` |
+| 页面 | kebab-case | `about.tsx`       |
+| 工具 | camelCase  | `formatDate.ts`   |
+| 样式 | kebab-case | `global.css`      |
+| 数据 | camelCase  | `products.ts`     |
 
 ### 变量命名
 
@@ -210,19 +210,19 @@ npm run start
 ### SEO 关键词
 
 ```
-狗弟爱学无人机, 狗弟工作室, 教育无人机, 科研无人机, 
+狗弟爱学无人机, 狗弟工作室, 教育无人机, 科研无人机,
 STEM教育, 无人机教学, 编程无人机, 集群无人机
 ```
 
 ### 产品线
 
-| 产品 | 定位 |
-|------|------|
-| Edu X1 | 教学入门 |
-| Lab M2 | 科研平台 |
+| 产品      | 定位     |
+| --------- | -------- |
+| Edu X1    | 教学入门 |
+| Lab M2    | 科研平台 |
 | Swarm S10 | 集群系统 |
 | Vision V3 | 视觉研究 |
 
 ---
 
-*最后更新: 2026-02-28*
+_最后更新: 2026-02-28_

@@ -24,11 +24,11 @@ TypeScript = JavaScript + 类型系统。
 ```typescript
 // JavaScript（动态类型，运行时才报错）
 let name = "hello";
-name = 123;  // 不报错，但可能导致 bug
+name = 123; // 不报错，但可能导致 bug
 
 // TypeScript（静态类型，写代码时就报错）
 let name: string = "hello";
-name = 123;  // ❌ 编辑器立刻报错：不能把 number 赋给 string
+name = 123; // ❌ 编辑器立刻报错：不能把 number 赋给 string
 ```
 
 **为什么用它**：写代码时就能发现错误，不用等到运行才崩溃。
@@ -49,7 +49,7 @@ function Welcome({ name }: { name: string }) {
 }
 
 // 使用组件
-<Welcome name="张三" />  // 渲染出：<h1>你好，张三</h1>
+<Welcome name="张三" />; // 渲染出：<h1>你好，张三</h1>
 ```
 
 **核心思想**：把页面拆成小组件，组件可以复用、嵌套。
@@ -72,7 +72,11 @@ Tailwind：直接在 HTML 里用预定义的工具类。
 <!-- 传统方式 -->
 <div class="card">...</div>
 <style>
-  .card { padding: 16px; background: white; border-radius: 8px; }
+  .card {
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+  }
 </style>
 
 <!-- Tailwind 方式 -->
@@ -81,26 +85,27 @@ Tailwind：直接在 HTML 里用预定义的工具类。
 
 **常用类名速查**：
 
-| 类名 | 作用 | CSS 等价 |
-|------|------|----------|
-| `p-4` | 内边距 | `padding: 1rem` |
-| `m-4` | 外边距 | `margin: 1rem` |
-| `px-4` | 左右内边距 | `padding-left/right: 1rem` |
-| `py-4` | 上下内边距 | `padding-top/bottom: 1rem` |
-| `mt-4` | 上外边距 | `margin-top: 1rem` |
-| `text-xl` | 字体大小 | `font-size: 1.25rem` |
-| `font-bold` | 粗体 | `font-weight: 700` |
-| `text-gray-500` | 文字颜色 | `color: #6b7280` |
-| `bg-white` | 背景色 | `background: white` |
-| `rounded-lg` | 圆角 | `border-radius: 0.5rem` |
-| `shadow-md` | 阴影 | `box-shadow: ...` |
-| `flex` | 弹性布局 | `display: flex` |
-| `grid` | 网格布局 | `display: grid` |
-| `hidden` | 隐藏 | `display: none` |
-| `w-full` | 宽度 100% | `width: 100%` |
-| `max-w-screen-lg` | 最大宽度 | `max-width: 1024px` |
+| 类名              | 作用       | CSS 等价                   |
+| ----------------- | ---------- | -------------------------- |
+| `p-4`             | 内边距     | `padding: 1rem`            |
+| `m-4`             | 外边距     | `margin: 1rem`             |
+| `px-4`            | 左右内边距 | `padding-left/right: 1rem` |
+| `py-4`            | 上下内边距 | `padding-top/bottom: 1rem` |
+| `mt-4`            | 上外边距   | `margin-top: 1rem`         |
+| `text-xl`         | 字体大小   | `font-size: 1.25rem`       |
+| `font-bold`       | 粗体       | `font-weight: 700`         |
+| `text-gray-500`   | 文字颜色   | `color: #6b7280`           |
+| `bg-white`        | 背景色     | `background: white`        |
+| `rounded-lg`      | 圆角       | `border-radius: 0.5rem`    |
+| `shadow-md`       | 阴影       | `box-shadow: ...`          |
+| `flex`            | 弹性布局   | `display: flex`            |
+| `grid`            | 网格布局   | `display: grid`            |
+| `hidden`          | 隐藏       | `display: none`            |
+| `w-full`          | 宽度 100%  | `width: 100%`              |
+| `max-w-screen-lg` | 最大宽度   | `max-width: 1024px`        |
 
 **响应式前缀**：
+
 - `md:` = 768px 以上生效
 - `lg:` = 1024px 以上生效
 - `sm:` = 640px 以上生效
@@ -136,13 +141,13 @@ zfly_website/
 
 ### 2.1 为什么这样组织？
 
-| 目录 | 职责 | 什么时候改它 |
-|------|------|--------------|
-| `components/` | 可复用的 UI 组件 | 想改导航栏、按钮样式 |
-| `pages/` | 页面内容 | 想改某个页面的内容 |
-| `data/` | 业务数据 | 想加产品、改产品信息 |
-| `utils/` | 配置和工具 | 想改站点名称、SEO 信息 |
-| `styles/` | 全局样式 | 想改全局字体、颜色 |
+| 目录          | 职责             | 什么时候改它           |
+| ------------- | ---------------- | ---------------------- |
+| `components/` | 可复用的 UI 组件 | 想改导航栏、按钮样式   |
+| `pages/`      | 页面内容         | 想改某个页面的内容     |
+| `data/`       | 业务数据         | 想加产品、改产品信息   |
+| `utils/`      | 配置和工具       | 想改站点名称、SEO 信息 |
+| `styles/`     | 全局样式         | 想改全局字体、颜色     |
 
 ---
 
@@ -202,7 +207,7 @@ const ProductCard = ({ name, price }: { name: string; price: string }) => {
 // Section 组件接收 children
 type SectionProps = {
   title: string;
-  children: ReactNode;  // ReactNode = 任何可渲染的内容
+  children: ReactNode; // ReactNode = 任何可渲染的内容
 };
 
 const Section = ({ title, children }: SectionProps) => (
@@ -216,19 +221,19 @@ const Section = ({ title, children }: SectionProps) => (
 <Section title="产品介绍">
   <p>这里是产品介绍内容</p>
   <img src="product.jpg" />
-</Section>
+</Section>;
 ```
 
 ### 3.4 文件路由
 
 Next.js 的 `pages/` 目录下的文件自动变成路由：
 
-| 文件路径 | URL 路径 |
-|----------|----------|
-| `pages/index.tsx` | `/` |
-| `pages/about.tsx` | `/about` |
-| `pages/contact.tsx` | `/contact` |
-| `pages/products/index.tsx` | `/products` |
+| 文件路径                    | URL 路径             |
+| --------------------------- | -------------------- |
+| `pages/index.tsx`           | `/`                  |
+| `pages/about.tsx`           | `/about`             |
+| `pages/contact.tsx`         | `/contact`           |
+| `pages/products/index.tsx`  | `/products`          |
 | `pages/products/[slug].tsx` | `/products/任意名称` |
 
 **动态路由**：`[slug]` 是占位符，可以匹配任意值。
@@ -247,12 +252,12 @@ Next.js 的 `pages/` 目录下的文件自动变成路由：
 
 ```typescript
 export const AppConfig = {
-  site_name: '狗弟爱学无人机',           // 站点名称，显示在导航栏/页脚
-  title: '狗弟爱学无人机 - ...',         // 浏览器标签页标题
-  description: '狗弟爱学无人机是...',    // SEO 描述，搜索结果里显示
-  locale: 'zh-CN',                       // 语言设置
-  keywords: '教育无人机,科研无人机,...', // SEO 关键词
-  siteUrl: 'https://gd-drone.com',       // 网站域名，用于 SEO
+  site_name: "狗弟爱学无人机", // 站点名称，显示在导航栏/页脚
+  title: "狗弟爱学无人机 - ...", // 浏览器标签页标题
+  description: "狗弟爱学无人机是...", // SEO 描述，搜索结果里显示
+  locale: "zh-CN", // 语言设置
+  keywords: "教育无人机,科研无人机,...", // SEO 关键词
+  siteUrl: "https://gd-drone.com", // 网站域名，用于 SEO
 };
 ```
 
@@ -280,6 +285,7 @@ const Layout = ({ children }: LayoutProps) => (
 ```
 
 **修改场景**：
+
 - 改导航链接：修改 `navLinks` 数组
 - 改 Logo：修改 `<Link href="/">` 里的 SVG
 - 改页脚内容：修改 `<footer>` 部分
@@ -301,7 +307,7 @@ const Button = ({ xl, children, ... }: ButtonProps) => {
     '基础样式',
     xl ? '大按钮样式' : '普通按钮样式',
   );
-  
+
   return <button className={btnClass}>{children}</button>;
 };
 ```
@@ -323,7 +329,7 @@ const Meta = ({ title, description, canonical }: MetaProps) => (
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={url} />
-    
+
     {/* Open Graph 标签，影响微信/微博分享卡片 */}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -334,10 +340,7 @@ const Meta = ({ title, description, canonical }: MetaProps) => (
 **每个页面都要用**：
 
 ```tsx
-<Meta 
-  title="产品中心 - 狗弟爱学无人机" 
-  description="浏览我们的无人机产品..."
-/>
+<Meta title="产品中心 - 狗弟爱学无人机" description="浏览我们的无人机产品..." />
 ```
 
 ### 4.5 `src/data/products.ts` - 产品数据
@@ -345,21 +348,21 @@ const Meta = ({ title, description, canonical }: MetaProps) => (
 ```typescript
 export type Product = {
   id: number;
-  slug: string;           // URL 友好的标识，如 "edu-drone-lite"
-  name: string;           // 产品名称
-  category: string;       // 分类
-  description: string;    // 简短描述
-  image: string;          // 图片 URL
-  price: string;          // 价格（字符串，因为可能是"询价"）
-  features: string[];     // 特性列表
-  specs: Record<string, string>;  // 技术规格
+  slug: string; // URL 友好的标识，如 "edu-drone-lite"
+  name: string; // 产品名称
+  category: string; // 分类
+  description: string; // 简短描述
+  image: string; // 图片 URL
+  price: string; // 价格（字符串，因为可能是"询价"）
+  features: string[]; // 特性列表
+  specs: Record<string, string>; // 技术规格
 };
 
 export const products: Product[] = [
   {
     id: 1,
-    slug: 'edu-drone-lite',
-    name: '小飞侠 Lite',
+    slug: "edu-drone-lite",
+    name: "小飞侠 Lite",
     // ...
   },
   // 更多产品...
@@ -376,18 +379,18 @@ export const products: Product[] = [
 const Index = () => (
   <Layout>                           {/* 包裹在 Layout 里 */}
     <Meta title="..." description="..." />  {/* SEO 信息 */}
-    
+
     {/* Hero 区域 - 大标题 */}
     <div className="bg-gray-100 pt-20 pb-32">
       <h1>让科研与教育在空中起飞</h1>
       <Button>查看产品</Button>
     </div>
-    
+
     {/* 特性区域 */}
     <Section title="核心优势">
       <FeatureRow title="开放平台" ... />
     </Section>
-    
+
     {/* CTA 区域 */}
     <Section>
       <div>准备好了吗？<Button>联系我们</Button></div>
@@ -416,7 +419,7 @@ const ProductDetail = ({ product }: { product: Product }) => (
 // 告诉 Next.js 有哪些页面需要生成
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = products.map((p) => ({
-    params: { slug: p.slug },  // 每个产品一个页面
+    params: { slug: p.slug }, // 每个产品一个页面
   }));
   return { paths, fallback: false };
 };
@@ -449,9 +452,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 ```tsx
 // 用 .map() 遍历数组
-{products.map((product) => (
-  <ProductCard key={product.id} product={product} />
-))}
+{
+  products.map((product) => <ProductCard key={product.id} product={product} />);
+}
 
 // key 是必须的，用于 React 识别每个元素
 ```
@@ -471,7 +474,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
 // 深度解构
 const ProductCard = ({ product: { name, price } }: ProductCardProps) => {
-  return <div>{name} - {price}</div>;
+  return (
+    <div>
+      {name} - {price}
+    </div>
+  );
 };
 ```
 
@@ -505,9 +512,10 @@ const UserCard = ({ user }: { user: User }) => (
 直接找到对应页面文件，改里面的文字。
 
 **例**：改首页标题
+
 ```tsx
 // src/pages/index.tsx
-<h1>让科研与教育在空中起飞</h1>  // 改这里
+<h1>让科研与教育在空中起飞</h1> // 改这里
 ```
 
 ### 6.2 改样式
@@ -515,6 +523,7 @@ const UserCard = ({ user }: { user: User }) => (
 找到对应元素的 `className`，修改 Tailwind 类。
 
 **例**：让标题更大
+
 ```tsx
 // 原来
 <h1 className="text-4xl">标题</h1>
@@ -550,10 +559,10 @@ theme: {
 2. 写一个导出默认组件的页面：
 
 ```tsx
-import { Layout } from '../components/Layout';
-import { Meta } from '../components/Meta';
-import { Section } from '../components/Section';
-import { AppConfig } from '../utils/AppConfig';
+import { Layout } from "../components/Layout";
+import { Meta } from "../components/Meta";
+import { Section } from "../components/Section";
+import { AppConfig } from "../utils/AppConfig";
 
 const FAQ = () => (
   <Layout>
@@ -618,6 +627,7 @@ npm run dev
 编辑器（VS Code）会直接显示红色波浪线，鼠标悬停看错误信息。
 
 常见错误：
+
 - `Property 'xxx' does not exist`：拼写错误或缺少属性
 - `Type 'string' is not assignable to type 'number'`：类型不匹配
 - `Cannot find module`：导入路径错误
@@ -644,27 +654,30 @@ npm run format
 
 ### 官方文档（推荐）
 
-| 技术 | 文档 | 说明 |
-|------|------|------|
-| React | https://react.dev/learn | 中文版：https://zh-hans.react.dev |
-| Next.js | https://nextjs.org/docs | 框架文档 |
-| TypeScript | https://www.typescriptlang.org/docs | 类型系统 |
-| Tailwind | https://tailwindcss.com/docs | 样式类速查 |
+| 技术       | 文档                                | 说明                              |
+| ---------- | ----------------------------------- | --------------------------------- |
+| React      | https://react.dev/learn             | 中文版：https://zh-hans.react.dev |
+| Next.js    | https://nextjs.org/docs             | 框架文档                          |
+| TypeScript | https://www.typescriptlang.org/docs | 类型系统                          |
+| Tailwind   | https://tailwindcss.com/docs        | 样式类速查                        |
 
 ### 推荐学习顺序
 
 1. **先看 React 基础**
+
    - [快速入门](https://zh-hans.react.dev/learn)
    - [组件和 Props](https://zh-hans.react.dev/learn/passing-props-to-a-component)
    - [条件渲染](https://zh-hans.react.dev/learn/conditional-rendering)
    - [列表渲染](https://zh-hans.react.dev/learn/rendering-lists)
 
 2. **再看 Tailwind**
+
    - [核心概念](https://tailwindcss.com/docs/utility-first)
    - [响应式设计](https://tailwindcss.com/docs/responsive-design)
    - 用的时候直接搜类名
 
 3. **Next.js 按需学**
+
    - [路由](https://nextjs.org/docs/pages/building-your-application/routing)
    - [静态生成](https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props)
 
@@ -676,18 +689,18 @@ npm run format
 
 ## 附录：术语表
 
-| 术语 | 解释 |
-|------|------|
-| Component | 组件，可复用的 UI 单元 |
-| Props | 组件的输入参数 |
-| Children | 组件标签之间的内容 |
-| JSX/TSX | 在 JS/TS 里写 HTML 的语法 |
-| Hook | React 的功能钩子（如 useState） |
-| SSG | Static Site Generation，静态站点生成 |
-| SSR | Server-Side Rendering，服务端渲染 |
-| SEO | Search Engine Optimization，搜索引擎优化 |
-| Canonical URL | 标准网址，告诉搜索引擎页面的权威地址 |
-| Responsive | 响应式，适配不同屏幕尺寸 |
+| 术语          | 解释                                     |
+| ------------- | ---------------------------------------- |
+| Component     | 组件，可复用的 UI 单元                   |
+| Props         | 组件的输入参数                           |
+| Children      | 组件标签之间的内容                       |
+| JSX/TSX       | 在 JS/TS 里写 HTML 的语法                |
+| Hook          | React 的功能钩子（如 useState）          |
+| SSG           | Static Site Generation，静态站点生成     |
+| SSR           | Server-Side Rendering，服务端渲染        |
+| SEO           | Search Engine Optimization，搜索引擎优化 |
+| Canonical URL | 标准网址，告诉搜索引擎页面的权威地址     |
+| Responsive    | 响应式，适配不同屏幕尺寸                 |
 
 ---
 

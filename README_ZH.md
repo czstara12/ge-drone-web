@@ -56,27 +56,27 @@ src/
 
 ## 页面
 
-| 路径 | 说明 |
-|------|------|
-| `/` | 首页 |
-| `/products` | 产品列表 |
-| `/products/liyumen-x8` | 鲤鱼门-X8 勘测无人机 |
-| `/products/sanhao` | 三好学生 室内导航教学平台 |
-| `/products/wuhao` | 五好学生 竞赛科研平台 |
-| `/products/sim-platform` | 飞思仿真平台 |
-| `/about` | 关于我们 |
-| `/contact` | 联系我们 |
+| 路径                     | 说明                      |
+| ------------------------ | ------------------------- |
+| `/`                      | 首页                      |
+| `/products`              | 产品列表                  |
+| `/products/liyumen-x8`   | 鲤鱼门-X8 勘测无人机      |
+| `/products/sanhao`       | 三好学生 室内导航教学平台 |
+| `/products/wuhao`        | 五好学生 竞赛科研平台     |
+| `/products/sim-platform` | 飞思仿真平台              |
+| `/about`                 | 关于我们                  |
+| `/contact`               | 联系我们                  |
 
 ## 产品
 
 目前收录 4 款真实产品：
 
-| 产品 | 类别 | 特点 |
-|------|------|------|
-| 鲤鱼门-X8 | 专业勘测 | Odin1 传感器模组、RTK 定位、21 分钟续航 |
-| 三好学生 | 教学竞赛 | 2D Lidar SLAM、YOLO 识别、Ubuntu + ROS |
-| 五好学生 | 竞赛科研 | 3 种导航方案、13 代 i5 处理器、Intel 传感器全家桶 |
-| 飞思仿真平台 | 仿真软件 | XTDrone + PX4 + Gazebo + ROS，基于 WSL2 |
+| 产品         | 类别     | 特点                                              |
+| ------------ | -------- | ------------------------------------------------- |
+| 鲤鱼门-X8    | 专业勘测 | Odin1 传感器模组、RTK 定位、21 分钟续航           |
+| 三好学生     | 教学竞赛 | 2D Lidar SLAM、YOLO 识别、Ubuntu + ROS            |
+| 五好学生     | 竞赛科研 | 3 种导航方案、13 代 i5 处理器、Intel 传感器全家桶 |
+| 飞思仿真平台 | 仿真软件 | XTDrone + PX4 + Gazebo + ROS，基于 WSL2           |
 
 ## 配置
 
@@ -84,12 +84,12 @@ src/
 
 ```typescript
 export const AppConfig = {
-  site_name: '狗弟爱学无人机',
-  title: '狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家',
-  description: '...',
-  locale: 'zh-CN',
-  keywords: '...',
-  siteUrl: 'https://godi-drone.com',  // 用于 SEO canonical URL
+  site_name: "狗弟爱学无人机",
+  title: "狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家",
+  description: "...",
+  locale: "zh-CN",
+  keywords: "...",
+  siteUrl: "https://godi-drone.com", // 用于 SEO canonical URL
 };
 ```
 
@@ -103,14 +103,14 @@ export const AppConfig = {
 
 ## 常用命令
 
-| 命令 | 说明 |
-|------|------|
-| `npm run dev` | 启动开发服务器 |
-| `npm run build` | 生产构建 |
-| `npm run start` | 启动生产服务 |
-| `npm run lint` | 代码检查 |
-| `npm run format` | 代码格式化 |
-| `npm run check-types` | 类型检查 |
+| 命令                  | 说明           |
+| --------------------- | -------------- |
+| `npm run dev`         | 启动开发服务器 |
+| `npm run build`       | 生产构建       |
+| `npm run start`       | 启动生产服务   |
+| `npm run lint`        | 代码检查       |
+| `npm run format`      | 代码格式化     |
+| `npm run check-types` | 类型检查       |
 
 ## 部署
 

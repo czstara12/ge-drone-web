@@ -56,28 +56,28 @@ src/
 
 ## Pages
 
-| Path | Description |
-|------|-------------|
-| `/` | Home |
-| `/products` | Product List |
-| `/products/liyumen-x8` | Liyumen-X8 Survey Drone |
-| `/products/sanhao` | Sanhao Indoor Navigation Platform |
-| `/products/wuhao` | Wuhao Competition & Research Platform |
-| `/products/sim-platform` | Feisi Simulation Platform |
-| `/about` | About Us |
-| `/contact` | Contact |
+| Path                     | Description                           |
+| ------------------------ | ------------------------------------- |
+| `/`                      | Home                                  |
+| `/products`              | Product List                          |
+| `/products/liyumen-x8`   | Liyumen-X8 Survey Drone               |
+| `/products/sanhao`       | Sanhao Indoor Navigation Platform     |
+| `/products/wuhao`        | Wuhao Competition & Research Platform |
+| `/products/sim-platform` | Feisi Simulation Platform             |
+| `/about`                 | About Us                              |
+| `/contact`               | Contact                               |
 
 ## Products
 
 Currently featuring 5 real products:
 
-| Product | Category | Highlights |
-|---------|----------|------------|
-| Liyumen-X8 | Professional Survey | Odin1 sensor module, RTK positioning, 21min flight |
-| Sanhao (三好学生) | Education/Competition | 2D Lidar SLAM, YOLO detection, Ubuntu + ROS |
-| Wuhao (五好学生) | Competition/Research | 3 navigation modes, 13th-gen i5, Intel sensor suite |
-| Feisi Sim (飞思仿真平台) | Simulation Software | XTDrone + PX4 + Gazebo + ROS, WSL2-based |
-| Qihao (七好学生) | General Platform | 40min flight, foldable, Livox Mid-360, NUC13/Orin NX |
+| Product                  | Category              | Highlights                                           |
+| ------------------------ | --------------------- | ---------------------------------------------------- |
+| Liyumen-X8               | Professional Survey   | Odin1 sensor module, RTK positioning, 21min flight   |
+| Sanhao (三好学生)        | Education/Competition | 2D Lidar SLAM, YOLO detection, Ubuntu + ROS          |
+| Wuhao (五好学生)         | Competition/Research  | 3 navigation modes, 13th-gen i5, Intel sensor suite  |
+| Feisi Sim (飞思仿真平台) | Simulation Software   | XTDrone + PX4 + Gazebo + ROS, WSL2-based             |
+| Qihao (七好学生)         | General Platform      | 40min flight, foldable, Livox Mid-360, NUC13/Orin NX |
 
 ## Configuration
 
@@ -85,12 +85,12 @@ Site config is in `src/utils/AppConfig.ts`:
 
 ```typescript
 export const AppConfig = {
-  site_name: '狗弟爱学无人机',
-  title: '狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家',
-  description: '...',
-  locale: 'zh-CN',
-  keywords: '...',
-  siteUrl: 'https://godi-drone.com',  // For SEO canonical URLs
+  site_name: "狗弟爱学无人机",
+  title: "狗弟爱学无人机 - 狗弟工作室 | 教育科研无人机专家",
+  description: "...",
+  locale: "zh-CN",
+  keywords: "...",
+  siteUrl: "https://godi-drone.com", // For SEO canonical URLs
 };
 ```
 
@@ -104,14 +104,14 @@ export const AppConfig = {
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start dev server |
-| `npm run build` | Production build |
-| `npm run start` | Start production server |
-| `npm run lint` | Lint code |
-| `npm run format` | Format code |
-| `npm run check-types` | Type check |
+| Command               | Description             |
+| --------------------- | ----------------------- |
+| `npm run dev`         | Start dev server        |
+| `npm run build`       | Production build        |
+| `npm run start`       | Start production server |
+| `npm run lint`        | Lint code               |
+| `npm run format`      | Format code             |
+| `npm run check-types` | Type check              |
 
 ## Deployment
 

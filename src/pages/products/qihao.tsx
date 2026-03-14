@@ -170,23 +170,23 @@ const QihaoProduct = () => (
     </div>
 
     {/* 核心参数 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">核心参数</h2>
-        <p className="mt-2 text-gray-600">性能与便携的完美平衡</p>
+        <h2 className="text-3xl font-bold text-white">核心参数</h2>
+        <p className="mt-2 text-gray-400">性能与便携的完美平衡</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
         {coreSpecs.map((spec) => (
           <div
             key={spec.label}
-            className="rounded-xl bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-800/60 p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
           >
             <div className="mb-2 text-4xl font-bold text-orange-600">
               {spec.value}
             </div>
-            <div className="mb-2 font-semibold text-gray-900">{spec.label}</div>
-            <div className="text-sm text-gray-500">{spec.desc}</div>
+            <div className="mb-2 font-semibold text-white">{spec.label}</div>
+            <div className="text-sm text-gray-400">{spec.desc}</div>
           </div>
         ))}
       </div>
@@ -195,8 +195,8 @@ const QihaoProduct = () => (
     {/* 折叠展示 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">大折叠设计</h2>
-        <p className="mt-2 text-gray-600">85cm 轴距，折叠后仅 30×26cm</p>
+        <h2 className="text-3xl font-bold text-white">大折叠设计</h2>
+        <p className="mt-2 text-gray-400">85cm 轴距，折叠后仅 30×26cm</p>
       </div>
 
       <div className="grid items-center gap-8 md:grid-cols-2">
@@ -212,7 +212,7 @@ const QihaoProduct = () => (
           </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">折叠状态</span>
-            <span className="ml-2 text-gray-500">30 × 26 cm</span>
+            <span className="ml-2 text-gray-400">30 × 26 cm</span>
           </div>
         </div>
         <div className="overflow-hidden rounded-xl shadow-lg">
@@ -227,7 +227,7 @@ const QihaoProduct = () => (
           </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">展开状态</span>
-            <span className="ml-2 text-gray-500">85 cm 轴距</span>
+            <span className="ml-2 text-gray-400">85 cm 轴距</span>
           </div>
         </div>
       </div>
@@ -261,83 +261,83 @@ const QihaoProduct = () => (
     {/* 模块配置 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">模块配置</h2>
-        <p className="mt-2 text-gray-600">专业级硬件组合</p>
+        <h2 className="text-3xl font-bold text-white">模块配置</h2>
+        <p className="mt-2 text-gray-400">专业级硬件组合</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
         {modules.map((mod) => (
           <div
             key={mod.name}
-            className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
+            className="rounded-lg border border-white/10 bg-gray-800/60 p-6 shadow-sm"
           >
             <div className="mb-3 text-3xl">{mod.icon}</div>
-            <h3 className="mb-2 text-lg font-bold text-gray-900">{mod.name}</h3>
-            <p className="text-gray-600">{mod.desc}</p>
+            <h3 className="mb-2 text-lg font-bold text-white">{mod.name}</h3>
+            <p className="text-gray-400">{mod.desc}</p>
           </div>
         ))}
       </div>
     </Section>
 
     {/* 详细规格 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">详细规格</h2>
+        <h2 className="text-3xl font-bold text-white">详细规格</h2>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
         {/* 飞行参数 */}
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md">
           <h3 className="mb-4 text-xl font-bold text-orange-600">飞行参数</h3>
           {specs.flight.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
 
         {/* 尺寸参数 */}
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md">
           <h3 className="mb-4 text-xl font-bold text-orange-600">尺寸参数</h3>
           {specs.size.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
 
         {/* 传感器 */}
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md">
           <h3 className="mb-4 text-xl font-bold text-orange-600">传感器</h3>
           {specs.sensor.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
 
         {/* 算力平台 */}
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md">
           <h3 className="mb-4 text-xl font-bold text-orange-600">算力平台</h3>
           {specs.compute.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
@@ -347,8 +347,8 @@ const QihaoProduct = () => (
     {/* 服务支持 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">服务支持</h2>
-        <p className="mt-2 text-gray-600">完善的售后保障</p>
+        <h2 className="text-3xl font-bold text-white">服务支持</h2>
+        <p className="mt-2 text-gray-400">完善的售后保障</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
@@ -357,8 +357,8 @@ const QihaoProduct = () => (
             <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-orange-100 text-3xl">
               {svc.icon}
             </div>
-            <h3 className="mb-2 font-bold text-gray-900">{svc.title}</h3>
-            <p className="text-sm text-gray-600">{svc.desc}</p>
+            <h3 className="mb-2 font-bold text-white">{svc.title}</h3>
+            <p className="text-sm text-gray-400">{svc.desc}</p>
           </div>
         ))}
       </div>
@@ -374,7 +374,7 @@ const QihaoProduct = () => (
           大折叠、高续航、强算力，七好学生为你而来
         </p>
         <Link href="/contact">
-          <Button xl className="bg-white text-orange-600 hover:bg-orange-50">
+          <Button xl className="bg-orange-500 text-white hover:bg-orange-400">
             立即咨询
           </Button>
         </Link>

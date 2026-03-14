@@ -128,23 +128,23 @@ const LiyumenX8 = () => (
     </div>
 
     {/* 核心参数 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">核心参数</h2>
-        <p className="mt-2 text-gray-600">卓越的飞行性能</p>
+        <h2 className="text-3xl font-bold text-white">核心参数</h2>
+        <p className="mt-2 text-gray-400">卓越的飞行性能</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
         {coreSpecs.map((spec) => (
           <div
             key={spec.label}
-            className="rounded-xl bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-800/60 p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
           >
             <div className="mb-2 text-4xl font-bold text-primary-600">
               {spec.value}
             </div>
-            <div className="mb-2 font-semibold text-gray-900">{spec.label}</div>
-            <div className="text-sm text-gray-500">{spec.desc}</div>
+            <div className="mb-2 font-semibold text-white">{spec.label}</div>
+            <div className="text-sm text-gray-400">{spec.desc}</div>
           </div>
         ))}
       </div>
@@ -153,8 +153,8 @@ const LiyumenX8 = () => (
     {/* 产品特点 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">产品特点</h2>
-        <p className="mt-2 text-gray-600">
+        <h2 className="text-3xl font-bold text-white">产品特点</h2>
+        <p className="mt-2 text-gray-400">
           笼式安全型设计，紧凑高效的工业级外形
         </p>
       </div>
@@ -163,14 +163,14 @@ const LiyumenX8 = () => (
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="flex items-start gap-4 rounded-lg border border-gray-100 bg-white p-6 shadow-sm"
+            className="flex items-start gap-4 rounded-lg border border-white/10 bg-gray-800/60 p-6 shadow-sm"
           >
             <div className="shrink-0 text-4xl">{feature.icon}</div>
             <div>
-              <h3 className="mb-2 text-xl font-bold text-gray-900">
+              <h3 className="mb-2 text-xl font-bold text-white">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.desc}</p>
+              <p className="text-gray-400">{feature.desc}</p>
             </div>
           </div>
         ))}
@@ -222,8 +222,8 @@ const LiyumenX8 = () => (
     {/* 飞行性能展示 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">卓越的飞行性能</h2>
-        <p className="mt-2 text-gray-600">飞行性能展示</p>
+        <h2 className="text-3xl font-bold text-white">卓越的飞行性能</h2>
+        <p className="mt-2 text-gray-400">飞行性能展示</p>
       </div>
 
       <div className="relative overflow-hidden rounded-2xl shadow-xl">
@@ -238,12 +238,12 @@ const LiyumenX8 = () => (
     </Section>
 
     {/* CTA */}
-    <Section className="bg-primary-100">
+    <Section className="bg-primary-900/30">
       <div className="text-center">
-        <h2 className="mb-4 text-3xl font-bold text-gray-900">
+        <h2 className="mb-4 text-3xl font-bold text-white">
           准备好体验专业级勘测无人机了吗？
         </h2>
-        <p className="mb-8 text-xl text-gray-600">
+        <p className="mb-8 text-xl text-gray-400">
           联系我们获取详细产品资料、定制方案和报价
         </p>
         <Link href="/contact">

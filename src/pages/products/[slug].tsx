@@ -22,7 +22,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => (
     />
 
     <Section>
-      <div className="overflow-hidden rounded-xl bg-white shadow-xl">
+      <div className="overflow-hidden rounded-xl bg-gray-800/60 shadow-xl">
         <div className="md:flex">
           {/* Image */}
           <div className="relative h-96 bg-gray-200 md:h-auto md:min-h-[400px] md:w-1/2">
@@ -41,19 +41,19 @@ const ProductDetail = ({ product }: ProductDetailProps) => (
             <div className="text-sm font-semibold uppercase tracking-wide text-primary-500">
               {product.category}
             </div>
-            <h1 className="mt-2 text-3xl font-bold leading-tight text-gray-900">
+            <h1 className="mt-2 text-3xl font-bold leading-tight text-white">
               {product.name}
             </h1>
-            <p className="mt-4 text-lg text-gray-600">{product.description}</p>
+            <p className="mt-4 text-lg text-gray-400">{product.description}</p>
 
             {/* Features */}
             <div className="mt-8">
-              <h3 className="mb-3 text-lg font-semibold text-gray-900">
+              <h3 className="mb-3 text-lg font-semibold text-white">
                 核心特性
               </h3>
               <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
                 {product.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-600">
+                  <li key={idx} className="flex items-center text-gray-400">
                     <svg
                       className="mr-2 size-5 text-green-500"
                       fill="none"
@@ -74,9 +74,9 @@ const ProductDetail = ({ product }: ProductDetailProps) => (
             </div>
 
             {/* Price & CTA */}
-            <div className="mt-8 border-t border-gray-100 pt-8">
+            <div className="mt-8 border-t border-white/10 pt-8">
               <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold text-gray-900">
+                <div className="text-2xl font-bold text-white">
                   {product.price}
                 </div>
                 <Link href="/contact">
@@ -88,16 +88,16 @@ const ProductDetail = ({ product }: ProductDetailProps) => (
         </div>
 
         {/* Specs */}
-        <div className="border-t border-gray-200 bg-gray-50 p-8 md:p-12">
-          <h3 className="mb-6 text-2xl font-bold text-gray-900">技术规格</h3>
+        <div className="border-t border-white/10 bg-gray-800/30 p-8 md:p-12">
+          <h3 className="mb-6 text-2xl font-bold text-white">技术规格</h3>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Object.entries(product.specs).map(([key, value]) => (
               <div
                 key={key}
-                className="rounded border border-gray-100 bg-white p-4 shadow-sm"
+                className="rounded border border-white/10 bg-gray-800/60 p-4 shadow-sm"
               >
-                <div className="mb-1 text-sm text-gray-500">{key}</div>
-                <div className="text-lg font-medium text-gray-900">{value}</div>
+                <div className="mb-1 text-sm text-gray-400">{key}</div>
+                <div className="text-lg font-medium text-white">{value}</div>
               </div>
             ))}
           </div>
