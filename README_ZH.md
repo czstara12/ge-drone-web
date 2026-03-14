@@ -63,7 +63,7 @@ src/
 | `/products/liyumen-x8`   | 鲤鱼门-X8 勘测无人机      |
 | `/products/sanhao`       | 三好学生 室内导航教学平台 |
 | `/products/wuhao`        | 五好学生 竞赛科研平台     |
-| `/products/sim-platform` | 飞思仿真平台              |
+| `/products/sim-platform` | 狗弟仿真平台              |
 | `/about`                 | 关于我们                  |
 | `/contact`               | 联系我们                  |
 
@@ -76,7 +76,7 @@ src/
 | 鲤鱼门-X8    | 专业勘测 | Odin1 传感器模组、RTK 定位、21 分钟续航           |
 | 三好学生     | 教学竞赛 | 2D Lidar SLAM、YOLO 识别、Ubuntu + ROS            |
 | 五好学生     | 竞赛科研 | 3 种导航方案、13 代 i5 处理器、Intel 传感器全家桶 |
-| 飞思仿真平台 | 仿真软件 | XTDrone + PX4 + Gazebo + ROS，基于 WSL2           |
+| 狗弟仿真平台 | 仿真软件 | XTDrone + PX4 + Gazebo + ROS，基于 WSL2           |
 
 ## 配置
 

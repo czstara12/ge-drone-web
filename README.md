@@ -63,7 +63,7 @@ src/
 | `/products/liyumen-x8`   | Liyumen-X8 Survey Drone               |
 | `/products/sanhao`       | Sanhao Indoor Navigation Platform     |
 | `/products/wuhao`        | Wuhao Competition & Research Platform |
-| `/products/sim-platform` | Feisi Simulation Platform             |
+| `/products/sim-platform` | Godi Simulation Platform              |
 | `/about`                 | About Us                              |
 | `/contact`               | Contact                               |
 
@@ -76,7 +76,7 @@ Currently featuring 5 real products:
 | Liyumen-X8               | Professional Survey   | Odin1 sensor module, RTK positioning, 21min flight   |
 | Sanhao (三好学生)        | Education/Competition | 2D Lidar SLAM, YOLO detection, Ubuntu + ROS          |
 | Wuhao (五好学生)         | Competition/Research  | 3 navigation modes, 13th-gen i5, Intel sensor suite  |
-| Feisi Sim (飞思仿真平台) | Simulation Software   | XTDrone + PX4 + Gazebo + ROS, WSL2-based             |
+| Godi Sim (狗弟仿真平台) | Simulation Software   | XTDrone + PX4 + Gazebo + ROS, WSL2-based             |
 | Qihao (七好学生)         | General Platform      | 40min flight, foldable, Livox Mid-360, NUC13/Orin NX |
 
 ## Configuration

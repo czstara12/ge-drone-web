@@ -118,7 +118,7 @@ const SimPlatform = () => (
               仿真开发环境
             </div>
             <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-              飞思仿真平台
+              狗弟仿真平台
               <span className="mt-2 block text-2xl font-normal text-emerald-200">
                 XTDrone 预装环境 · 基于 WSL2
               </span>
@@ -236,7 +236,7 @@ const SimPlatform = () => (
 
           <div className="rounded-xl border-2 border-emerald-200 bg-emerald-50 p-6">
             <h3 className="mb-4 flex items-center text-xl font-bold text-emerald-700">
-              <span className="mr-2">✅</span> 飞思仿真平台
+              <span className="mr-2">✅</span> 狗弟仿真平台
             </h3>
             <ul className="space-y-2 text-emerald-600">
               <li>• WSL2 原生性能，流畅运行</li>

@@ -112,7 +112,7 @@ export const products: Product[] = [
   {
     id: '4',
     slug: 'sim-platform',
-    name: '飞思仿真平台',
+    name: '狗弟仿真平台',
     description:
       '基于 WSL2 的 XTDrone 预装环境，集成 PX4、Gazebo、ROS，开箱即用的无人机仿真开发平台，支持 GPU 加速，适用于算法研究、教学演示、竞赛训练。',
     price: '询价',
