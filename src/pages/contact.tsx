@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { FormEvent, ReactNode } from 'react';
 
 import { Button } from '../components/Button';
 import { Layout } from '../components/Layout';
@@ -89,97 +89,109 @@ const EmailIcon = () => (
 );
 
 // Main page component
-const Contact = () => (
-  <Layout>
-    <Meta
-      title={`联系我们 - ${AppConfig.site_name}`}
-      description="联系狗弟工作室获取产品报价、课程方案或技术支持。"
-    />
+const Contact = () => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-    <Section>
-      <div className="mx-auto max-w-4xl">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <h1 className="text-4xl font-bold text-white">联系我们</h1>
-          <p className="mt-4 text-xl text-gray-400">
-            我们期待听到您的声音，为您提供最专业的教育科研无人机服务
-          </p>
-        </div>
+    window.location.href = 'weixin://';
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Contact Info */}
-          <div className="rounded-xl border border-white/10 bg-gray-800/50 p-8 shadow-lg">
-            <h2 className="mb-6 text-2xl font-bold text-white">联系方式</h2>
+    window.setTimeout(() => {
+      window.location.href = 'https://weixin.qq.com/';
+    }, 800);
+  };
 
-            <div className="space-y-6">
-              <ContactItem
-                icon={<LocationIcon />}
-                title="公司地址"
-                content="中国大连"
-              />
-              <ContactItem
-                icon={<WechatIcon />}
-                title="联系微信"
-                content="liuxiaodi404mob"
-              />
-              <ContactItem
-                icon={<EmailIcon />}
-                title="电子邮箱"
-                content={
-                  <>
-                    <p>contact@gd-drone.com (商务合作)</p>
-                    <p>support@gd-drone.com (技术支持)</p>
-                  </>
-                }
-              />
-            </div>
+  return (
+    <Layout>
+      <Meta
+        title={`联系我们 - ${AppConfig.site_name}`}
+        description="联系狗弟工作室获取产品报价、课程方案或技术支持。"
+      />
+
+      <Section>
+        <div className="mx-auto max-w-4xl">
+          {/* Header */}
+          <div className="mb-16 text-center">
+            <h1 className="text-4xl font-bold text-white">联系我们</h1>
+            <p className="mt-4 text-xl text-gray-400">
+              我们期待听到您的声音，为您提供最专业的教育科研无人机服务
+            </p>
           </div>
 
-          {/* Contact Form */}
-          <div className="rounded-xl border border-white/10 bg-gray-800/50 p-8 shadow-lg">
-            <h2 className="mb-6 text-2xl font-bold text-white">在线咨询</h2>
-            <form>
-              <FormField id="name" label="姓名" placeholder="您的姓名" />
-              <FormField
-                id="org"
-                label="学校/机构"
-                placeholder="您所在的学校或机构"
-              />
-              <FormField
-                id="email"
-                label="邮箱"
-                type="email"
-                placeholder="您的邮箱"
-              />
-              <FormField
-                id="phone"
-                label="电话"
-                type="tel"
-                placeholder="您的联系电话"
-              />
-              <div className="mb-6">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-200"
-                  htmlFor="message"
-                >
-                  咨询内容
-                </label>
-                <textarea
-                  className="w-full rounded-lg border border-white/10 bg-dark-800/80 px-3 py-2 leading-tight text-gray-100 shadow-sm placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  id="message"
-                  rows={4}
-                  placeholder="请描述您的需求（如：课程方案咨询、产品采购、科研合作等）"
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            {/* Contact Info */}
+            <div className="rounded-xl border border-white/10 bg-gray-800/50 p-8 shadow-lg">
+              <h2 className="mb-6 text-2xl font-bold text-white">联系方式</h2>
+
+              <div className="space-y-6">
+                <ContactItem
+                  icon={<LocationIcon />}
+                  title="公司地址"
+                  content="中国大连"
+                />
+                <ContactItem
+                  icon={<WechatIcon />}
+                  title="联系微信"
+                  content="liuxiaodi404mob"
+                />
+                <ContactItem
+                  icon={<EmailIcon />}
+                  title="电子邮箱"
+                  content={
+                    <>
+                      <p>contact@gd-drone.com (商务合作)</p>
+                      <p>support@gd-drone.com (技术支持)</p>
+                    </>
+                  }
                 />
               </div>
-              <Button xl type="submit">
-                提交咨询
-              </Button>
-            </form>
+            </div>
+
+            {/* Contact Form */}
+            <div className="rounded-xl border border-white/10 bg-gray-800/50 p-8 shadow-lg">
+              <h2 className="mb-6 text-2xl font-bold text-white">在线咨询</h2>
+              <form onSubmit={handleSubmit}>
+                <FormField id="name" label="姓名" placeholder="您的姓名" />
+                <FormField
+                  id="org"
+                  label="学校/机构"
+                  placeholder="您所在的学校或机构"
+                />
+                <FormField
+                  id="email"
+                  label="邮箱"
+                  type="email"
+                  placeholder="您的邮箱"
+                />
+                <FormField
+                  id="phone"
+                  label="电话"
+                  type="tel"
+                  placeholder="您的联系电话"
+                />
+                <div className="mb-6">
+                  <label
+                    className="mb-2 block text-sm font-bold text-gray-200"
+                    htmlFor="message"
+                  >
+                    咨询内容
+                  </label>
+                  <textarea
+                    className="w-full rounded-lg border border-white/10 bg-dark-800/80 px-3 py-2 leading-tight text-gray-100 shadow-sm placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                    id="message"
+                    rows={4}
+                    placeholder="请描述您的需求（如：课程方案咨询、产品采购、科研合作等）"
+                  />
+                </div>
+                <Button xl type="submit">
+                  跳转微信咨询
+                </Button>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    </Section>
-  </Layout>
-);
+      </Section>
+    </Layout>
+  );
+};
 
 export default Contact;
