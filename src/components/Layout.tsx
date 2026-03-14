@@ -24,7 +24,15 @@ const Layout = ({ children }: LayoutProps) => (
           className="flex items-center gap-2 text-2xl font-bold text-white"
         >
           {/* 无人机 SVG 图标 */}
-          <svg className="size-8 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            className="size-8 text-primary-500"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <circle cx="12" cy="12" r="3" />
             <line x1="3" y1="6" x2="7" y2="10" />
             <line x1="21" y1="6" x2="17" y2="10" />
@@ -42,7 +50,10 @@ const Layout = ({ children }: LayoutProps) => (
           <ul className="flex items-center gap-6 text-base font-medium text-gray-400">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition-colors hover:text-white">
+                <Link
+                  href={link.href}
+                  className="transition-colors hover:text-white"
+                >
                   {link.label}
                 </Link>
               </li>
@@ -59,8 +70,19 @@ const Layout = ({ children }: LayoutProps) => (
     <footer className="border-t border-white/5 bg-dark-900">
       <div className="mx-auto max-w-screen-lg px-6 py-12">
         <div className="text-center">
-          <Link href="/" className="inline-flex items-center gap-2 text-xl font-bold text-white">
-            <svg className="size-6 text-primary-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-xl font-bold text-white"
+          >
+            <svg
+              className="size-6 text-primary-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <circle cx="12" cy="12" r="3" />
               <line x1="3" y1="6" x2="7" y2="10" />
               <line x1="21" y1="6" x2="17" y2="10" />
@@ -78,7 +100,10 @@ const Layout = ({ children }: LayoutProps) => (
             <ul className="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-500">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition-colors hover:text-white">
+                  <Link
+                    href={link.href}
+                    className="transition-colors hover:text-white"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -87,7 +112,8 @@ const Layout = ({ children }: LayoutProps) => (
           </nav>
 
           <div className="mt-8 text-sm text-gray-600">
-            © {new Date().getFullYear()} {AppConfig.site_name}. All rights reserved.
+            © {new Date().getFullYear()} {AppConfig.site_name}. All rights
+            reserved.
           </div>
         </div>
       </div>

@@ -22,9 +22,15 @@ const FeatureRow = ({ title, description, icon, reverse }: FeatureRowProps) => (
         <span className="text-[100px] drop-shadow-md">{icon}</span>
       </div>
     </FadeIn>
-    <FadeIn direction={reverse ? 'left' : 'right'} delay={0.15} className="md:w-1/2">
+    <FadeIn
+      direction={reverse ? 'left' : 'right'}
+      delay={0.15}
+      className="md:w-1/2"
+    >
       <h3 className="text-3xl font-bold text-white">{title}</h3>
-      <p className="mt-4 text-lg leading-relaxed text-gray-400">{description}</p>
+      <p className="mt-4 text-lg leading-relaxed text-gray-400">
+        {description}
+      </p>
     </FadeIn>
   </div>
 );
@@ -49,7 +55,7 @@ const Index = () => (
       <div className="relative mx-auto max-w-screen-lg px-6 text-center">
         <FadeIn>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/30 bg-primary-500/10 px-4 py-1.5 text-sm text-primary-400">
-            <span className="size-1.5 rounded-full bg-primary-400 animate-pulse" />
+            <span className="size-1.5 animate-pulse rounded-full bg-primary-400" />
             专注无人机教育与科研平台
           </div>
         </FadeIn>
@@ -63,7 +69,8 @@ const Index = () => (
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mx-auto mb-10 mt-6 max-w-2xl text-xl text-gray-400">
-            专为高校科研与 STEM 教育打造的无人机平台，从入门教学到前沿研究，助力培养下一代航空人才。
+            专为高校科研与 STEM
+            教育打造的无人机平台，从入门教学到前沿研究，助力培养下一代航空人才。
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
