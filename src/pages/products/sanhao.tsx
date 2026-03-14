@@ -154,7 +154,7 @@ const SanhaoProduct = () => (
                 <Button xl>立即咨询</Button>
               </Link>
               <a
-                href="https://www.bilibili.com/video/BV1xkHbeXEYn/"
+                href="https://www.bilibili.com/video/BV1snyDYqE1h/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-md border-2 border-white/50 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
