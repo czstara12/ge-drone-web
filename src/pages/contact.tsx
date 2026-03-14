@@ -17,8 +17,8 @@ const ContactItem = ({ icon, title, content }: ContactItemProps) => (
   <div className="flex items-start">
     <div className="mr-4 mt-1 text-primary-500">{icon}</div>
     <div>
-      <h3 className="font-bold text-gray-900">{title}</h3>
-      <div className="text-gray-600">{content}</div>
+      <h3 className="font-bold text-white">{title}</h3>
+      <div className="text-gray-400">{content}</div>
     </div>
   </div>
 );
@@ -37,11 +37,11 @@ const FormField = ({
   type = 'text',
 }: FormFieldProps) => (
   <div className="mb-4">
-    <label className="mb-2 block text-sm font-bold text-gray-700" htmlFor={id}>
+    <label className="mb-2 block text-sm font-bold text-gray-200" htmlFor={id}>
       {label}
     </label>
     <input
-      className="w-full rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none focus:ring-2 focus:ring-primary-500"
+      className="w-full rounded-lg border border-white/10 bg-dark-800/80 px-3 py-2 leading-tight text-gray-100 shadow-sm placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
       id={id}
       type={type}
       placeholder={placeholder}
@@ -100,16 +100,16 @@ const Contact = () => (
       <div className="mx-auto max-w-4xl">
         {/* Header */}
         <div className="mb-16 text-center">
-          <h1 className="text-4xl font-bold text-gray-900">联系我们</h1>
-          <p className="mt-4 text-xl text-gray-500">
+          <h1 className="text-4xl font-bold text-white">联系我们</h1>
+          <p className="mt-4 text-xl text-gray-400">
             我们期待听到您的声音，为您提供最专业的教育科研无人机服务
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           {/* Contact Info */}
-          <div className="rounded-lg bg-white p-8 shadow-md">
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">联系方式</h2>
+          <div className="rounded-xl border border-white/10 bg-gray-800/50 p-8 shadow-lg">
+            <h2 className="mb-6 text-2xl font-bold text-white">联系方式</h2>
 
             <div className="space-y-6">
               <ContactItem
@@ -136,8 +136,8 @@ const Contact = () => (
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-lg bg-white p-8 shadow-md">
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">在线咨询</h2>
+          <div className="rounded-xl border border-white/10 bg-gray-800/50 p-8 shadow-lg">
+            <h2 className="mb-6 text-2xl font-bold text-white">在线咨询</h2>
             <form>
               <FormField id="name" label="姓名" placeholder="您的姓名" />
               <FormField
@@ -159,13 +159,13 @@ const Contact = () => (
               />
               <div className="mb-6">
                 <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
+                  className="mb-2 block text-sm font-bold text-gray-200"
                   htmlFor="message"
                 >
                   咨询内容
                 </label>
                 <textarea
-                  className="w-full rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full rounded-lg border border-white/10 bg-dark-800/80 px-3 py-2 leading-tight text-gray-100 shadow-sm placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
                   id="message"
                   rows={4}
                   placeholder="请描述您的需求（如：课程方案咨询、产品采购、科研合作等）"

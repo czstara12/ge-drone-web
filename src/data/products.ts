@@ -10,6 +10,12 @@ export interface Product {
   specs: {
     [key: string]: string;
   };
+  theme: {
+    cardClassName: string;
+    badgeClassName: string;
+    accentClassName: string;
+    buttonClassName: string;
+  };
 }
 
 export const products: Product[] = [
@@ -35,6 +41,13 @@ export const products: Product[] = [
       传感器: 'Lidar + Depth + RGB',
       定位精度: '厘米级',
     },
+    theme: {
+      cardClassName:
+        'border border-primary-500/20 bg-gradient-to-br from-primary-900/40 via-dark-800 to-dark-900 shadow-glow-sm',
+      badgeClassName: 'bg-primary-500 text-white',
+      accentClassName: 'text-primary-400',
+      buttonClassName: 'bg-primary-500 text-white hover:bg-primary-400',
+    },
   },
   {
     id: '2',
@@ -57,6 +70,13 @@ export const products: Product[] = [
       悬停精度: '±1cm',
       定位精度: '0.1m/100m²',
       飞控: 'Pixhawk 6C',
+    },
+    theme: {
+      cardClassName:
+        'border border-blue-500/20 bg-gradient-to-br from-blue-900/40 via-dark-800 to-indigo-950 shadow-glow-sm',
+      badgeClassName: 'bg-blue-500 text-white',
+      accentClassName: 'text-blue-400',
+      buttonClassName: 'bg-blue-500 text-white hover:bg-blue-400',
     },
   },
   {
@@ -81,6 +101,13 @@ export const products: Product[] = [
       定位精度: '1-3cm',
       飞控: 'Pixhawk 4',
     },
+    theme: {
+      cardClassName:
+        'border border-purple-500/20 bg-gradient-to-br from-purple-900/40 via-dark-800 to-indigo-950 shadow-glow-sm',
+      badgeClassName: 'bg-purple-500 text-white',
+      accentClassName: 'text-purple-400',
+      buttonClassName: 'bg-purple-500 text-white hover:bg-purple-400',
+    },
   },
   {
     id: '4',
@@ -104,6 +131,13 @@ export const products: Product[] = [
       预装系统: 'Ubuntu 18.04',
       仿真框架: 'XTDrone',
     },
+    theme: {
+      cardClassName:
+        'border border-emerald-500/20 bg-gradient-to-br from-emerald-900/40 via-dark-800 to-cyan-950 shadow-glow-sm',
+      badgeClassName: 'bg-emerald-500 text-white',
+      accentClassName: 'text-emerald-400',
+      buttonClassName: 'bg-emerald-500 text-white hover:bg-emerald-400',
+    },
   },
   {
     id: '5',
@@ -126,6 +160,13 @@ export const products: Product[] = [
       展开轴距: '85cm',
       飞控系统: 'PX4',
       激光雷达: 'Livox Mid-360',
+    },
+    theme: {
+      cardClassName:
+        'border border-orange-500/20 bg-gradient-to-br from-orange-900/40 via-dark-800 to-amber-950 shadow-glow-sm',
+      badgeClassName: 'bg-orange-500 text-white',
+      accentClassName: 'text-orange-400',
+      buttonClassName: 'bg-orange-500 text-white hover:bg-orange-400',
     },
   },
 ];

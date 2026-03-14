@@ -208,23 +208,23 @@ const WuhaoProduct = () => (
     </div>
 
     {/* 核心参数 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">核心参数</h2>
-        <p className="mt-2 text-gray-600">强载重、超稳定、高精度</p>
+        <h2 className="text-3xl font-bold text-white">核心参数</h2>
+        <p className="mt-2 text-gray-400">强载重、超稳定、高精度</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
         {coreSpecs.map((spec) => (
           <div
             key={spec.label}
-            className="rounded-xl bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-800/60 p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
           >
             <div className="mb-2 text-4xl font-bold text-purple-600">
               {spec.value}
             </div>
-            <div className="mb-2 font-semibold text-gray-900">{spec.label}</div>
-            <div className="text-sm text-gray-500">{spec.desc}</div>
+            <div className="mb-2 font-semibold text-white">{spec.label}</div>
+            <div className="text-sm text-gray-400">{spec.desc}</div>
           </div>
         ))}
       </div>
@@ -233,22 +233,22 @@ const WuhaoProduct = () => (
     {/* 产品特点 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">产品特点</h2>
-        <p className="mt-2 text-gray-600">共轴双桨带来的独特优势</p>
+        <h2 className="text-3xl font-bold text-white">产品特点</h2>
+        <p className="mt-2 text-gray-400">共轴双桨带来的独特优势</p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
+            className="flex items-start gap-4 rounded-lg border border-white/10 bg-gray-800/60 p-6 shadow-sm"
           >
             <div className="shrink-0 text-4xl">{feature.icon}</div>
             <div>
               <h3 className="mb-2 text-xl font-bold text-purple-700">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.desc}</p>
+              <p className="text-gray-400">{feature.desc}</p>
             </div>
           </div>
         ))}
@@ -269,10 +269,10 @@ const WuhaoProduct = () => (
     </Section>
 
     {/* 产品展示 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">产品展示</h2>
-        <p className="mt-2 text-gray-600">全碳纤维保护框架</p>
+        <h2 className="text-3xl font-bold text-white">产品展示</h2>
+        <p className="mt-2 text-gray-400">全碳纤维保护框架</p>
       </div>
 
       <div className="grid items-center gap-8 md:grid-cols-2">
@@ -288,7 +288,7 @@ const WuhaoProduct = () => (
           </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">整体视角</span>
-            <span className="ml-2 text-gray-500">D435 深度相机</span>
+            <span className="ml-2 text-gray-400">D435 深度相机</span>
           </div>
         </div>
         <div className="overflow-hidden rounded-xl shadow-lg">
@@ -303,7 +303,7 @@ const WuhaoProduct = () => (
           </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">俯视角度</span>
-            <span className="ml-2 text-gray-500">Mid-360 激光雷达</span>
+            <span className="ml-2 text-gray-400">Mid-360 激光雷达</span>
           </div>
         </div>
       </div>
@@ -336,8 +336,8 @@ const WuhaoProduct = () => (
     {/* 导航方案 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">导航方案</h2>
-        <p className="mt-2 text-gray-600">多种导航方式可选</p>
+        <h2 className="text-3xl font-bold text-white">导航方案</h2>
+        <p className="mt-2 text-gray-400">多种导航方式可选</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -356,7 +356,7 @@ const WuhaoProduct = () => (
       </div>
 
       <div className="mt-8 rounded-xl bg-gray-100 p-6">
-        <h3 className="mb-3 text-lg font-bold text-gray-900">🗺️ 建图 & 识别</h3>
+        <h3 className="mb-3 text-lg font-bold text-white">🗺️ 建图 & 识别</h3>
         <ul className="space-y-2 text-gray-700">
           <li>
             • <strong>建图</strong>：基于 Mid-360 实时三维建图
@@ -369,14 +369,14 @@ const WuhaoProduct = () => (
     </Section>
 
     {/* 续航表 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">续航能力</h2>
-        <p className="mt-2 text-gray-600">根据电池容量灵活选择</p>
+        <h2 className="text-3xl font-bold text-white">续航能力</h2>
+        <p className="mt-2 text-gray-400">根据电池容量灵活选择</p>
       </div>
 
       <div className="mx-auto max-w-2xl">
-        <div className="overflow-hidden rounded-xl bg-white shadow-md">
+        <div className="overflow-hidden rounded-xl bg-gray-800/60 shadow-md">
           <table className="w-full">
             <thead className="bg-purple-600 text-white">
               <tr>
@@ -389,11 +389,13 @@ const WuhaoProduct = () => (
               {flightTimes.map((item, idx) => (
                 <tr
                   key={item.battery}
-                  className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                  className={
+                    idx % 2 === 0 ? 'bg-gray-800/30' : 'bg-gray-800/60'
+                  }
                 >
                   <td className="px-6 py-4 font-medium">{item.battery}</td>
                   <td className="px-6 py-4 text-purple-600">{item.time}</td>
-                  <td className="px-6 py-4 text-gray-500">{item.note}</td>
+                  <td className="px-6 py-4 text-gray-400">{item.note}</td>
                 </tr>
               ))}
             </tbody>
@@ -405,24 +407,24 @@ const WuhaoProduct = () => (
     {/* 详细规格 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">详细规格</h2>
+        <h2 className="text-3xl font-bold text-white">详细规格</h2>
       </div>
 
-      <div className="mx-auto max-w-2xl rounded-xl bg-white p-6 shadow-md">
+      <div className="mx-auto max-w-2xl rounded-xl bg-gray-800/60 p-6 shadow-md">
         {droneSpecs.map((s) => (
           <div
             key={s.label}
-            className="flex justify-between border-b border-gray-100 py-4 last:border-0"
+            className="flex justify-between border-b border-white/10 py-4 last:border-0"
           >
-            <span className="text-gray-600">{s.label}</span>
-            <span className="font-medium text-gray-900">{s.value}</span>
+            <span className="text-gray-400">{s.label}</span>
+            <span className="font-medium text-white">{s.value}</span>
           </div>
         ))}
       </div>
     </Section>
 
     {/* 发货配套 */}
-    <Section className="bg-purple-50">
+    <Section className="bg-purple-50" titleClassName="text-gray-900">
       <div className="mx-auto max-w-3xl">
         <div className="mb-6 text-center">
           <h2 className="text-2xl font-bold text-gray-900">发货配套</h2>
@@ -450,9 +452,9 @@ const WuhaoProduct = () => (
 
     {/* 版本说明 */}
     <Section>
-      <div className="mx-auto max-w-3xl rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 className="mb-4 text-lg font-bold text-gray-900">📋 版本说明</h3>
-        <p className="mb-3 text-gray-600">
+      <div className="mx-auto max-w-3xl rounded-xl border border-white/10 bg-gray-800/60 p-6 shadow-sm">
+        <h3 className="mb-4 text-lg font-bold text-white">📋 版本说明</h3>
+        <p className="mb-3 text-gray-400">
           当前为<strong>第二版</strong>，相较于第一版的升级：
         </p>
         <ul className="space-y-2 text-gray-700">
@@ -464,7 +466,7 @@ const WuhaoProduct = () => (
           </li>
           <li>• 其它配置保持一致</li>
         </ul>
-        <p className="mt-4 text-sm text-gray-500">
+        <p className="mt-4 text-sm text-gray-400">
           💡 四好学生是五好学生的小型化版本
         </p>
       </div>
@@ -478,7 +480,7 @@ const WuhaoProduct = () => (
           共轴双桨、强载重、超稳定，五好学生助你取得佳绩
         </p>
         <Link href="/contact">
-          <Button xl className="bg-white text-purple-600 hover:bg-purple-50">
+          <Button xl className="bg-purple-500 text-white hover:bg-purple-400">
             立即咨询
           </Button>
         </Link>

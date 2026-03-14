@@ -180,23 +180,23 @@ const SanhaoProduct = () => (
     </div>
 
     {/* 核心参数 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">核心参数</h2>
-        <p className="mt-2 text-gray-600">精准定位，稳定可靠</p>
+        <h2 className="text-3xl font-bold text-white">核心参数</h2>
+        <p className="mt-2 text-gray-400">精准定位，稳定可靠</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
         {coreSpecs.map((spec) => (
           <div
             key={spec.label}
-            className="rounded-xl bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-800/60 p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
           >
             <div className="mb-2 text-4xl font-bold text-blue-600">
               {spec.value}
             </div>
-            <div className="mb-2 font-semibold text-gray-900">{spec.label}</div>
-            <div className="text-sm text-gray-500">{spec.desc}</div>
+            <div className="mb-2 font-semibold text-white">{spec.label}</div>
+            <div className="text-sm text-gray-400">{spec.desc}</div>
           </div>
         ))}
       </div>
@@ -205,8 +205,8 @@ const SanhaoProduct = () => (
     {/* 产品展示 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">产品展示</h2>
-        <p className="mt-2 text-gray-600">碳纤维涵道保护罩，安全可靠</p>
+        <h2 className="text-3xl font-bold text-white">产品展示</h2>
+        <p className="mt-2 text-gray-400">碳纤维涵道保护罩，安全可靠</p>
       </div>
 
       <div className="grid items-center gap-8 md:grid-cols-2">
@@ -222,7 +222,7 @@ const SanhaoProduct = () => (
           </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">俯视图</span>
-            <span className="ml-2 text-gray-500">涵道保护 + 激光雷达</span>
+            <span className="ml-2 text-gray-400">涵道保护 + 激光雷达</span>
           </div>
         </div>
         <div className="overflow-hidden rounded-xl shadow-lg">
@@ -237,7 +237,7 @@ const SanhaoProduct = () => (
           </div>
           <div className="bg-gray-100 p-4 text-center">
             <span className="font-semibold text-gray-700">正面图</span>
-            <span className="ml-2 text-gray-500">前置摄像头 + RPLIDAR</span>
+            <span className="ml-2 text-gray-400">前置摄像头 + RPLIDAR</span>
           </div>
         </div>
       </div>
@@ -270,57 +270,55 @@ const SanhaoProduct = () => (
     {/* 产品功能 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">产品功能</h2>
-        <p className="mt-2 text-gray-600">开箱即用的完整功能套件</p>
+        <h2 className="text-3xl font-bold text-white">产品功能</h2>
+        <p className="mt-2 text-gray-400">开箱即用的完整功能套件</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
         {functions.map((func) => (
           <div
             key={func.title}
-            className="rounded-lg border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+            className="rounded-lg border border-white/10 bg-gray-800/60 p-6 shadow-sm transition-shadow hover:shadow-md"
           >
             <div className="mb-3 text-3xl">{func.icon}</div>
-            <h3 className="mb-2 text-lg font-bold text-gray-900">
-              {func.title}
-            </h3>
-            <p className="text-sm text-gray-600">{func.desc}</p>
+            <h3 className="mb-2 text-lg font-bold text-white">{func.title}</h3>
+            <p className="text-sm text-gray-400">{func.desc}</p>
           </div>
         ))}
       </div>
     </Section>
 
     {/* 详细规格 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">详细技术规格</h2>
+        <h2 className="text-3xl font-bold text-white">详细技术规格</h2>
       </div>
 
       <div className="grid gap-8 md:grid-cols-2">
         {/* 飞行器参数 */}
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md">
           <h3 className="mb-4 text-xl font-bold text-blue-600">飞行器参数</h3>
           {droneSpecs.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
 
         {/* 电池参数 */}
-        <div className="rounded-xl bg-white p-6 shadow-md">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md">
           <h3 className="mb-4 text-xl font-bold text-blue-600">电池 & 续航</h3>
           {batterySpecs.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
 
@@ -330,25 +328,25 @@ const SanhaoProduct = () => (
           {computerSpecs.map((s) => (
             <div
               key={s.label}
-              className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+              className="flex justify-between border-b border-white/10 py-3 last:border-0"
             >
-              <span className="text-gray-600">{s.label}</span>
-              <span className="font-medium text-gray-900">{s.value}</span>
+              <span className="text-gray-400">{s.label}</span>
+              <span className="font-medium text-white">{s.value}</span>
             </div>
           ))}
         </div>
 
         {/* 激光雷达 */}
-        <div className="rounded-xl bg-white p-6 shadow-md md:col-span-2">
+        <div className="rounded-xl bg-gray-800/60 p-6 shadow-md md:col-span-2">
           <h3 className="mb-4 text-xl font-bold text-blue-600">激光雷达参数</h3>
           <div className="grid gap-4 md:grid-cols-2">
             {lidarSpecs.map((s) => (
               <div
                 key={s.label}
-                className="flex justify-between border-b border-gray-100 py-3 last:border-0"
+                className="flex justify-between border-b border-white/10 py-3 last:border-0"
               >
-                <span className="text-gray-600">{s.label}</span>
-                <span className="font-medium text-gray-900">{s.value}</span>
+                <span className="text-gray-400">{s.label}</span>
+                <span className="font-medium text-white">{s.value}</span>
               </div>
             ))}
           </div>
@@ -359,8 +357,8 @@ const SanhaoProduct = () => (
     {/* 软件系统 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">软件系统</h2>
-        <p className="mt-2 text-gray-600">开源友好，二次开发无门槛</p>
+        <h2 className="text-3xl font-bold text-white">软件系统</h2>
+        <p className="mt-2 text-gray-400">开源友好，二次开发无门槛</p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-3">
@@ -397,7 +395,7 @@ const SanhaoProduct = () => (
     </Section>
 
     {/* 使用环境说明 */}
-    <Section className="bg-yellow-50">
+    <Section className="bg-yellow-50" titleClassName="text-gray-900">
       <div className="mx-auto max-w-3xl text-center">
         <div className="mb-4 text-4xl">⚠️</div>
         <h2 className="mb-4 text-2xl font-bold text-gray-900">使用环境要求</h2>
@@ -426,7 +424,7 @@ const SanhaoProduct = () => (
           轻量化、高性价比，适合教学入门、竞赛准备、算法验证
         </p>
         <Link href="/contact">
-          <Button xl className="bg-white text-blue-600 hover:bg-blue-50">
+          <Button xl className="bg-blue-500 text-white hover:bg-blue-400">
             立即咨询
           </Button>
         </Link>

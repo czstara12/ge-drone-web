@@ -167,16 +167,16 @@ const SimPlatform = () => (
               </div>
               <div className="space-y-2">
                 <p>
-                  <span className="text-gray-500">$</span> wsl --import
+                  <span className="text-gray-400">$</span> wsl --import
                   Ubuntu-18.04 ...
                 </p>
                 <p className="text-emerald-300">✓ XTDrone 平台导入成功</p>
                 <p>
-                  <span className="text-gray-500">$</span> terminator
+                  <span className="text-gray-400">$</span> terminator
                 </p>
                 <p className="text-emerald-300">✓ 启动终端</p>
                 <p>
-                  <span className="text-gray-500">$</span> roslaunch px4_gazebo
+                  <span className="text-gray-400">$</span> roslaunch px4_gazebo
                   ...
                 </p>
                 <p className="text-emerald-300">✓ Gazebo 仿真环境启动</p>
@@ -189,25 +189,25 @@ const SimPlatform = () => (
     </div>
 
     {/* 核心特点 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">
+        <h2 className="text-3xl font-bold text-white">
           为什么选择我们的预装平台？
         </h2>
-        <p className="mt-2 text-gray-600">省去数天配置时间，专注于算法研究</p>
+        <p className="mt-2 text-gray-400">省去数天配置时间，专注于算法研究</p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-4">
         {coreFeatures.map((spec) => (
           <div
             key={spec.label}
-            className="rounded-xl bg-white p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gray-800/60 p-6 text-center shadow-lg transition-transform hover:-translate-y-1"
           >
             <div className="mb-2 text-4xl font-bold text-emerald-600">
               {spec.value}
             </div>
-            <div className="mb-2 font-semibold text-gray-900">{spec.label}</div>
-            <div className="text-sm text-gray-500">{spec.desc}</div>
+            <div className="mb-2 font-semibold text-white">{spec.label}</div>
+            <div className="text-sm text-gray-400">{spec.desc}</div>
           </div>
         ))}
       </div>
@@ -217,7 +217,7 @@ const SimPlatform = () => (
     <Section>
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">告别这些烦恼</h2>
+          <h2 className="text-3xl font-bold text-white">告别这些烦恼</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -276,8 +276,8 @@ const SimPlatform = () => (
     {/* 适用场景 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">适用场景</h2>
-        <p className="mt-2 text-gray-600">无论是科研、教学还是竞赛</p>
+        <h2 className="text-3xl font-bold text-white">适用场景</h2>
+        <p className="mt-2 text-gray-400">无论是科研、教学还是竞赛</p>
       </div>
 
       <div className="grid gap-8 md:grid-cols-4">
@@ -286,18 +286,18 @@ const SimPlatform = () => (
             <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-100 text-3xl">
               {uc.icon}
             </div>
-            <h3 className="mb-2 text-lg font-bold text-gray-900">{uc.title}</h3>
-            <p className="text-sm text-gray-600">{uc.desc}</p>
+            <h3 className="mb-2 text-lg font-bold text-white">{uc.title}</h3>
+            <p className="text-sm text-gray-400">{uc.desc}</p>
           </div>
         ))}
       </div>
     </Section>
 
     {/* 版本对比 */}
-    <Section className="bg-gray-50">
+    <Section className="bg-gray-800/30">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">选择版本</h2>
-        <p className="mt-2 text-gray-600">两种版本，满足不同需求</p>
+        <h2 className="text-3xl font-bold text-white">选择版本</h2>
+        <p className="mt-2 text-gray-400">两种版本，满足不同需求</p>
       </div>
 
       <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -306,8 +306,8 @@ const SimPlatform = () => (
             key={edition.name}
             className={`rounded-xl p-8 ${
               edition.highlight
-                ? 'border-2 border-emerald-500 bg-white shadow-xl'
-                : 'border border-gray-200 bg-white shadow-md'
+                ? 'border-2 border-emerald-500 bg-gray-800/60 shadow-xl'
+                : 'border border-white/10 bg-gray-800/60 shadow-md'
             }`}
           >
             {edition.highlight && (
@@ -315,12 +315,12 @@ const SimPlatform = () => (
                 推荐
               </div>
             )}
-            <h3 className="mb-6 text-2xl font-bold text-gray-900">
+            <h3 className="mb-6 text-2xl font-bold text-white">
               {edition.name}
             </h3>
             <ul className="mb-8 space-y-3">
               {edition.features.map((f, idx) => (
-                <li key={idx} className="flex items-center text-gray-600">
+                <li key={idx} className="flex items-center text-gray-400">
                   <span className="mr-2 text-emerald-500">✓</span>
                   {f}
                 </li>
@@ -344,23 +344,23 @@ const SimPlatform = () => (
     {/* 系统要求 */}
     <Section>
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">系统要求</h2>
-        <p className="mt-2 text-gray-600">确保您的电脑满足以下配置</p>
+        <h2 className="text-3xl font-bold text-white">系统要求</h2>
+        <p className="mt-2 text-gray-400">确保您的电脑满足以下配置</p>
       </div>
 
       <div className="mx-auto max-w-2xl">
-        <div className="rounded-xl bg-gray-50 p-6">
+        <div className="rounded-xl bg-gray-800/30 p-6">
           {requirements.map((req, idx) => (
             <div
               key={req.label}
               className={`flex justify-between py-4 ${
                 idx !== requirements.length - 1
-                  ? 'border-b border-gray-200'
+                  ? 'border-b border-white/10'
                   : ''
               }`}
             >
               <span className="font-medium text-gray-700">{req.label}</span>
-              <span className="text-gray-900">{req.value}</span>
+              <span className="text-white">{req.value}</span>
             </div>
           ))}
         </div>
@@ -368,11 +368,11 @@ const SimPlatform = () => (
     </Section>
 
     {/* 配套资源 */}
-    <Section className="bg-emerald-50">
+    <Section className="bg-emerald-50" titleClassName="text-gray-900">
       <div className="mx-auto max-w-4xl text-center">
         <div className="mb-4 text-4xl">📚</div>
         <h2 className="mb-4 text-2xl font-bold text-gray-900">配套学习资源</h2>
-        <p className="mb-6 text-gray-600">
+        <p className="mb-6 text-gray-400">
           B 站提供完整的 XTDrone 29
           讲视频教程，从入门到精通，手把手带你学会仿真平台。
         </p>
@@ -395,7 +395,7 @@ const SimPlatform = () => (
           省去繁琐配置，专注于你的算法研究
         </p>
         <Link href="/contact">
-          <Button xl className="bg-white text-emerald-600 hover:bg-emerald-50">
+          <Button xl className="bg-emerald-500 text-white hover:bg-emerald-400">
             立即咨询
           </Button>
         </Link>
