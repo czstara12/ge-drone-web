@@ -182,7 +182,7 @@ const WuhaoProduct = () => (
                 <Button xl>立即咨询</Button>
               </Link>
               <a
-                href="https://www.bilibili.com/video/BV1bm4y1N7u1/"
+                href="https://www.bilibili.com/video/BV1r4421U7Rk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-md border-2 border-white/50 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
@@ -258,7 +258,7 @@ const WuhaoProduct = () => (
       <div className="mt-8 rounded-xl bg-purple-50 p-6 text-center">
         <p className="mb-3 text-purple-800">🎬 超稳定定点飞行效果展示</p>
         <a
-          href="https://www.bilibili.com/video/BV1o3411G7dx/"
+          href="https://www.bilibili.com/video/BV1YaxseEEqh"
           target="_blank"
           rel="noopener noreferrer"
           className="text-purple-600 underline hover:text-purple-700"
