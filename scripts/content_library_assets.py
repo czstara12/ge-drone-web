@@ -38,6 +38,16 @@ USE_HINTS = [
     ("product", ("无人机", "外观", "机架", "折叠")),
 ]
 
+DISPLAY_LABELS = {
+    "pointcloud": "点云/扫描",
+    "wiring": "接线/配置",
+    "install": "安装流程",
+    "remote-control": "遥控器/交互",
+    "hardware": "硬件",
+    "product": "产品图",
+    "image": "图片",
+}
+
 IMAGE_PATTERNS = [
     re.compile(r'<img\b[^>]*?\bsrc="([^"]+)"[^>]*>', re.IGNORECASE),
     re.compile(r"!\[[^\]]*\]\(([^)]+)\)"),
@@ -106,20 +116,20 @@ def read_image(ref: ImageRef, allow_network: bool) -> tuple[bytes | None, str, d
     raw = ref.raw.strip()
     if raw.startswith(("http://", "https://")):
         if not allow_network:
-            return None, "missing: network disabled", {}
+            return None, "缺失：未启用网络下载", {}
         req = urllib.request.Request(raw, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=30) as response:
             content = response.read()
             headers = {key: value for key, value in response.headers.items()}
-            return content, "downloaded", headers
+            return content, "已下载", headers
 
     local_path = (ref.source_doc.parent / raw).resolve()
     if not local_path.exists():
         local_path = (SOURCE_ROOT / raw).resolve()
     if not local_path.exists():
-        return None, f"missing: {raw}", {}
+        return None, f"缺失：{raw}", {}
 
-    return local_path.read_bytes(), "copied", {}
+    return local_path.read_bytes(), "已迁入", {}
 
 
 def short_hash(content: bytes | str) -> str:
@@ -147,9 +157,9 @@ def manifest_row(local_file: str, source: str, source_doc: Path, original: str, 
 
 def update_manifests(rows_by_dir: dict[Path, list[str]]) -> None:
     header = [
-        "# Image Manifest",
+        "# 图片清单",
         "",
-        "| Local File | Source URL Or Path | Source Document | Original ID Or Alt | Suggested Use | Website Ready | Notes |",
+        "| 本地文件 | 来源 URL 或路径 | 来源文档 | 原始编号或 Alt | 建议用途 | 网站可用状态 | 备注 |",
         "| --- | --- | --- | --- | --- | --- | --- |",
     ]
     for directory, rows in sorted(rows_by_dir.items()):
@@ -197,7 +207,7 @@ def collect_assets(allow_network: bool) -> None:
                         seen_content[digest] = target_path
                     else:
                         manifest_file = existing.relative_to(ROOT).as_posix()
-                        notes = f"duplicate content; canonical file is `{manifest_file}`"
+                        notes = f"重复图片；canonical 文件为 `{manifest_file}`"
 
                 rows_by_dir.setdefault(target_dir, []).append(
                     manifest_row(
@@ -205,8 +215,8 @@ def collect_assets(allow_network: bool) -> None:
                         source=ref.raw,
                         source_doc=source_doc,
                         original=f"image-{ref.ordinal}",
-                        suggested_use=label,
-                        ready="Review",
+                        suggested_use=DISPLAY_LABELS.get(label, label),
+                        ready="待审核",
                         notes=notes,
                     )
                 )
