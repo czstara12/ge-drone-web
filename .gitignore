@@ -30,7 +30,6 @@ yarn-error.log*
 
 # local folder
 local
-.worktrees
 
 # vercel
 .vercel
