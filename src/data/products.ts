@@ -24,22 +24,22 @@ export const products: Product[] = [
     slug: 'liyumen-x8',
     name: '鲤鱼门-X8',
     description:
-      '专业勘测无人机，配备 Odin1 传感器模组，高精度 Lidar、RGB 相机一体化设计，为勘测任务提供精准、高效的解决方案。',
+      '工业级勘测无人机，致力于解决地下隧道、矿山、林业等复杂受限空间难题，实现无GNSS信号下的高可靠自主飞行和"一比一现实还原"建图。',
     price: '询价',
-    category: '专业勘测',
+    category: '工业勘测',
     image: '/images/products/drone-product-real.jpg',
     features: [
-      '笼式安全型设计',
+      '无GNSS信号高可靠自主飞行',
       'Odin1 高精度传感器模组',
-      'RTK 级 GPS 定位',
-      '21 分钟续航时间',
+      '三维彩色点云现实还原',
+      '最高70万点/秒高密度点云',
     ],
     specs: {
-      最大飞行速度: '70km/h',
-      最大飞行时间: '21min',
-      最大带载重量: '350g',
-      传感器: 'Lidar + Depth + RGB',
-      定位精度: '厘米级',
+      飞行速度: '5m/s max',
+      续航时间: '12min/18min',
+      最大起飞质量: '4000g',
+      相机: '深度240x180 + RGB1600x1296',
+      抗风等级: '5级',
     },
     theme: {
       cardClassName:
