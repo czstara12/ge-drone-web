@@ -73,7 +73,23 @@
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/products/sanhao/_manifest.md`。
+图片来源清单：`docs/content-library/assets/products/sanhao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：产品图
+
+- 来源：`out/p/3hao.md`
+- 文件：`docs/content-library/assets/products/sanhao/sanhao-product-001-885e3cb1.jpg`
+- 备注：已下载
+
+![sanhao image-1 产品图](../assets/products/sanhao/sanhao-product-001-885e3cb1.jpg)
+
+### image-2：接线/配置
+
+- 来源：`out/p/3hao.md`
+- 文件：`docs/content-library/assets/products/sanhao/sanhao-wiring-002-aa443109.jpg`
+- 备注：已下载
+
+![sanhao image-2 接线/配置](../assets/products/sanhao/sanhao-wiring-002-aa443109.jpg)
 
 ## 来源备注
 

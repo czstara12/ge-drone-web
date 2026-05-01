@@ -73,7 +73,55 @@
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/products/wuhao/_manifest.md`。
+图片来源清单：`docs/content-library/assets/products/wuhao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：硬件
+
+- 来源：`out/p/5hao.md`
+- 文件：`docs/content-library/assets/products/wuhao/wuhao-hardware-001-81ffb8fe.jpg`
+- 备注：已下载
+
+![wuhao image-1 硬件](../assets/products/wuhao/wuhao-hardware-001-81ffb8fe.jpg)
+
+### image-2：硬件
+
+- 来源：`out/p/5hao.md`
+- 文件：`docs/content-library/assets/products/wuhao/wuhao-hardware-002-2cceab3a.jpg`
+- 备注：已下载
+
+![wuhao image-2 硬件](../assets/products/wuhao/wuhao-hardware-002-2cceab3a.jpg)
+
+### image-3：接线/配置
+
+- 来源：`out/p/5hao.md`
+- 文件：`docs/content-library/assets/products/wuhao/wuhao-wiring-003-8a252efc.jpg`
+- 备注：已下载
+
+![wuhao image-3 接线/配置](../assets/products/wuhao/wuhao-wiring-003-8a252efc.jpg)
+
+### image-4：图片
+
+- 来源：`out/p/5hao.md`
+- 文件：`docs/content-library/assets/products/wuhao/wuhao-image-004-2141b9a6.jpg`
+- 备注：已下载
+
+![wuhao image-4 图片](../assets/products/wuhao/wuhao-image-004-2141b9a6.jpg)
+
+### image-5：图片
+
+- 来源：`out/p/5hao.md`
+- 文件：`docs/content-library/assets/products/wuhao/wuhao-image-005-b644cfc0.png`
+- 备注：已下载
+
+![wuhao image-5 图片](../assets/products/wuhao/wuhao-image-005-b644cfc0.png)
+
+### image-6：硬件
+
+- 来源：`out/p/5hao.md`
+- 文件：`docs/content-library/assets/products/wuhao/wuhao-hardware-006-872e1108.png`
+- 备注：已下载
+
+![wuhao image-6 硬件](../assets/products/wuhao/wuhao-hardware-006-872e1108.png)
 
 ## 来源备注
 

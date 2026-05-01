@@ -87,7 +87,47 @@ roslaunch simulation ros_Auto2Dnav_demo_px4.launch
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/wiki/sim-matlab-vm-guide/_manifest.md`。
+图片来源清单：`docs/content-library/assets/wiki/sim-matlab-vm-guide/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：安装流程
+
+- 来源：`out/p/gd-sim-matlab.md`
+- 文件：`docs/content-library/assets/products/sim-platform/sim-platform-install-001-40d11226.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sim-platform/sim-platform-install-001-40d11226.png`
+
+![sim-matlab-vm-guide image-1 安装流程](../assets/products/sim-platform/sim-platform-install-001-40d11226.png)
+
+### image-2：产品图
+
+- 来源：`out/p/gd-sim-matlab.md`
+- 文件：`docs/content-library/assets/products/sim-platform/sim-platform-product-002-a9d3e1e1.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sim-platform/sim-platform-product-002-a9d3e1e1.png`
+
+![sim-matlab-vm-guide image-2 产品图](../assets/products/sim-platform/sim-platform-product-002-a9d3e1e1.png)
+
+### image-3：接线/配置
+
+- 来源：`out/p/gd-sim-matlab.md`
+- 文件：`docs/content-library/assets/products/sim-platform/sim-platform-wiring-003-2cb3ba81.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sim-platform/sim-platform-wiring-003-2cb3ba81.png`
+
+![sim-matlab-vm-guide image-3 接线/配置](../assets/products/sim-platform/sim-platform-wiring-003-2cb3ba81.png)
+
+### image-4：安装流程
+
+- 来源：`out/p/gd-sim-matlab.md`
+- 文件：`docs/content-library/assets/products/sim-platform/sim-platform-install-004-ac75337c.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sim-platform/sim-platform-install-004-ac75337c.png`
+
+![sim-matlab-vm-guide image-4 安装流程](../assets/products/sim-platform/sim-platform-install-004-ac75337c.png)
+
+### image-5：安装流程
+
+- 来源：`out/p/gd-sim-matlab.md`
+- 文件：`docs/content-library/assets/products/sim-platform/sim-platform-install-005-c539d2a9.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sim-platform/sim-platform-install-005-c539d2a9.png`
+
+![sim-matlab-vm-guide image-5 安装流程](../assets/products/sim-platform/sim-platform-install-005-c539d2a9.png)
 
 ## 来源备注
 

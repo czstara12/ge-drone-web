@@ -88,7 +88,423 @@
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/wiki/456-series-operation-guide/_manifest.md`。
+图片来源清单：`docs/content-library/assets/wiki/456-series-operation-guide/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-001-9e708c65.png`
+- 备注：已下载
+
+![456-series-operation-guide image-1 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-001-9e708c65.png)
+
+### image-2：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-002-74b6b8d2.png`
+- 备注：已下载
+
+![456-series-operation-guide image-2 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-002-74b6b8d2.png)
+
+### image-3：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-003-b6a6b89e.png`
+- 备注：已下载
+
+![456-series-operation-guide image-3 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-003-b6a6b89e.png)
+
+### image-4：遥控器/交互
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-004-b5041380.png`
+- 备注：已下载
+
+![456-series-operation-guide image-4 遥控器/交互](../assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-004-b5041380.png)
+
+### image-5：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-image-005-b5bdee8f.png`
+- 备注：已下载
+
+![456-series-operation-guide image-5 图片](../assets/wiki/456-series-operation-guide/456-series-operation-guide-image-005-b5bdee8f.png)
+
+### image-6：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-006-e5419ad9.png`
+- 备注：已下载
+
+![456-series-operation-guide image-6 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-006-e5419ad9.png)
+
+### image-7：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-007-d0347de8.png`
+- 备注：已下载
+
+![456-series-operation-guide image-7 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-007-d0347de8.png)
+
+### image-8：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-008-fb175efc.png`
+- 备注：已下载
+
+![456-series-operation-guide image-8 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-008-fb175efc.png)
+
+### image-9：安装流程
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-install-009-7ac2e744.png`
+- 备注：已下载
+
+![456-series-operation-guide image-9 安装流程](../assets/wiki/456-series-operation-guide/456-series-operation-guide-install-009-7ac2e744.png)
+
+### image-10：安装流程
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-install-010-6d13cc7a.png`
+- 备注：已下载
+
+![456-series-operation-guide image-10 安装流程](../assets/wiki/456-series-operation-guide/456-series-operation-guide-install-010-6d13cc7a.png)
+
+### image-11：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
+
+![456-series-operation-guide image-11 图片](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
+
+### image-12：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-image-012-635802c4.png`
+- 备注：已下载
+
+![456-series-operation-guide image-12 图片](../assets/wiki/456-series-operation-guide/456-series-operation-guide-image-012-635802c4.png)
+
+### image-13：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-013-efdd9853.png`
+- 备注：已下载
+
+![456-series-operation-guide image-13 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-013-efdd9853.png)
+
+### image-14：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-014-8bb40996.jpg`
+- 备注：已下载
+
+![456-series-operation-guide image-14 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-014-8bb40996.jpg)
+
+### image-15：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-015-eca41615.png`
+- 备注：已下载
+
+![456-series-operation-guide image-15 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-015-eca41615.png)
+
+### image-16：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-016-a6cf93f2.png`
+- 备注：已下载
+
+![456-series-operation-guide image-16 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-016-a6cf93f2.png)
+
+### image-17：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-017-b9038a6f.png`
+- 备注：已下载
+
+![456-series-operation-guide image-17 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-017-b9038a6f.png)
+
+### image-18：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-018-26e9bbdb.png`
+- 备注：已下载
+
+![456-series-operation-guide image-18 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-018-26e9bbdb.png)
+
+### image-19：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-019-bbe2bcc2.png`
+- 备注：已下载
+
+![456-series-operation-guide image-19 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-019-bbe2bcc2.png)
+
+### image-20：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-020-acfa2d0f.png`
+- 备注：已下载
+
+![456-series-operation-guide image-20 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-020-acfa2d0f.png)
+
+### image-21：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-021-63762e6d.png`
+- 备注：已下载
+
+![456-series-operation-guide image-21 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-021-63762e6d.png)
+
+### image-22：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-022-5f4f79a0.png`
+- 备注：已下载
+
+![456-series-operation-guide image-22 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-022-5f4f79a0.png)
+
+### image-23：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-023-95f6a86c.png`
+- 备注：已下载
+
+![456-series-operation-guide image-23 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-023-95f6a86c.png)
+
+### image-24：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-image-024-6c95cd6f.png`
+- 备注：已下载
+
+![456-series-operation-guide image-24 图片](../assets/wiki/456-series-operation-guide/456-series-operation-guide-image-024-6c95cd6f.png)
+
+### image-25：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-025-39e8feba.png`
+- 备注：已下载
+
+![456-series-operation-guide image-25 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-025-39e8feba.png)
+
+### image-26：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-026-278ada5e.png`
+- 备注：已下载
+
+![456-series-operation-guide image-26 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-026-278ada5e.png)
+
+### image-27：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-027-5d704bca.png`
+- 备注：已下载
+
+![456-series-operation-guide image-27 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-027-5d704bca.png)
+
+### image-28：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-028-0ed6b1db.png`
+- 备注：已下载
+
+![456-series-operation-guide image-28 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-028-0ed6b1db.png)
+
+### image-29：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-029-9cd1dad0.png`
+- 备注：已下载
+
+![456-series-operation-guide image-29 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-029-9cd1dad0.png)
+
+### image-30：产品图
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-product-030-982e6b3d.png`
+- 备注：已下载
+
+![456-series-operation-guide image-30 产品图](../assets/wiki/456-series-operation-guide/456-series-operation-guide-product-030-982e6b3d.png)
+
+### image-31：遥控器/交互
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-031-423261ff.png`
+- 备注：已下载
+
+![456-series-operation-guide image-31 遥控器/交互](../assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-031-423261ff.png)
+
+### image-32：遥控器/交互
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-032-d069dc2d.png`
+- 备注：已下载
+
+![456-series-operation-guide image-32 遥控器/交互](../assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-032-d069dc2d.png)
+
+### image-33：产品图
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-product-033-785a47cb.png`
+- 备注：已下载
+
+![456-series-operation-guide image-33 产品图](../assets/wiki/456-series-operation-guide/456-series-operation-guide-product-033-785a47cb.png)
+
+### image-34：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-034-e0ef75f1.png`
+- 备注：已下载
+
+![456-series-operation-guide image-34 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-034-e0ef75f1.png)
+
+### image-35：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-035-868bdff9.png`
+- 备注：已下载
+
+![456-series-operation-guide image-35 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-035-868bdff9.png)
+
+### image-36：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-036-a96476cf.png`
+- 备注：已下载
+
+![456-series-operation-guide image-36 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-036-a96476cf.png)
+
+### image-37：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-037-0039cf61.png`
+- 备注：已下载
+
+![456-series-operation-guide image-37 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-037-0039cf61.png)
+
+### image-38：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-038-ee126ee6.png`
+- 备注：已下载
+
+![456-series-operation-guide image-38 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-038-ee126ee6.png)
+
+### image-39：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-039-0588f99b.png`
+- 备注：已下载
+
+![456-series-operation-guide image-39 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-039-0588f99b.png)
+
+### image-40：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-image-040-5ab8eda1.png`
+- 备注：已下载
+
+![456-series-operation-guide image-40 图片](../assets/wiki/456-series-operation-guide/456-series-operation-guide-image-040-5ab8eda1.png)
+
+### image-41：安装流程
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-install-041-06e2706e.png`
+- 备注：已下载
+
+![456-series-operation-guide image-41 安装流程](../assets/wiki/456-series-operation-guide/456-series-operation-guide-install-041-06e2706e.png)
+
+### image-42：安装流程
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-install-042-2338b744.png`
+- 备注：已下载
+
+![456-series-operation-guide image-42 安装流程](../assets/wiki/456-series-operation-guide/456-series-operation-guide-install-042-2338b744.png)
+
+### image-43：点云/扫描
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-pointcloud-043-39a7a1fa.png`
+- 备注：已下载
+
+![456-series-operation-guide image-43 点云/扫描](../assets/wiki/456-series-operation-guide/456-series-operation-guide-pointcloud-043-39a7a1fa.png)
+
+### image-44：接线/配置
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-044-1316c74d.png`
+- 备注：已下载
+
+![456-series-operation-guide image-44 接线/配置](../assets/wiki/456-series-operation-guide/456-series-operation-guide-wiring-044-1316c74d.png)
+
+### image-45：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-045-ff3f6a64.png`
+- 备注：已下载
+
+![456-series-operation-guide image-45 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-045-ff3f6a64.png)
+
+### image-46：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-046-01d50b81.png`
+- 备注：已下载
+
+![456-series-operation-guide image-46 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-046-01d50b81.png)
+
+### image-47：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-047-83963ade.png`
+- 备注：已下载
+
+![456-series-operation-guide image-47 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-047-83963ade.png)
+
+### image-48：遥控器/交互
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-048-42fdacfe.png`
+- 备注：已下载
+
+![456-series-operation-guide image-48 遥控器/交互](../assets/wiki/456-series-operation-guide/456-series-operation-guide-remote-control-048-42fdacfe.png)
+
+### image-49：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-049-248dc6aa.png`
+- 备注：已下载
+
+![456-series-operation-guide image-49 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-049-248dc6aa.png)
+
+### image-50：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-image-050-5999c304.png`
+- 备注：已下载
+
+![456-series-operation-guide image-50 图片](../assets/wiki/456-series-operation-guide/456-series-operation-guide-image-050-5999c304.png)
+
+### image-51：图片
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-image-051-13a87e4a.png`
+- 备注：已下载
+
+![456-series-operation-guide image-51 图片](../assets/wiki/456-series-operation-guide/456-series-operation-guide-image-051-13a87e4a.png)
+
+### image-52：硬件
+
+- 来源：`out/p/456wiki.md`
+- 文件：`docs/content-library/assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-052-ce67378d.png`
+- 备注：已下载
+
+![456-series-operation-guide image-52 硬件](../assets/wiki/456-series-operation-guide/456-series-operation-guide-hardware-052-ce67378d.png)
 
 ## 来源备注
 

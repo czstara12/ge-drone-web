@@ -66,7 +66,55 @@
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/products/qihao/_manifest.md`。
+图片来源清单：`docs/content-library/assets/products/qihao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：产品图
+
+- 来源：`out/p/7hao.md`
+- 文件：`docs/content-library/assets/products/qihao/qihao-product-001-328cbb22.jpg`
+- 备注：已下载
+
+![qihao image-1 产品图](../assets/products/qihao/qihao-product-001-328cbb22.jpg)
+
+### image-2：图片
+
+- 来源：`out/p/7hao.md`
+- 文件：`docs/content-library/assets/products/qihao/qihao-image-002-594d2c5c.jpg`
+- 备注：已下载
+
+![qihao image-2 图片](../assets/products/qihao/qihao-image-002-594d2c5c.jpg)
+
+### image-3：图片
+
+- 来源：`out/p/7hao.md`
+- 文件：`docs/content-library/assets/products/qihao/qihao-image-003-c4cc14e8.jpg`
+- 备注：已下载
+
+![qihao image-3 图片](../assets/products/qihao/qihao-image-003-c4cc14e8.jpg)
+
+### image-4：图片
+
+- 来源：`out/p/7hao.md`
+- 文件：`docs/content-library/assets/products/qihao/qihao-image-004-9be02494.jpg`
+- 备注：已下载
+
+![qihao image-4 图片](../assets/products/qihao/qihao-image-004-9be02494.jpg)
+
+### image-5：图片
+
+- 来源：`out/p/7hao.md`
+- 文件：`docs/content-library/assets/products/qihao/qihao-image-005-5a5363a3.jpg`
+- 备注：已下载
+
+![qihao image-5 图片](../assets/products/qihao/qihao-image-005-5a5363a3.jpg)
+
+### image-6：接线/配置
+
+- 来源：`out/p/7hao.md`
+- 文件：`docs/content-library/assets/products/qihao/qihao-wiring-006-8dfc7c0f.jpg`
+- 备注：已下载
+
+![qihao image-6 接线/配置](../assets/products/qihao/qihao-wiring-006-8dfc7c0f.jpg)
 
 ## 来源备注
 

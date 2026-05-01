@@ -67,7 +67,71 @@
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/products/sihao/_manifest.md`。
+图片来源清单：`docs/content-library/assets/products/sihao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：接线/配置
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
+- 备注：已下载
+
+![sihao image-1 接线/配置](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
+
+### image-2：硬件
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-hardware-002-d0a7b935.png`
+- 备注：已下载
+
+![sihao image-2 硬件](../assets/products/sihao/sihao-hardware-002-d0a7b935.png)
+
+### image-3：图片
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-image-003-f84e76b7.png`
+- 备注：已下载
+
+![sihao image-3 图片](../assets/products/sihao/sihao-image-003-f84e76b7.png)
+
+### image-4：图片
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-image-004-ef140058.jpg`
+- 备注：已下载
+
+![sihao image-4 图片](../assets/products/sihao/sihao-image-004-ef140058.jpg)
+
+### image-5：图片
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-image-005-1dc2279f.png`
+- 备注：已下载
+
+![sihao image-5 图片](../assets/products/sihao/sihao-image-005-1dc2279f.png)
+
+### image-6：图片
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-image-006-36865d67.png`
+- 备注：已下载
+
+![sihao image-6 图片](../assets/products/sihao/sihao-image-006-36865d67.png)
+
+### image-7：图片
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-image-007-13f1d371.png`
+- 备注：已下载
+
+![sihao image-7 图片](../assets/products/sihao/sihao-image-007-13f1d371.png)
+
+### image-8：硬件
+
+- 来源：`out/p/4hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-hardware-008-49b1895b.png`
+- 备注：已下载
+
+![sihao image-8 硬件](../assets/products/sihao/sihao-hardware-008-49b1895b.png)
 
 ## 来源备注
 

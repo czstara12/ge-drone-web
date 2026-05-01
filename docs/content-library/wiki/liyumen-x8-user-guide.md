@@ -73,7 +73,287 @@ MindCloud Studio 支持扫描数据处理，包括高效空间数据标注与处
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/wiki/liyumen-x8-user-guide/_manifest.md`。
+图片来源清单：`docs/content-library/assets/wiki/liyumen-x8-user-guide/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：点云/扫描
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-001-1b9dc446.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-001-1b9dc446.png`
+
+![liyumen-x8-user-guide image-1 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-001-1b9dc446.png)
+
+### image-2：硬件
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-002-5482330a.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-002-5482330a.png`
+
+![liyumen-x8-user-guide image-2 硬件](../assets/products/liyumen-x8/liyumen-x8-hardware-002-5482330a.png)
+
+### image-3：点云/扫描
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-003-5bebdeed.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-003-5bebdeed.png`
+
+![liyumen-x8-user-guide image-3 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-003-5bebdeed.png)
+
+### image-4：点云/扫描
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-004-73ec7004.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-004-73ec7004.png`
+
+![liyumen-x8-user-guide image-4 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-004-73ec7004.png)
+
+### image-14：接线/配置
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-014-9fa751b7.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-014-9fa751b7.png`
+
+![liyumen-x8-user-guide image-14 接线/配置](../assets/products/liyumen-x8/liyumen-x8-wiring-014-9fa751b7.png)
+
+### image-15：接线/配置
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-015-c9cc0fd3.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-015-c9cc0fd3.png`
+
+![liyumen-x8-user-guide image-15 接线/配置](../assets/products/liyumen-x8/liyumen-x8-wiring-015-c9cc0fd3.png)
+
+### image-16：接线/配置
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-016-9db6501a.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-016-9db6501a.png`
+
+![liyumen-x8-user-guide image-16 接线/配置](../assets/products/liyumen-x8/liyumen-x8-wiring-016-9db6501a.png)
+
+### image-17：接线/配置
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-017-5b57e931.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-017-5b57e931.png`
+
+![liyumen-x8-user-guide image-17 接线/配置](../assets/products/liyumen-x8/liyumen-x8-wiring-017-5b57e931.png)
+
+### image-18：硬件
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-018-1e1440c1.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-018-1e1440c1.png`
+
+![liyumen-x8-user-guide image-18 硬件](../assets/products/liyumen-x8/liyumen-x8-hardware-018-1e1440c1.png)
+
+### image-19：硬件
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-019-41a7c1ef.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-019-41a7c1ef.png`
+
+![liyumen-x8-user-guide image-19 硬件](../assets/products/liyumen-x8/liyumen-x8-hardware-019-41a7c1ef.png)
+
+### image-20：点云/扫描
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-020-f76ca4cc.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-020-f76ca4cc.png`
+
+![liyumen-x8-user-guide image-20 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-020-f76ca4cc.png)
+
+### image-21：点云/扫描
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-021-f1ca3265.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-021-f1ca3265.png`
+
+![liyumen-x8-user-guide image-21 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-021-f1ca3265.png)
+
+### image-22：硬件
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-022-c2b46718.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-022-c2b46718.png`
+
+![liyumen-x8-user-guide image-22 硬件](../assets/products/liyumen-x8/liyumen-x8-hardware-022-c2b46718.png)
+
+### image-23：硬件
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-023-395f88dd.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-023-395f88dd.png`
+
+![liyumen-x8-user-guide image-23 硬件](../assets/products/liyumen-x8/liyumen-x8-hardware-023-395f88dd.png)
+
+### image-24：硬件
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-024-d72f91b4.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-hardware-024-d72f91b4.png`
+
+![liyumen-x8-user-guide image-24 硬件](../assets/products/liyumen-x8/liyumen-x8-hardware-024-d72f91b4.png)
+
+### image-25：遥控器/交互
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-remote-control-025-a5e1190b.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-remote-control-025-a5e1190b.png`
+
+![liyumen-x8-user-guide image-25 遥控器/交互](../assets/products/liyumen-x8/liyumen-x8-remote-control-025-a5e1190b.png)
+
+### image-26：接线/配置
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-026-b749d1b5.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-wiring-026-b749d1b5.png`
+
+![liyumen-x8-user-guide image-26 接线/配置](../assets/products/liyumen-x8/liyumen-x8-wiring-026-b749d1b5.png)
+
+### image-27：图片
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-027-4b402992.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-027-4b402992.png`
+
+![liyumen-x8-user-guide image-27 图片](../assets/products/liyumen-x8/liyumen-x8-image-027-4b402992.png)
+
+### image-28：图片
+
+- 来源：`out/p/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-028-3785c7ca.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-028-3785c7ca.png`
+
+![liyumen-x8-user-guide image-28 图片](../assets/products/liyumen-x8/liyumen-x8-image-028-3785c7ca.png)
+
+### image-1：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-001-357552fb.jpg`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-001-357552fb.jpg`
+
+![liyumen-x8-user-guide image-1 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-001-357552fb.jpg)
+
+### image-2：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-002-70d85c23.jpg`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-002-70d85c23.jpg`
+
+![liyumen-x8-user-guide image-2 图片](../assets/products/liyumen-x8/liyumen-x8-image-002-70d85c23.jpg)
+
+### image-3：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-003-8b3dc034.jpg`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-003-8b3dc034.jpg`
+
+![liyumen-x8-user-guide image-3 图片](../assets/products/liyumen-x8/liyumen-x8-image-003-8b3dc034.jpg)
+
+### image-5：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-005-e6e658a2.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-005-e6e658a2.png`
+
+![liyumen-x8-user-guide image-5 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-005-e6e658a2.png)
+
+### image-6：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-006-93af7d53.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-006-93af7d53.png`
+
+![liyumen-x8-user-guide image-6 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-006-93af7d53.png)
+
+### image-7：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-007-66ff731b.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-007-66ff731b.png`
+
+![liyumen-x8-user-guide image-7 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-007-66ff731b.png)
+
+### image-8：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-008-bb8146c4.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-008-bb8146c4.png`
+
+![liyumen-x8-user-guide image-8 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-008-bb8146c4.png)
+
+### image-9：产品图
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-product-009-927619fb.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-product-009-927619fb.png`
+
+![liyumen-x8-user-guide image-9 产品图](../assets/products/liyumen-x8/liyumen-x8-product-009-927619fb.png)
+
+### image-10：遥控器/交互
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-remote-control-010-b76ffa7a.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-remote-control-010-b76ffa7a.png`
+
+![liyumen-x8-user-guide image-10 遥控器/交互](../assets/products/liyumen-x8/liyumen-x8-remote-control-010-b76ffa7a.png)
+
+### image-11：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-011-58416449.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-011-58416449.png`
+
+![liyumen-x8-user-guide image-11 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-011-58416449.png)
+
+### image-12：点云/扫描
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-012-59f81fab.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-pointcloud-012-59f81fab.png`
+
+![liyumen-x8-user-guide image-12 点云/扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-012-59f81fab.png)
+
+### image-13：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-013-452bef40.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-013-452bef40.png`
+
+![liyumen-x8-user-guide image-13 图片](../assets/products/liyumen-x8/liyumen-x8-image-013-452bef40.png)
+
+### image-14：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-014-82908d03.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-014-82908d03.png`
+
+![liyumen-x8-user-guide image-14 图片](../assets/products/liyumen-x8/liyumen-x8-image-014-82908d03.png)
+
+### image-15：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-015-d4c6762f.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-015-d4c6762f.png`
+
+![liyumen-x8-user-guide image-15 图片](../assets/products/liyumen-x8/liyumen-x8-image-015-d4c6762f.png)
+
+### image-16：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-016-4edd93fe.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-016-4edd93fe.png`
+
+![liyumen-x8-user-guide image-16 图片](../assets/products/liyumen-x8/liyumen-x8-image-016-4edd93fe.png)
+
+### image-17：图片
+
+- 来源：`out/liyumenx8.md`
+- 文件：`docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-017-e4cfe45d.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/liyumen-x8/liyumen-x8-image-017-e4cfe45d.png`
+
+![liyumen-x8-user-guide image-17 图片](../assets/products/liyumen-x8/liyumen-x8-image-017-e4cfe45d.png)
 
 ## 来源备注
 

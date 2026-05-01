@@ -73,7 +73,31 @@
 
 ## 图片资产
 
-图片采集后查看 `docs/content-library/assets/products/liuhao/_manifest.md`。
+图片来源清单：`docs/content-library/assets/products/liuhao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+
+### image-1：硬件
+
+- 来源：`out/p/6hao.md`
+- 文件：`docs/content-library/assets/products/liuhao/liuhao-hardware-001-4e55b162.jpg`
+- 备注：已下载
+
+![liuhao image-1 硬件](../assets/products/liuhao/liuhao-hardware-001-4e55b162.jpg)
+
+### image-2：接线/配置
+
+- 来源：`out/p/6hao.md`
+- 文件：`docs/content-library/assets/products/liuhao/liuhao-wiring-002-8b3fc354.jpg`
+- 备注：已下载
+
+![liuhao image-2 接线/配置](../assets/products/liuhao/liuhao-wiring-002-8b3fc354.jpg)
+
+### image-3：接线/配置
+
+- 来源：`out/p/6hao.md`
+- 文件：`docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
+- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
+
+![liuhao image-3 接线/配置](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
 
 ## 来源备注
 
