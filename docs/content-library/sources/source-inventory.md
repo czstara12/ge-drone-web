@@ -1,15 +1,15 @@
-# Source Inventory
+# 来源清单
 
-| Source | Type | Target Documents | Notes |
+| 来源 | 类型 | 目标文档 | 备注 |
 | --- | --- | --- | --- |
-| `out/p/3hao.md` | Product source | `products/sanhao.md` | Sanhao product introduction, modules, specs, features, upgrade notes, sales notes. |
-| `out/p/4hao.md` | Product source | `products/sihao.md` | Sihao product introduction, hardware modules, performance notes, delivery content, sales notes. |
-| `out/p/5hao.md` | Product source | `products/wuhao.md` | Wuhao product introduction, version differences, modules, navigation, mapping, recognition, sales notes. |
-| `out/p/6hao.md` | Product source | `products/liuhao.md` | Liuhao product introduction, upgrade notes, modules, SLAM, navigation, exploration, recognition, network notes, sales notes. |
-| `out/p/7hao.md` | Product source | `products/qihao.md` | Qihao product introduction, modules, endurance, dimensions, sales notes. |
-| `out/p/liyumenx8.md` | Product and Wiki source | `products/liyumen-x8.md`, `wiki/liyumen-x8-user-guide.md` | Latest X8 upgrade, packages, pricing, Odin and Mid360 variants, remote control operation, mapping workflow. |
-| `out/liyumenx8.md` | Product and Wiki source | `products/liyumen-x8.md`, `wiki/liyumen-x8-user-guide.md` | DOCX-derived X8 brochure content and local converted images. |
-| `out/p/456wiki.md` | Wiki source | `wiki/456-series-operation-guide.md` | Hardware, wiring, software, QGC, flight commands, code notes for 4/5/6 series. |
-| `out/p/gd-sim-wsl.md` | Product and Wiki source | `products/sim-platform.md`, `wiki/sim-wsl-install-guide.md` | WSL simulation platform product notes, installation, activation, troubleshooting. |
-| `out/p/gd-sim-matlab.md` | Product and Wiki source | `products/sim-platform.md`, `wiki/sim-matlab-vm-guide.md` | VMware and MATLAB simulation platform instructions and supplements. |
-| `out/media/media/*` | Local image exports | `assets/products/liyumen-x8/`, `assets/wiki/liyumen-x8-user-guide/` | DOCX conversion images to be migrated and registered in manifests. |
+| `out/p/3hao.md` | 产品资料 | `products/sanhao.md` | 三好学生产品介绍、模块、参数、功能、升级说明、销售说明。 |
+| `out/p/4hao.md` | 产品资料 | `products/sihao.md` | 四好学生产品介绍、硬件模块、性能信息、发货资料、销售说明。 |
+| `out/p/5hao.md` | 产品资料 | `products/wuhao.md` | 五好学生产品介绍、版本差异、模块、导航、建图、识别、销售说明。 |
+| `out/p/6hao.md` | 产品资料 | `products/liuhao.md` | 六好学生产品介绍、升级说明、模块、SLAM、导航、探索、识别、网络说明、销售说明。 |
+| `out/p/7hao.md` | 产品资料 | `products/qihao.md` | 七好学生产品介绍、模块、续航、尺寸、销售说明。 |
+| `out/p/liyumenx8.md` | 产品与 Wiki 资料 | `products/liyumen-x8.md`、`wiki/liyumen-x8-user-guide.md` | 最新 X8 升级说明、套装、价格、Odin 和 Mid360 方案、遥控器操作、建图流程。 |
+| `out/liyumenx8.md` | 产品与 Wiki 资料 | `products/liyumen-x8.md`、`wiki/liyumen-x8-user-guide.md` | DOCX 转换得到的 X8 手册型资料和本地导出图片。 |
+| `out/p/456wiki.md` | Wiki 资料 | `wiki/456-series-operation-guide.md` | 四/五/六系列硬件、接线、软件、QGC、飞行指令、代码说明。 |
+| `out/p/gd-sim-wsl.md` | 产品与 Wiki 资料 | `products/sim-platform.md`、`wiki/sim-wsl-install-guide.md` | WSL 仿真平台产品信息、安装、激活、排障。 |
+| `out/p/gd-sim-matlab.md` | 产品与 Wiki 资料 | `products/sim-platform.md`、`wiki/sim-matlab-vm-guide.md` | VMware 与 MATLAB 仿真平台说明和补充资料。 |
+| `out/media/media/*` | 本地图片导出 | `assets/products/liyumen-x8/`、`assets/wiki/liyumen-x8-user-guide/` | DOCX 转换生成的图片，需要迁入资料库并登记。 |

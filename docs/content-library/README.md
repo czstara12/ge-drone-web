@@ -1,22 +1,25 @@
-# Content Library
+# 本地产品与 Wiki 资料库
 
-This library is the local reference base for future website work. It separates product-facing material from Wiki-style operational material while sharing one image and source inventory.
+这个资料库用于后续网站修改参考。它把“产品页可用资料”和“未来 Wiki 模块资料”分开整理，同时统一管理图片资源、来源记录和可公开使用状态。
 
-## Domains
+当前阶段不让网站直接读取这些文档，也不实现 `/wiki` 页面。这里先建立可靠的本地知识底座，方便后续改产品页、首页、产品卡片、SEO 文案和独立 Wiki 模块。
 
-- `products/`: concise product references for product pages, product cards, homepage sections, and SEO copy.
-- `wiki/`: long-form setup, operation, troubleshooting, delivery, and user-guide material for a future independent Wiki module.
-- `assets/`: downloaded or migrated images grouped by product or Wiki article.
-- `sources/`: source and image inventories used to trace every curated document and asset.
+## 内容分区
 
-## Asset Rules
+- `products/`：产品资料，面向产品页、产品卡片、首页卖点和 SEO 文案。
+- `wiki/`：教程、安装、交付、操作、排障等长文资料，面向未来独立 Wiki 模块。
+- `assets/`：下载或迁入后的本地图片资源，按产品或 Wiki 文章分目录管理。
+- `sources/`：来源清单和图片总清单，用于追踪每份整理资料和每张图片的出处。
 
-- Remote Yuque images are downloaded into `assets/` and renamed with stable, non-conflicting filenames.
-- Local exported images from `out/media/media` are migrated into `assets/` and recorded with original paths.
-- Existing website images under `public/images/products` are not moved or overwritten.
-- Every asset directory has an `_manifest.md`.
-- Every image is marked `Review`, `Yes`, or `No` for website readiness.
+## 图片管理规则
 
-## Future Wiki Module
+- 语雀远程图片必须下载到 `assets/`，并使用稳定、不重名的文件名。
+- `out/media/media` 中的本地导出图片迁入 `assets/`，并记录原始路径。
+- 不移动、不覆盖 `public/images/products` 中当前网站正在使用的图片。
+- 每个图片目录必须有 `_manifest.md`。
+- 每张图片都要标注网站可用状态：`Review`、`Yes` 或 `No`。
+- 如果多处来源引用同一张图片，只保留一个本地 canonical 文件，并在清单里记录所有来源。
 
-The Wiki documents include stable slugs, categories, related products, and suggested routes. They are not currently wired into the website.
+## 未来 Wiki 模块预留
+
+`wiki/` 下的文档会包含稳定 slug、分类、关联产品和建议路由。它们只是未来网站 Wiki 的内容参考，还没有接入前端页面。
