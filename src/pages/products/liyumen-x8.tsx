@@ -226,6 +226,145 @@ const LiyumenX8 = () => (
       </div>
     </Section>
 
+    {/* 方案对比 */}
+    <Section title="感知方案对比" className="bg-gray-50">
+      <div id="comparison" className="grid gap-8 md:grid-cols-2">
+        {[
+          {
+            id: 'odin1',
+            name: 'Odin1 激光雷达',
+            isRecommended: true,
+            specs: [
+              { id: 'odin-lines', label: '激光线数', value: '64线' },
+              { id: 'odin-range', label: '测量范围', value: '≤ 200m' },
+              {
+                id: 'odin-resolution',
+                label: '角度分辨率',
+                value: '0.16° × 0.33°',
+              },
+              { id: 'odin-frequency', label: '数据输出频率', value: '10-20Hz' },
+              { id: 'odin-weight', label: '重量', value: '810g' },
+              { id: 'odin-power', label: '功耗', value: '8W' },
+            ],
+            pricing: [
+              { id: 'odin-pro', version: '全能版', price: '¥7.9w' },
+              { id: 'odin-std', version: '标准版', price: '¥2.7w' },
+            ],
+            advantages: [
+              { id: 'odin-acc', text: '高精度点云（精度±2cm@10m）' },
+              { id: 'odin-fov', text: '大视角（35° × 90°）' },
+              { id: 'odin-anti', text: '抗干扰能力强' },
+              { id: 'odin-seal', text: '防水防尘（IP69K）' },
+            ],
+          },
+          {
+            id: 'mid360',
+            name: 'Mid360 激光雷达',
+            isRecommended: false,
+            specs: [
+              { id: 'mid-lines', label: '激光线数', value: '8线' },
+              { id: 'mid-range', label: '测量范围', value: '≤ 40m' },
+              { id: 'mid-resolution', label: '角度分辨率', value: '0.2° × 2°' },
+              { id: 'mid-frequency', label: '数据输出频率', value: '10Hz' },
+              { id: 'mid-weight', label: '重量', value: '570g' },
+              { id: 'mid-power', label: '功耗', value: '5W' },
+            ],
+            pricing: [
+              { id: 'mid-pro', version: '全能版', price: '¥5.1w' },
+              { id: 'mid-std', version: '标准版', price: '¥2.5w' },
+            ],
+            advantages: [
+              { id: 'mid-cost', text: '低成本解决方案' },
+              { id: 'mid-portable', text: '轻便易携带' },
+              { id: 'mid-short', text: '适合短距离场景' },
+              { id: 'mid-mature', text: '成熟稳定' },
+            ],
+          },
+        ].map((option) => (
+          <div
+            key={option.id}
+            className={`overflow-hidden rounded-lg border-2 transition-all ${
+              option.isRecommended
+                ? 'border-primary-500 bg-blue-50 ring-2 ring-primary-300'
+                : 'border-gray-200 bg-white'
+            }`}
+          >
+            <div className="p-6">
+              <div className="mb-4 flex items-start justify-between">
+                <h3 className="text-lg font-bold text-gray-900">
+                  {option.name}
+                </h3>
+                {option.isRecommended && (
+                  <span className="inline-block rounded-full bg-primary-500 px-3 py-1 text-xs font-semibold text-white">
+                    推荐
+                  </span>
+                )}
+              </div>
+
+              {/* 规格表 */}
+              <div className="mb-6 border-b border-gray-200 pb-6">
+                <h4 className="mb-3 font-semibold text-gray-900">核心规格</h4>
+                <div className="space-y-2">
+                  {option.specs.map((spec) => (
+                    <div key={spec.id} className="flex justify-between text-sm">
+                      <span className="text-gray-600">{spec.label}</span>
+                      <span className="font-medium text-gray-900">
+                        {spec.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 价格 */}
+              <div className="mb-6 border-b border-gray-200 pb-6">
+                <h4 className="mb-3 font-semibold text-gray-900">价格</h4>
+                <div className="space-y-2">
+                  {option.pricing.map((price) => (
+                    <div
+                      key={price.id}
+                      className="flex justify-between text-sm"
+                    >
+                      <span className="text-gray-600">{price.version}</span>
+                      <span className="font-bold text-primary-600">
+                        {price.price}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 优势 */}
+              <div>
+                <h4 className="mb-3 font-semibold text-gray-900">核心优势</h4>
+                <ul className="space-y-2">
+                  {option.advantages.map((advantage) => (
+                    <li
+                      key={advantage.id}
+                      className="flex items-start text-sm text-gray-700"
+                    >
+                      <svg
+                        className="mr-2 mt-0.5 size-4 shrink-0 text-primary-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {advantage.text}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+
     {/* 产品特点 */}
     <Section>
       <div className="mb-12 text-center">
