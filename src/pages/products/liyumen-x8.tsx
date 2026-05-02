@@ -9,37 +9,90 @@ import { AppConfig } from '../../utils/AppConfig';
 
 // 详细参数
 const detailedSpecs = [
-  { label: '激光雷达波长', value: '905nm' },
-  { label: '激光安全等级', value: 'Class1 人眼安全' },
-  { label: 'FOV', value: '水平120°、竖直 90°' },
-  { label: '点云输出', value: '最高70万点/秒' },
-  { label: '相机', value: '深度模组240 X 180+RGB模组1600 x 1296' },
-  { label: '算力', value: '最高144TOPS' },
+  { id: 'lidar-wavelength', label: '激光雷达波长', value: '905nm' },
+  { id: 'laser-safety', label: '激光安全等级', value: 'Class1 人眼安全' },
+  { id: 'fov', label: 'FOV', value: '水平120°、竖直 90°' },
+  { id: 'point-cloud', label: '点云输出', value: '最高70万点/秒' },
   {
+    id: 'camera',
+    label: '相机',
+    value: '深度模组240 X 180+RGB模组1600 x 1296',
+  },
+  { id: 'computing-power', label: '算力', value: '最高144TOPS' },
+  {
+    id: 'cpu',
     label: 'CPU',
     value: '8 核 ARM® CORTEX ® - A78AE V8.2 64 位CPU 2MB L2 + 4MB L3',
   },
-  { label: 'GPU', value: '1024 NVIDIA® CUDA® Core & 32 Tensor Core' },
-  { label: '遥控器', value: '触屏遥控（5寸或10寸选配）' },
-  { label: '标准起飞质量', value: '2450g' }, // Assuming kg is a typo in md, drones are usually g
-  { label: '最大起飞质量', value: '4000g' }, // Assuming kg is a typo
-  { label: '笼体尺寸', value: '375×460×235mm' },
-  { label: '桨叶尺寸', value: '5寸/三叶' },
-  { label: '电机轴距', value: '270mm' },
-  { label: '机体结构', value: 'X型八旋翼共轴双桨冗余结构' },
-  { label: '材质', value: '碳纤维/工程塑料' },
-  { label: '电池安装', value: '推拉式快拆' },
-  { label: '电池参数', value: '6s/8s 高压半固态电池 9000mha' },
-  { label: '飞行速度', value: '5m/s max' },
-  { label: '飞行高度', value: '50m' },
-  { label: '续航时间', value: '12min/18min（选配不同电池）' },
-  { label: '抗风等级', value: '5级' },
-  { label: '可穿越最小涵洞', value: '400mm（圆直径）' },
-  { label: '光纤通讯', value: '1km max（选配）' },
-  { label: '链路距离', value: '3-15km（空旷）/5堵墙（穿透）' },
-  { label: '安全工作环境温度', value: '-20℃~45℃' },
-  { label: '安全等级', value: '防尘/防泼溅/防爆' },
-  { label: '避障能力', value: '前向或360度' },
+  {
+    id: 'gpu',
+    label: 'GPU',
+    value: '1024 NVIDIA® CUDA® Core & 32 Tensor Core',
+  },
+  {
+    id: 'remote-control',
+    label: '遥控器',
+    value: '触屏遥控（5寸或10寸选配）',
+  },
+  {
+    id: 'standard-takeoff-weight',
+    label: '标准起飞质量',
+    value: '2450g',
+  }, // Assuming kg is a typo in md, drones are usually g
+  {
+    id: 'max-takeoff-weight',
+    label: '最大起飞质量',
+    value: '4000g',
+  }, // Assuming kg is a typo
+  { id: 'cage-size', label: '笼体尺寸', value: '375×460×235mm' },
+  { id: 'blade-size', label: '桨叶尺寸', value: '5寸/三叶' },
+  { id: 'motor-distance', label: '电机轴距', value: '270mm' },
+  {
+    id: 'body-structure',
+    label: '机体结构',
+    value: 'X型八旋翼共轴双桨冗余结构',
+  },
+  { id: 'material', label: '材质', value: '碳纤维/工程塑料' },
+  {
+    id: 'battery-installation',
+    label: '电池安装',
+    value: '推拉式快拆',
+  },
+  {
+    id: 'battery-spec',
+    label: '电池参数',
+    value: '6s/8s 高压半固态电池 9000mha',
+  },
+  { id: 'flight-speed', label: '飞行速度', value: '5m/s max' },
+  { id: 'flight-height', label: '飞行高度', value: '50m' },
+  {
+    id: 'flight-time',
+    label: '续航时间',
+    value: '12min/18min（选配不同电池）',
+  },
+  { id: 'wind-resistance', label: '抗风等级', value: '5级' },
+  {
+    id: 'min-culvert',
+    label: '可穿越最小涵洞',
+    value: '400mm（圆直径）',
+  },
+  {
+    id: 'optical-fiber',
+    label: '光纤通讯',
+    value: '1km max（选配）',
+  },
+  {
+    id: 'link-distance',
+    label: '链路距离',
+    value: '3-15km（空旷）/5堵墙（穿透）',
+  },
+  {
+    id: 'work-temperature',
+    label: '安全工作环境温度',
+    value: '-20℃~45℃',
+  },
+  { id: 'safety-level', label: '安全等级', value: '防尘/防泼溅/防爆' },
+  { id: 'obstacle-avoidance', label: '避障能力', value: '前向或360度' },
 ];
 
 // 产品特点
@@ -123,6 +176,7 @@ const LiyumenX8 = () => (
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {[
           {
+            id: 'sewer-inspection',
             image:
               '/images/products/liyumen-x8/liyumen-x8-image-014-82908d03.png',
             title: '下水道检测',
@@ -130,26 +184,29 @@ const LiyumenX8 = () => (
               '深入地下管道，精准识别堵塞、破损等问题，支持长距离巡检',
           },
           {
+            id: 'dense-vegetation',
             image:
               '/images/products/liyumen-x8/liyumen-x8-image-015-d4c6762f.png',
             title: '密集植被区域',
             description: '穿过树木丛生的复杂环境，精准识别地形和障碍物',
           },
           {
+            id: 'slope-monitoring',
             image:
               '/images/products/liyumen-x8/liyumen-x8-image-016-4edd93fe.png',
             title: '边坡稳定性监测',
             description: '高精度3D扫描边坡表面，持续监测地质灾害隐患',
           },
           {
+            id: 'mine-surveying',
             image:
               '/images/products/liyumen-x8/liyumen-x8-image-017-e4cfe45d.png',
             title: '矿洞勘测',
             description: '应对复杂地质条件，建立高精度矿洞地质模型',
           },
-        ].map((item, index) => (
+        ].map((item) => (
           <div
-            key={index}
+            key={item.id}
             className="overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-lg"
           >
             <div className="relative h-48 bg-gray-200">
@@ -358,8 +415,8 @@ const LiyumenX8 = () => (
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-700">
-            {detailedSpecs.map((spec, index) => (
-              <tr key={index} className="hover:bg-gray-700/30">
+            {detailedSpecs.map((spec) => (
+              <tr key={spec.id} className="hover:bg-gray-700/30">
                 <td className="px-6 py-3 font-medium text-white">
                   {spec.label}
                 </td>
