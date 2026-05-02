@@ -421,6 +421,68 @@ const LiyumenX8 = () => (
       </div>
     </Section>
 
+    {/* 地图处理能力 */}
+    <Section title="地图生成与处理" className="bg-gray-50">
+      <div id="mapping" className="grid items-center gap-8 md:grid-cols-2">
+        {/* 左侧图片 */}
+        <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
+          <Image
+            src="/images/products/liyumen-x8/liyumen-x8-pointcloud-012-59f81fab.png"
+            alt="地图软件处理示意"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        {/* 右侧文本 */}
+        <div>
+          <h3 className="mb-4 text-2xl font-bold text-gray-900">
+            专业地图生成工具链
+          </h3>
+          <p className="mb-4 leading-relaxed text-gray-700">
+            X8配套提供完整的点云处理和地图生成解决方案，支持多种行业标准格式输出，与主流GIS平台无缝集成。
+          </p>
+
+          <div className="space-y-4">
+            <div className="border-l-4 border-primary-500 pl-4">
+              <h4 className="mb-1 font-semibold text-gray-900">点云处理</h4>
+              <p className="text-sm text-gray-600">
+                内置滤波、配准、分类等高级处理算法，生成高精度点云地图
+              </p>
+            </div>
+
+            <div className="border-l-4 border-primary-500 pl-4">
+              <h4 className="mb-1 font-semibold text-gray-900">正射影像</h4>
+              <p className="text-sm text-gray-600">
+                自动生成高分辨率正射影像，精度可达厘米级，便于行业分析
+              </p>
+            </div>
+
+            <div className="border-l-4 border-primary-500 pl-4">
+              <h4 className="mb-1 font-semibold text-gray-900">三维模型</h4>
+              <p className="text-sm text-gray-600">
+                一键生成三维网格模型，支持OBJ、FBX等格式，可用于规划设计
+              </p>
+            </div>
+
+            <div className="border-l-4 border-primary-500 pl-4">
+              <h4 className="mb-1 font-semibold text-gray-900">等高线生成</h4>
+              <p className="text-sm text-gray-600">
+                智能提取地形等高线，支持自定义参数，满足专业地形分析需求
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+            <p className="text-sm text-blue-900">
+              <strong>兼容主流平台：</strong>
+              支持ArcGIS、QGIS、Pix4D等业界标准软件，数据格式包括LAS、E57、tiff等
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
+
     {/* 产品特点 */}
     <Section>
       <div className="mb-12 text-center">
