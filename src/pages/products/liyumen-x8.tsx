@@ -123,23 +123,27 @@ const LiyumenX8 = () => (
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {[
           {
-            image: '/images/products/liyumen-x8/liyumen-x8-image-014.png',
+            image:
+              '/images/products/liyumen-x8/liyumen-x8-image-014-82908d03.png',
             title: '下水道检测',
             description:
               '深入地下管道，精准识别堵塞、破损等问题，支持长距离巡检',
           },
           {
-            image: '/images/products/liyumen-x8/liyumen-x8-image-015.png',
+            image:
+              '/images/products/liyumen-x8/liyumen-x8-image-015-d4c6762f.png',
             title: '密集植被区域',
             description: '穿过树木丛生的复杂环境，精准识别地形和障碍物',
           },
           {
-            image: '/images/products/liyumen-x8/liyumen-x8-image-016.png',
+            image:
+              '/images/products/liyumen-x8/liyumen-x8-image-016-4edd93fe.png',
             title: '边坡稳定性监测',
             description: '高精度3D扫描边坡表面，持续监测地质灾害隐患',
           },
           {
-            image: '/images/products/liyumen-x8/liyumen-x8-image-017.png',
+            image:
+              '/images/products/liyumen-x8/liyumen-x8-image-017-e4cfe45d.png',
             title: '矿洞勘测',
             description: '应对复杂地质条件，建立高精度矿洞地质模型',
           },
