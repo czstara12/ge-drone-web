@@ -172,7 +172,7 @@ const LiyumenX8 = () => (
     </div>
 
     {/* 应用场景 */}
-    <Section title="应用场景" className="bg-white">
+    <Section title="应用场景" className="bg-gray-900/40">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {[
           {
@@ -207,9 +207,9 @@ const LiyumenX8 = () => (
         ].map((item) => (
           <div
             key={item.id}
-            className="overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-lg"
+            className="overflow-hidden rounded-lg border border-white/10 bg-gray-800/60 shadow-md transition-shadow hover:border-primary-400/40 hover:shadow-lg"
           >
-            <div className="relative h-48 bg-gray-200">
+            <div className="relative h-48 bg-gray-800">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -217,9 +217,9 @@ const LiyumenX8 = () => (
                 className="object-cover"
               />
             </div>
-            <div className="bg-gray-50 p-4">
-              <h3 className="mb-2 font-semibold text-gray-900">{item.title}</h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
+            <div className="p-4">
+              <h3 className="mb-2 font-semibold text-white">{item.title}</h3>
+              <p className="text-sm text-gray-400">{item.description}</p>
             </div>
           </div>
         ))}
@@ -227,7 +227,7 @@ const LiyumenX8 = () => (
     </Section>
 
     {/* 方案对比 */}
-    <Section title="感知方案对比" className="bg-gray-50">
+    <Section title="感知方案对比" className="bg-gray-900/40">
       <div id="comparison" className="grid gap-8 md:grid-cols-2">
         {[
           {
@@ -285,15 +285,13 @@ const LiyumenX8 = () => (
             key={option.id}
             className={`overflow-hidden rounded-lg border-2 transition-all ${
               option.isRecommended
-                ? 'border-primary-500 bg-blue-50 ring-2 ring-primary-300'
-                : 'border-gray-200 bg-white'
+                ? 'bg-primary-950/30 border-primary-400 ring-2 ring-primary-500/30'
+                : 'border-white/10 bg-gray-800/60'
             }`}
           >
             <div className="p-6">
               <div className="mb-4 flex items-start justify-between">
-                <h3 className="text-lg font-bold text-gray-900">
-                  {option.name}
-                </h3>
+                <h3 className="text-lg font-bold text-white">{option.name}</h3>
                 {option.isRecommended && (
                   <span className="inline-block rounded-full bg-primary-500 px-3 py-1 text-xs font-semibold text-white">
                     推荐
@@ -302,13 +300,13 @@ const LiyumenX8 = () => (
               </div>
 
               {/* 规格表 */}
-              <div className="mb-6 border-b border-gray-200 pb-6">
-                <h4 className="mb-3 font-semibold text-gray-900">核心规格</h4>
+              <div className="mb-6 border-b border-white/10 pb-6">
+                <h4 className="mb-3 font-semibold text-white">核心规格</h4>
                 <div className="space-y-2">
                   {option.specs.map((spec) => (
                     <div key={spec.id} className="flex justify-between text-sm">
-                      <span className="text-gray-600">{spec.label}</span>
-                      <span className="font-medium text-gray-900">
+                      <span className="text-gray-400">{spec.label}</span>
+                      <span className="font-medium text-gray-100">
                         {spec.value}
                       </span>
                     </div>
@@ -317,16 +315,16 @@ const LiyumenX8 = () => (
               </div>
 
               {/* 价格 */}
-              <div className="mb-6 border-b border-gray-200 pb-6">
-                <h4 className="mb-3 font-semibold text-gray-900">价格</h4>
+              <div className="mb-6 border-b border-white/10 pb-6">
+                <h4 className="mb-3 font-semibold text-white">价格</h4>
                 <div className="space-y-2">
                   {option.pricing.map((price) => (
                     <div
                       key={price.id}
                       className="flex justify-between text-sm"
                     >
-                      <span className="text-gray-600">{price.version}</span>
-                      <span className="font-bold text-primary-600">
+                      <span className="text-gray-400">{price.version}</span>
+                      <span className="font-bold text-primary-300">
                         {price.price}
                       </span>
                     </div>
@@ -336,12 +334,12 @@ const LiyumenX8 = () => (
 
               {/* 优势 */}
               <div>
-                <h4 className="mb-3 font-semibold text-gray-900">核心优势</h4>
+                <h4 className="mb-3 font-semibold text-white">核心优势</h4>
                 <ul className="space-y-2">
                   {option.advantages.map((advantage) => (
                     <li
                       key={advantage.id}
-                      className="flex items-start text-sm text-gray-700"
+                      className="flex items-start text-sm text-gray-300"
                     >
                       <svg
                         className="mr-2 mt-0.5 size-4 shrink-0 text-primary-500"
@@ -366,7 +364,7 @@ const LiyumenX8 = () => (
     </Section>
 
     {/* 升级亮点 */}
-    <Section title="X8 升级亮点" className="bg-white">
+    <Section title="X8 升级亮点" className="bg-gray-900/40">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[
           {
@@ -411,18 +409,18 @@ const LiyumenX8 = () => (
         ].map((item) => (
           <div
             key={item.id}
-            className="rounded-lg border border-gray-200 bg-gray-50 p-6 transition-all hover:border-primary-300 hover:shadow-md"
+            className="rounded-lg border border-white/10 bg-gray-800/60 p-6 transition-all hover:border-primary-400/40 hover:shadow-md"
           >
             <div className="mb-4 text-4xl">{item.icon}</div>
-            <h3 className="mb-2 font-semibold text-gray-900">{item.title}</h3>
-            <p className="text-sm text-gray-600">{item.description}</p>
+            <h3 className="mb-2 font-semibold text-white">{item.title}</h3>
+            <p className="text-sm text-gray-400">{item.description}</p>
           </div>
         ))}
       </div>
     </Section>
 
     {/* 地图处理能力 */}
-    <Section title="地图生成与处理" className="bg-gray-50">
+    <Section title="地图生成与处理" className="bg-gray-900/40">
       <div id="mapping" className="grid items-center gap-8 md:grid-cols-2">
         {/* 左侧图片 */}
         <div className="relative h-80 overflow-hidden rounded-lg shadow-lg">
@@ -436,45 +434,45 @@ const LiyumenX8 = () => (
 
         {/* 右侧文本 */}
         <div>
-          <h3 className="mb-4 text-2xl font-bold text-gray-900">
+          <h3 className="mb-4 text-2xl font-bold text-white">
             专业地图生成工具链
           </h3>
-          <p className="mb-4 leading-relaxed text-gray-700">
+          <p className="mb-4 leading-relaxed text-gray-300">
             X8配套提供完整的点云处理和地图生成解决方案，支持多种行业标准格式输出，与主流GIS平台无缝集成。
           </p>
 
           <div className="space-y-4">
             <div className="border-l-4 border-primary-500 pl-4">
-              <h4 className="mb-1 font-semibold text-gray-900">点云处理</h4>
-              <p className="text-sm text-gray-600">
+              <h4 className="mb-1 font-semibold text-white">点云处理</h4>
+              <p className="text-sm text-gray-400">
                 内置滤波、配准、分类等高级处理算法，生成高精度点云地图
               </p>
             </div>
 
             <div className="border-l-4 border-primary-500 pl-4">
-              <h4 className="mb-1 font-semibold text-gray-900">正射影像</h4>
-              <p className="text-sm text-gray-600">
+              <h4 className="mb-1 font-semibold text-white">正射影像</h4>
+              <p className="text-sm text-gray-400">
                 自动生成高分辨率正射影像，精度可达厘米级，便于行业分析
               </p>
             </div>
 
             <div className="border-l-4 border-primary-500 pl-4">
-              <h4 className="mb-1 font-semibold text-gray-900">三维模型</h4>
-              <p className="text-sm text-gray-600">
+              <h4 className="mb-1 font-semibold text-white">三维模型</h4>
+              <p className="text-sm text-gray-400">
                 一键生成三维网格模型，支持OBJ、FBX等格式，可用于规划设计
               </p>
             </div>
 
             <div className="border-l-4 border-primary-500 pl-4">
-              <h4 className="mb-1 font-semibold text-gray-900">等高线生成</h4>
-              <p className="text-sm text-gray-600">
+              <h4 className="mb-1 font-semibold text-white">等高线生成</h4>
+              <p className="text-sm text-gray-400">
                 智能提取地形等高线，支持自定义参数，满足专业地形分析需求
               </p>
             </div>
           </div>
 
-          <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
-            <p className="text-sm text-blue-900">
+          <div className="bg-primary-950/30 mt-6 rounded-lg border border-primary-400/30 p-4">
+            <p className="text-sm text-primary-100">
               <strong>兼容主流平台：</strong>
               支持ArcGIS、QGIS、Pix4D等业界标准软件，数据格式包括LAS、E57、tiff等
             </p>
