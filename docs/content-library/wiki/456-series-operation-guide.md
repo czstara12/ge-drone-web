@@ -493,17 +493,23 @@ D435 深度相机的功能包位置在 /opt/ros/noetic/share/realsense2_camera �
 #### 启动 mid360 激光雷达：
 在~目录下（cd ~），运行 ./3DSLAM.sh  指令,此 sh 文件包含一系列的执行程序，如下图所示：
 
-```plain
+```bash
 source ~/.bashrc
 roscore &
 sleep 4
-roslaunch imu_tf mid360_imu_tf.launch & 进行了mid360的imu姿态变换
-roslaunch slam_to_mavros tf_to_mavros.launch & 进行了mid360的话题变换为mavros系列话题
-roslaunch livox_ros_driver2 msg_MID360.launch & 启动了mid360获取雷达点云数据
-roslaunch mavros px4.launch & 启动飞控和机载电脑之间的mavros通信
+roslaunch imu_tf mid360_imu_tf.launch &
+# 进行了mid360的imu姿态变换
+roslaunch slam_to_mavros tf_to_mavros.launch &
+# 进行了mid360的话题变换为mavros系列话题
+roslaunch livox_ros_driver2 msg_MID360.launch &
+# 启动了mid360获取雷达点云数据
+roslaunch mavros px4.launch &
+# 启动飞控和机载电脑之间的mavros通信
 sleep 6
-rosrun mavros mavcmd long 511 32 15000 0 0 0 0 0 启动mavros的响应
-roslaunch fast_lio mapping_mid360.launch  开始建图并获取定位数据
+rosrun mavros mavcmd long 511 32 15000 0 0 0 0 0
+# 启动mavros的响应
+roslaunch fast_lio mapping_mid360.launch
+# 开始建图并获取定位数据
 ```
 
 启动此代码后，无人机便有了定位数据，才可以切换到定点模型飞行，没有定位数据无法切换到定点模式。
@@ -557,13 +563,14 @@ ctrl+空格 切换 中英文输入法
 #### 1.    利用 mid360 激光雷达 进行 定位和 ego 自主导航
 ** Mid360提供定位数据,  Mid360提供点云数据  基于航点程序进行Ego _planner飞行。**
 
-```plain
-./3DSLAM.sh   获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch ego_planner single_run_in_expmid.launch   启动egoplanner(mid360提供的障碍物点云信息)；
-roslaunch egoctrl_v1 egoctrl.launch   启动ego控制器，上至航点程序，下至egoplanner算法；
-roslaunch egoctrl_v1 run_mid_ego.launch 启动 task_node 综合指令发布程序；
-解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下，按照task_node 综合指令发布程序自主飞行
+```bash
+./3DSLAM.sh
+roslaunch ego_planner single_run_in_expmid.launch
+roslaunch egoctrl_v1 egoctrl.launch
+roslaunch egoctrl_v1 run_mid_ego.launch
 ```
+
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、启动 egoplanner（mid360 提供的障碍物点云信息）、启动 ego 控制器（上至航点程序，下至 egoplanner 算法），并启动 task_node 综合指令发布程序。
 
 ./3DSLAM.sh 是在~目录下的，我们必须在~目录，即我们的主目录下输入这个指令哦！
 
@@ -579,37 +586,41 @@ egoplanner 的更多参数说明请看这个：[【开源无人机】Ego-Planner
 #### 2. 利用 mid360 激光雷达定位 和 利用深度相机进行 ego 自主导航
 **Mid360提供定位数据,  深度相机d435提供深度图像数据  基于航点程序进行Ego _planner飞行。**
 
-```plain
-./3DSLAM.sh     获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch realsense2_camera rs_camera.launch     启动d435 获得深度图像数据
-roslaunch ego_planner single_run_in_expd435.launch ；启动egoplanner(d435提供的障碍物点云信息)；
-roslaunch egoctrl_v1 egoctrl.launch  启动ego控制器，上至航点程序，下至egoplanner算法。
-roslaunch egoctrl_v1 run_mid_ego.launch 启动 task_node 综合指令发布程序；
-解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下，按照task_node 综合指令发布程序自主飞行
+```bash
+./3DSLAM.sh
+roslaunch realsense2_camera rs_camera.launch
+roslaunch ego_planner single_run_in_expd435.launch
+roslaunch egoctrl_v1 egoctrl.launch
+roslaunch egoctrl_v1 run_mid_ego.launch
 ```
+
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、启动 d435 获得深度图像数据、启动 egoplanner（d435 提供的障碍物点云信息）、启动 ego 控制器（上至航点程序，下至 egoplanner 算法），并启动 task_node 综合指令发布程序。
+
+随后解锁无人机，按下 offboard 模式按键，无人机将在机载电脑的控制下，按照 task_node 综合指令发布程序自主飞行。
 
 
 #### 3. 利用 mid360 激光雷达 定位和ego 手动打点导航（推荐用 5 新增自主导航，ego 太老了）
 **Mid360提供定位数据,  Mid360提供点云数据  基于Rviz打点进行Ego _planner飞行。**
 
-```plain
-./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch ego_planner single_run_in_expmid.launch   启动egoplanner(mid360提供的障碍物点云信息)；
-roslaunch egoctrl_v1 egoctrl_yuanshi.launch   启动控制器，上至rviz，下至egoplanner算法；
-解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下飞到 1 m,然后按照 rviz 打点的位置进行飞行。
-在rviz上打点飞行
+```bash
+./3DSLAM.sh
+roslaunch ego_planner single_run_in_expmid.launch
+roslaunch egoctrl_v1 egoctrl_yuanshi.launch
 ```
+
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、启动 egoplanner（mid360 提供的障碍物点云信息），并启动控制器（上至 rviz，下至 egoplanner 算法）。
+
+随后解锁无人机，按下 offboard 模式按键，无人机将在机载电脑的控制下飞到 1 m，然后按照 rviz 打点的位置飞行。在 rviz 上打点飞行。
 
 
 #### 4.  利用 mid360 激光雷达定位 切换到定点模式后 利用遥控器 手动定点飞行
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-遥控器切换到定点模式
-解锁无人机
-油门杆向上推动，0-50%的范围无效，50%-100%的范围内开始启动，缓慢推动加速无人机起飞，飞到一定高度后，将油门杆回中，此时无人机将保持悬停状态。
-遥控器控制运动
-遥控器拨到降落模式降落
+```bash
+./3DSLAM.sh
 ```
+
+启动该命令获取无人机定位数据（记得检查定位数据是否正常输出）。
+
+随后用遥控器切换到定点模式，解锁无人机。油门杆向上推动，0-50% 的范围无效，50%-100% 的范围内开始启动，缓慢推动加速无人机起飞，飞到一定高度后，将油门杆回中，此时无人机将保持悬停状态。使用遥控器控制运动，最后将遥控器拨到降落模式降落。
 
 
 ### 5. 【新】新增自主导航/探索/感知部分
@@ -617,41 +628,43 @@ roslaunch egoctrl_v1 egoctrl_yuanshi.launch   启动控制器，上至rviz，下
 
 膨胀、速度等参数都可以自己设置。
 
-```plain
-无人机不需要起飞，给机载电脑上电和mid360上电，这是单独的一个纯检测功能。
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
-roslaunch onboard_detector detector_with_learning_module.launch 开启动态障碍物检测
+无人机不需要起飞，给机载电脑上电和 mid360 上电，这是单独的一个纯检测功能。
+
+```bash
+./3DSLAM.sh
+qidongd435
+roslaunch onboard_detector detector_with_learning_module.launch
 ```
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
-roslaunch onboard_detector detector_with_learning_module.launch 开启动态障碍物检测
-roslaunch remote_control dynamic_navigation_rviz.launch 打开显示地图的rviz
-roslaunch autonomous_flight dynamic_navigation.launch 执行导航 无人机自动解锁并飞到1m
-,等待rviz打点飞行, 按ctrl+c降落（新版本支持遥控器降落）。
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、通过快捷指令启动深度相机并将像素强制改为 640*480，并开启动态障碍物检测。
+
+```bash
+./3DSLAM.sh
+qidongd435
+roslaunch onboard_detector detector_with_learning_module.launch
+roslaunch remote_control dynamic_navigation_rviz.launch
+roslaunch autonomous_flight dynamic_navigation.launch
 ```
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch remote_control navigation_rviz.launch所有地图的rviz
-roslaunch autonomous_flight navigation.launch 执行导航 无人机自动解锁并飞到1m
-,等待rviz打点飞行, 按ctrl+c降落（新版本支持遥控器降落）。
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、通过快捷指令启动深度相机并将像素强制改为 640*480、开启动态障碍物检测、打开显示地图的 rviz，并执行导航。无人机会自动解锁并飞到 1 m，等待 rviz 打点飞行，按 ctrl+c 降落（新版本支持遥控器降落）。
+
+```bash
+./3DSLAM.sh
+roslaunch remote_control navigation_rviz.launch
+roslaunch autonomous_flight navigation.launch
 ```
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、打开显示地图的 rviz，并执行导航。无人机会自动解锁并飞到 1 m，等待 rviz 打点飞行，按 ctrl+c 降落（新版本支持遥控器降落）。
 
-
-## qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
-
-
-## roslaunch onboard_detector detector_with_learning_module.launch 第二行和第三行启不启动都可以,默认别启动
-roslaunch remote_control exploration_rviz.launch 打开显示地图的rviz
-roslaunch autonomous_flight dynamic_exploration.launch 执行探索 无人机自动解锁并飞到1m
-,等待用户按回车指令继续, 按ctrl+c降落（新版本支持遥控器降落）。
+```bash
+./3DSLAM.sh
+roslaunch remote_control exploration_rviz.launch
+roslaunch autonomous_flight dynamic_exploration.launch
 ```
+
+以上命令依次获取无人机定位数据（记得检查定位数据是否正常输出）、打开显示地图的 rviz，并执行探索。无人机会自动解锁并飞到 1 m，等待用户按回车指令继续，按 ctrl+c 降落（新版本支持遥控器降落）。
+
+`qidongd435`（快捷指令）会启动深度相机并将像素强制改为 640*480；`roslaunch onboard_detector detector_with_learning_module.launch` 是动态障碍物检测命令。第二行和第三行启不启动都可以，默认别启动。
 
 <details class="lake-collapse"><summary id="ua84e1e32">自主探索参数详细说明：</summary><p id="u7f4446e4" class="ne-p">**1. 定位与区域范围 **</p><p id="ud073f7eb" class="ne-p">**odom_topic**</p><p id="u1f6243ab" class="ne-p">作用：指定无人机里程计信息的ROS话题。</p><p id="ud6016b6f" class="ne-p">"/mavros/local_position/odom"：MAVROS（PX4飞控）的默认里程计话题。
 注意：需根据实际使用的飞控系统选择正确的话题。
@@ -729,13 +742,12 @@ false：激进策略，允许进入未知区域，但风险更高。
 
 [https://github.com/pytorch/vision](https://github.com/pytorch/vision)    torchvision 的版本安装的是0.16（与安装的 torch 相对应）。
 
-```plain
+```bash
 cd ~/YOLO/yolov5
 python detect.py --weights yolov5s.pt --source 6
-
-
-## yolov5s.pt 替换为你的权重文件 数字6是你的USB摄像头编号
 ```
+
+其中 `yolov5s.pt` 替换为你的权重文件，数字 `6` 是你的 USB 摄像头编号。
 
 USB摄像头编号的方法，先把摄像头（通过 usb 口或拓展坞或 typec 口）插在机载电脑上，在终端输入 ls /dev/ |grep video ；输出如下：
 
@@ -761,11 +773,11 @@ USB摄像头编号的方法，先把摄像头（通过 usb 口或拓展坞或 ty
 
 2. 若把 devel 和 build 文件删除掉了，
 
-```plain
+```bash
 cd livox_ros_driver2
 ```
 
-```plain
+```bash
 source /opt/ros/noetic/setup.sh
 ./build.sh ROS1
 ```
