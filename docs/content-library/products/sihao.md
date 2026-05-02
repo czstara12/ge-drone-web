@@ -20,21 +20,15 @@ updated: 2026-05-01
 
 
 ### 1.所使用的模块
-> 1.飞控：pix 4（PX4）
->
-> 2.雷达：mid360
->
-> 3.【新】超强机载电脑：Jetson orin nx super 8G ，算力免费从从 70T 升到 117T。
->
->
+1. 飞控：pix 4（PX4）
+2. 雷达：mid360
+3. 【新】超强机载电脑：Jetson orin nx super 8G ，算力免费从从 70T 升到 117T。
 
 
 ![image-1](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
 
 
->
-> 4.深度相机：D435
->
+4. 深度相机：D435
 
 预装功能很丰富，涵盖定位、建图、导航、探索、识别，部分见 B 站视频：
 
@@ -52,8 +46,7 @@ updated: 2026-05-01
 
 
 ### 2.电池、载重、续航、体积 、定位精度
-> “四好学生”整机重量
->
+“四好学生”整机重量
 
 电池：4S 5300mah
 
@@ -77,47 +70,24 @@ updated: 2026-05-01
 ![image-3](../assets/products/sihao/sihao-image-003-f84e76b7.png)
 
 
->
-
-
 ![image-4](../assets/products/sihao/sihao-image-004-ef140058.jpg)
 
 
->
-> 发货配套资料：
->
->
+发货配套资料：
 
 
 ![image-5](../assets/products/sihao/sihao-image-005-1dc2279f.png)
 
 
->
->
-
-
 ![image-6](../assets/products/sihao/sihao-image-006-36865d67.png)
-
-
->
->
 
 
 ![image-7](../assets/products/sihao/sihao-image-007-13f1d371.png)
 
 
->
->
-
-
 ![image-8](../assets/products/sihao/sihao-hardware-008-49b1895b.png)
 
 
->
-
-> 1. 机载电脑软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
->
-> 2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
->
-> 3.支持任意发票。
->
+1. 机载电脑软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
+2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
+3. 支持任意发票。

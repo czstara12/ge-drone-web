@@ -28,23 +28,16 @@ updated: 2026-05-01
 
 
 ### 1.所使用的模块
-> 1.飞控：塔式飞控（PX4）已升级至工业级飞控 或 Nxt PX4！
->
-> 2.雷达：mid360
->
-> 3.机载电脑：jetson orin nx super
->
->
+1. 飞控：塔式飞控（PX4）已升级至工业级飞控 或 Nxt PX4！
+2. 雷达：mid360
+3. 机载电脑：jetson orin nx super
 
 
 ![image-3](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
 
 
->
-> 4.USB 摄像头：星光级1080P_2.6mm无畸变[水平100度](支持硬件同步且提供同步驱动源码)
->
-> 5.遥控器：Radiomaster POCKET遥控器（常规的美国手操作）
->
+4. USB 摄像头：星光级1080P_2.6mm无畸变[水平100度](支持硬件同步且提供同步驱动源码)
+5. 遥控器：Radiomaster POCKET遥控器（常规的美国手操作）
 
 [自己进来找不同吧|相机小型化|fastlivo2改_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1SBT6zPEqk/)
 
@@ -56,8 +49,7 @@ updated: 2026-05-01
 
 
 ### 2.电池、载重、续航、体积 、定位精度
-> 六好学生整机重量
->
+六好学生整机重量
 
 电池：4s 5300mah
 
@@ -77,102 +69,221 @@ updated: 2026-05-01
 
 ** SLAM 功能**
 
-```plain
-./3DSLAM.sh   获取无人机的定位数据并进行三维扫描建图（一键启动）
+获取无人机的定位数据并进行三维扫描建图（一键启动）。
+
+```bash
+./3DSLAM.sh
 ```
 
-```c
-./fastlivo2.sh   获取无人机的定位数据并进行三维建图（一键启动）
+获取无人机的定位数据并进行三维建图（一键启动）。
+
+```bash
+./fastlivo2.sh
 ```
 
 **自主避障导航功能**
 
-```plain
-./3DSLAM.sh   获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch ego_planner single_run_in_expmid.launch   启动egoplanner(mid360提供的障碍物点云信息)；
-roslaunch egoctrl_v1 egoctrl.launch   启动ego控制器，上至航点程序，下至egoplanner算法；
-roslaunch egoctrl_v1 run_mid_ego.launch 启动 task_node 综合指令发布程序；
-解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下，按照task_node 综合指令发布程序自主飞行
+获取无人机的定位数据，记得检查定位数据是否正常输出。
+
+```bash
+./3DSLAM.sh
 ```
 
-```plain
+启动 egoplanner，使用 mid360 提供的障碍物点云信息。
+
+```bash
+roslaunch ego_planner single_run_in_expmid.launch
+```
+
+启动 ego 控制器，上至航点程序，下至 egoplanner 算法。
+
+```bash
+roslaunch egoctrl_v1 egoctrl.launch
+```
+
+启动 task_node 综合指令发布程序。
+
+```bash
+roslaunch egoctrl_v1 run_mid_ego.launch
+```
+
+解锁无人机，按下 offboard 模式按键。无人机会在机载电脑的控制下，按照 task_node 综合指令发布程序自主飞行。
+
 新手建议：
-./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch ego_planner single_run_in_expmid.launch   启动egoplanner(mid360提供的障碍物点云信息)；
-roslaunch egoctrl_v1 egoctrl_yuanshi.launch   启动控制器，上至rviz，下至egoplanner算法；
-解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下飞到 1 m,然后按照 rviz 打点的位置进行飞行。
-在rviz上打点飞行
+
+获取无人机的定位数据，记得检查定位数据是否正常输出。
+
+```bash
+./3DSLAM.sh
 ```
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-遥控器切换到定点模式
-解锁无人机
+启动 egoplanner，使用 mid360 提供的障碍物点云信息。
+
+```bash
+roslaunch ego_planner single_run_in_expmid.launch
+```
+
+启动控制器，上至 rviz，下至 egoplanner 算法。
+
+```bash
+roslaunch egoctrl_v1 egoctrl_yuanshi.launch
+```
+
+解锁无人机，按下 offboard 模式按键。无人机会在机载电脑的控制下飞到 1 m，然后按照 rviz 打点的位置进行飞行。
+
+在 rviz 上打点飞行。
+
+启动并获取无人机的定位数据，记得检查定位数据是否正常输出。
+
+```bash
+./3DSLAM.sh
+```
+
+遥控器切换到定点模式。
+
+解锁无人机。
+
 油门杆向上推动，0-50%的范围无效，50%-100%的范围内开始启动，缓慢推动加速无人机起飞，飞到一定高度后，将油门杆回中，此时无人机将保持悬停状态。
-遥控器控制运动
-遥控器拨到降落模式降落
+
+遥控器控制运动。
+
+遥控器拨到降落模式降落。
+
+启动并获取无人机的定位数据，记得检查定位数据是否正常输出。
+
+```bash
+./3DSLAM.sh
 ```
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
-roslaunch onboard_detector detector_with_learning_module.launch 开启动态障碍物检测
-roslaunch remote_control dynamic_navigation_rviz.launch 打开显示地图的rviz
-roslaunch autonomous_flight dynamic_navigation.launch 执行导航 无人机自动解锁并飞到1m
-,等待rviz打点飞行, 按ctrl+c降落。
+快捷指令，此指令将启动深度相机并将像素强制改为640*480。
+
+```bash
+qidongd435
 ```
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-roslaunch remote_control navigation_rviz.launch所有地图的rviz
-roslaunch autonomous_flight navigation.launch 执行导航 无人机自动解锁并飞到1m
-,等待rviz打点飞行, 按ctrl+c降落。
+开启动态障碍物检测。
+
+```bash
+roslaunch onboard_detector detector_with_learning_module.launch
+```
+
+打开显示地图的 rviz。
+
+```bash
+roslaunch remote_control dynamic_navigation_rviz.launch
+```
+
+执行导航，无人机自动解锁并飞到1m，等待 rviz 打点飞行，按 ctrl+c 降落。
+
+```bash
+roslaunch autonomous_flight dynamic_navigation.launch
+```
+
+启动并获取无人机的定位数据，记得检查定位数据是否正常输出。
+
+```bash
+./3DSLAM.sh
+```
+
+打开显示所有地图的 rviz。
+
+```bash
+roslaunch remote_control navigation_rviz.launch
+```
+
+执行导航，无人机自动解锁并飞到1m，等待 rviz 打点飞行，按 ctrl+c 降落。
+
+```bash
+roslaunch autonomous_flight navigation.launch
 ```
 
 **自主探索+避障导航功能**
 
-```plain
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+启动并获取无人机的定位数据，记得检查定位数据是否正常输出。
 
+```bash
+./3DSLAM.sh
+```
 
-## qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
+快捷指令，此指令将启动深度相机并将像素强制改为640*480。
 
+```bash
+qidongd435
+```
 
-## roslaunch onboard_detector detector_with_learning_module.launch 第二行和第三行启不启动都可以,默认别启动
-roslaunch remote_control exploration_rviz.launch 打开显示地图的rviz
-roslaunch autonomous_flight dynamic_exploration.launch 执行探索 无人机自动解锁并飞到1m
-,等待用户按回车指令继续, 按ctrl+c降落）。
+第二行和第三行启不启动都可以，默认别启动。
+
+```bash
+roslaunch onboard_detector detector_with_learning_module.launch
+```
+
+打开显示地图的 rviz。
+
+```bash
+roslaunch remote_control exploration_rviz.launch
+```
+
+执行探索，无人机自动解锁并飞到1m，等待用户按回车指令继续，按 ctrl+c 降落。
+
+```bash
+roslaunch autonomous_flight dynamic_exploration.launch
 ```
 
 **智能识别功能**
 
-```plain
 无人机不需要起飞，给机载电脑上电和mid360上电，这是单独的一个纯检测功能。
-启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
-qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
-roslaunch onboard_detector detector_with_learning_module.launch 开启动态障碍物检测
+
+启动并获取无人机的定位数据，记得检查定位数据是否正常输出。
+
+```bash
+./3DSLAM.sh
 ```
 
-```plain
+快捷指令，此指令将启动深度相机并将像素强制改为640*480。
+
+```bash
+qidongd435
+```
+
+开启动态障碍物检测。
+
+```bash
+roslaunch onboard_detector detector_with_learning_module.launch
+```
+
+```bash
 cd ~/YOLO/
 python YOLO.py
-
-
-## 在YOLO.py中替换为你的权重文件 数字是你的USB摄像头编号，识别结果可保存为视频、图片、文字输出等
 ```
+
+在 YOLO.py 中替换为你的权重文件。数字是你的 USB 摄像头编号，识别结果可保存为视频、图片、文字输出等。
+
 
 **便捷网络功能**
 
-```plain
-tizi 快捷指令，连接本地的clash(在./bashrc内填写ip和端口号即可)
+快捷指令，连接本地的 clash（在 ./bashrc 内填写 ip 和端口号即可）。
+
+```bash
+tizi
 ```
 
 **便捷 更换 wifi 功能**
 
-```plain
-sudo nmcli radio wifi on 开启wifi
-sudo iwlist wlan0 scan | grep ESSID
+开启 wifi。
 
+```bash
+sudo nmcli radio wifi on
+```
+
+扫描 wifi。
+
+```bash
+sudo iwlist wlan0 scan | grep ESSID
+```
+
+连接指定 wifi。
+
+```bash
 sudo nmcli dev wifi connect "你的WiFi名称" password "你的WiFi密码"
 sudo nmcli dev wifi connect "summer" password "11111111"
 ```
@@ -181,9 +292,6 @@ sudo nmcli dev wifi connect "summer" password "11111111"
 
 
 ## 售价
-> 1. 机载jetson orin super nx 软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
->
-> 2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
->
-> 3.支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
->
+1. 机载jetson orin super nx 软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
+2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
+3. 支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。

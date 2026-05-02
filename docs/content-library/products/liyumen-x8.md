@@ -55,18 +55,18 @@ Jetson Orin Nx 为用户提供了高性能的机载工控机，这是现阶段�
 销售价格（计算单位：元/人民币）
 
 | 名称 | mid360 无人机（带遥控器可视化、带 FastLio、FastLivo2、super 自主避障导航、航迹录制和航迹复飞、以及传感器驱动） |
+| --- | --- |
 | 价格 | 5.1 万一套 （全能版） |
 
 如果只要飞机本体，不带遥控器可视化（不影响其它任何功能，相当于退回到传统的无人机远程登陆控制方案）、 FastLio2、FastLivo2、super 自主避障导航、航迹录制和航迹复飞软件代码，售价为 2.5w（标准版）。主要就是我们把飞机给设计组装好，挣个辛苦费和组装费，都是硬件，没有软件上的售后。只有硬件的售后。
 
 | | 全能版 | 标准版 |
+| --- | --- | --- |
 | 雷达 | mid360 | 同全能版一致 |
 | 基础动力 | 7 寸桨+60A 电调+PX4 飞控 | 同全能版一致 |
 | 机架 | 3D 打印+碳纤维板 | 同全能版一致 |
 | 遥控器 | H12PRO | 同全能版一致 |
-| 电池 | 半固态-容量：7500 mAh
-（4 块） | 同全能版一致
-（2 块） |
+| 电池 | 半固态-容量：7500 mAh（4 块） | 同全能版一致（2 块） |
 | 机载电脑 | Jetson orin nx 16G | Jetson orin nx 8G |
 | 前视相机 | D435 RGBD 相机 | 普通 usb 相机 |
 | 遥控器触控交互及可视化 | √ | × |
@@ -99,18 +99,18 @@ Jetson Orin Nx super  (GPU强大) 为用户提供了高性能的机载工控机�
 销售价格（计算单位：元/人民币）
 
 | 名称 | Odin 无人机（带遥控器可视化、带装好的驱动、super 自主避障导航、航迹录制和航迹复飞、以及传感器驱动） |
+| --- | --- |
 | 价格 | 7.9w（全能版） 推荐 |
 
 如果只要飞机本体，不带遥控器可视化（不影响其它任何功能，相当于退回到传统的无人机远程登陆控制方案）、 super 自主避障导航、航迹录制和航迹复飞软件代码，售价为 2.7w（标准版）。主要就是我们把飞机给设计组装好，挣个辛苦费和组装费，都是硬件，没有软件上的售后。只有硬件的售后。
 
 | | 全能版 | 标准版 |
+| --- | --- | --- |
 | 雷达+深度+IMU+RGB | Odin1 | 同全能版一致 |
 | 基础动力 | 7 寸桨+60A 电调+PX4 飞控 | 同全能版一致 |
 | 机架 | 3D 打印+碳纤维板 | 同全能版一致 |
 | 遥控器 | H12PRO | 同全能版一致 |
-| 电池 | 半固态-容量：7500 mAh
-（4 块） | 同全能版一致
-（2 块） |
+| 电池 | 半固态-容量：7500 mAh（4 块） | 同全能版一致（2 块） |
 | 机载电脑 | Jetson orin nx 16G | Jetson orin nx 8G |
 | 云台 | √ | × |
 | 遥控器触控交互及可视化 | √ | × |
@@ -128,27 +128,24 @@ Jetson Orin Nx super  (GPU强大) 为用户提供了高性能的机载工控机�
 
 ![隧道扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-004-73ec7004.png)
 
-
-| **隧道扫描** |
+隧道扫描
 
 
 ![桥梁扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-005-e6e658a2.png)
 
-
-| **桥梁扫描** |
+桥梁扫描
 
 
 ![车辆扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-006-93af7d53.png)
 
-
-| **车辆扫描** |
+车辆扫描
 
 
 ![桥洞扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-007-66ff731b.png)
 
+桥洞扫描
 
-| **桥洞扫描** |
-| **不同场景下实时可视化结果（左、右侧分别为彩色点云和鱼眼相机的可视化展示）** |
+不同场景下实时可视化结果（左、右侧分别为彩色点云和鱼眼相机的可视化展示）
 
 
 ## **Convenient remote control interaction**
@@ -377,8 +374,9 @@ LiyumenX8工业级勘测无人机
 
 ![image3](../assets/products/liyumen-x8/image3.jpeg)
 
+俯视图
 
-| **俯视图**                                                                      | **后侧俯视图**                                                                |
+后侧俯视图
 
 
 ![image-3](../assets/products/liyumen-x8/liyumen-x8-image-003-8b3dc034.jpg)
@@ -387,9 +385,11 @@ LiyumenX8工业级勘测无人机
 
 ![image5](../assets/products/liyumen-x8/image5.jpeg)
 
+侧视图
 
-| **侧视图**                                                                      | **后视图**                                                                    |
-| **无人机外观多方位的展示图**                                                                                                                                    |
+后视图
+
+无人机外观多方位的展示图
 
 **Real-time spatial perception**
 
@@ -402,31 +402,27 @@ LiyumenX8工业级勘测无人机
 
 ![隧道扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-004-73ec7004.png)
 
-
-                                   **隧道扫描**
+隧道扫描
 
 
 
 ![image-5](../assets/products/liyumen-x8/liyumen-x8-pointcloud-005-e6e658a2.png)
 
-
-                                   **桥梁扫描**
+桥梁扫描
 
 
 
 ![image-6](../assets/products/liyumen-x8/liyumen-x8-pointcloud-006-93af7d53.png)
 
-
-                                   **车辆扫描**
+车辆扫描
 
 
 
 ![image-7](../assets/products/liyumen-x8/liyumen-x8-pointcloud-007-66ff731b.png)
 
+桥洞扫描
 
-                                   **桥洞扫描**
-
-   **不同场景下实时可视化结果（左、右侧分别为彩色点云和鱼眼相机的可视化展示）**
+不同场景下实时可视化结果（左、右侧分别为彩色点云和鱼眼相机的可视化展示）
 
 **Convenient remote control interaction**
 
@@ -552,20 +548,19 @@ Liyumen无人机作为一款**通用型勘测无人机**，可以在山坡、隧
 
 ![image-15](../assets/products/liyumen-x8/liyumen-x8-image-015-d4c6762f.png)
 
+下水道
 
-| 下水道                                                   | 杂乱树丛                                                  |
+杂乱树丛
 
 
 ![image-16](../assets/products/liyumen-x8/liyumen-x8-image-016-4edd93fe.png)
 
-
-| 边坡检测                                                                                                             |
+边坡检测
 
 
 ![image-17](../assets/products/liyumen-x8/liyumen-x8-image-017-e4cfe45d.png)
 
-
-| 矿洞隧道                                                                                                             |
+矿洞隧道
 
 **Detailed parameters of the drone**
 
@@ -584,8 +579,7 @@ Liyumen无人机作为一款**通用型勘测无人机**，可以在山坡、隧
 
   算力               最高144TOPS
 
-  CPU                8 核 ARM® CORTEX ® - A78AE V8.2 64 位CPU 2MB L2 + 4MB
-                     L3
+  CPU                8 核 ARM® CORTEX ® - A78AE V8.2 64 位CPU 2MB L2 + 4MB L3
 
   GPU                1024 NVIDIA® CUDA® Core & 32 Tensor Core
 
