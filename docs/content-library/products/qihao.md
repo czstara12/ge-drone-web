@@ -1,121 +1,83 @@
-# 七好学生无人机
+---
+title: 七好学生
+category: 产品资料
+product: 七好学生
+source_docs:
+  - out/p/7hao.md
+assets_manifest:
+  - docs/content-library/assets/products/qihao/_manifest.md
+updated: 2026-05-01
+---
 
-## 基础信息
 
-- slug：`qihao`
-- 来源文件：`out/p/7hao.md`
-- 关联 Wiki：无
-- 当前网站位置：`/products/qihao`，产品卡片数据在 `src/data/products.ts`
+# 七好学生
 
-## 快速摘要
+本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
-七好学生是大折叠、高续航的通用无人机平台，搭载 PX4、Mid360、NUC 13 或 Jetson Orin NX，并配备图传、云台和可视化遥控器。来源称支持该系列无人机所有算法的预部署，也可定制功能。
+七好学生无人机，是一款大折叠，高续航的通用无人机平台
 
-## 产品定位
 
-适合需要更长续航、更大机架、更强外场适应性的用户。它偏向通用平台和二次开发基础平台。
+![image-1](../assets/products/qihao/qihao-product-001-328cbb22.jpg)
 
-## 核心卖点
 
-- 大折叠便携结构。
-- 40 分钟续航。
-- PX4 + Mid360。
-- NUC 13 或 Jetson Orin NX 可选。
-- 图传、云台、可视化遥控器。
-- 支持系列算法预部署和定制功能。
 
-## 关键参数
+![image-2](../assets/products/qihao/qihao-image-002-594d2c5c.jpg)
 
-| 参数 | 数值 | 备注 |
-| --- | --- | --- |
-| 飞控 | PX4 | 保留来源参数。 |
-| 雷达 | Mid360 | 保留来源参数。 |
-| 机载电脑 | NUC 13 或 Jetson Orin NX | 保留来源参数。 |
-| 图传/控制 | 图传 + 云台 + 可视化遥控器 | 保留来源参数。 |
-| 电池 | 单串高电压 4.35V，14000mAh | 保留来源参数。 |
-| 续航 | 40min | 保留来源参数。 |
-| 折叠尺寸 | 30cm x 26cm | 保留来源参数。 |
-| 上桨后对角线 | 85cm | 保留来源参数。 |
 
-## 功能能力
 
-- 长续航。
-- 折叠机架。
-- Mid360 感知和算法能力。
-- 可选机载电脑配置。
-- 系列算法预部署。
-- 定制功能支持。
+![image-3](../assets/products/qihao/qihao-image-003-c4cc14e8.jpg)
 
-## 适用场景
 
-- 更长时间的户外或半户外任务。
-- 通用无人机平台开发。
-- 大机架算法部署。
-- 需要图传、云台、可视化遥控器的场景。
 
-## 价格与交付信息
+![image-4](../assets/products/qihao/qihao-image-004-9be02494.jpg)
 
-来源资料没有给出公开价格。来源说明包含 NUC13 或 Jetson Orin NX 软件环境、完全二次开发、使用支持、教程视频、发票、公司账户付款、B 站小店下单和 QQ 咨询。
 
-网站可用性：重点公开续航和折叠结构；销售流程细节需要改写。
 
-## 网页修改参考
+![image-5](../assets/products/qihao/qihao-image-005-5a5363a3.jpg)
 
-- 当前产品卡片已经强调 40 分钟续航和折叠设计。
-- 详情页可补充可视化遥控器、云台、算法预部署和定制功能支持。
 
-## 图片资产
 
-图片来源清单：`docs/content-library/assets/products/qihao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+![image-6](../assets/products/qihao/qihao-wiring-006-8dfc7c0f.jpg)
 
-### image-1：产品图
 
-- 来源：`out/p/7hao.md`
-- 文件：`docs/content-library/assets/products/qihao/qihao-product-001-328cbb22.jpg`
-- 备注：已下载
 
-![qihao image-1 产品图](../assets/products/qihao/qihao-product-001-328cbb22.jpg)
+## 详细介绍
 
-### image-2：图片
 
-- 来源：`out/p/7hao.md`
-- 文件：`docs/content-library/assets/products/qihao/qihao-image-002-594d2c5c.jpg`
-- 备注：已下载
+### 1.所使用的模块
+> 1.飞控：PX4
+>
+> 2.雷达：mid360
+>
+> 3.机载电脑：NUC 13/jetson orin nx
+>
+> 4.图传+云台+可视化遥控器
+>
 
-![qihao image-2 图片](../assets/products/qihao/qihao-image-002-594d2c5c.jpg)
+支持该系列无人机的所有算法的预部署哦~ 拿到手以后就有一个稳定的平台，也可定制功能。
 
-### image-3：图片
 
-- 来源：`out/p/7hao.md`
-- 文件：`docs/content-library/assets/products/qihao/qihao-image-003-c4cc14e8.jpg`
-- 备注：已下载
+### 2.电池、续航、体积
+电池：高电压 4.35v 一串的电池，14000mah
 
-![qihao image-3 图片](../assets/products/qihao/qihao-image-003-c4cc14e8.jpg)
+续航：40 分钟
 
-### image-4：图片
+体积：折叠状态 30cm*26cm 上桨后对角线 85cm
 
-- 来源：`out/p/7hao.md`
-- 文件：`docs/content-library/assets/products/qihao/qihao-image-004-9be02494.jpg`
-- 备注：已下载
+>
+>
 
-![qihao image-4 图片](../assets/products/qihao/qihao-image-004-9be02494.jpg)
 
-### image-5：图片
+## 售价
+> 1. 机载 NUC13/jetson orin nx 软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
+>
+> 2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
+>
+> 3.支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
+>
+## 网站可用性与来源备注
 
-- 来源：`out/p/7hao.md`
-- 文件：`docs/content-library/assets/products/qihao/qihao-image-005-5a5363a3.jpg`
-- 备注：已下载
+本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
 
-![qihao image-5 图片](../assets/products/qihao/qihao-image-005-5a5363a3.jpg)
-
-### image-6：接线/配置
-
-- 来源：`out/p/7hao.md`
-- 文件：`docs/content-library/assets/products/qihao/qihao-wiring-006-8dfc7c0f.jpg`
-- 备注：已下载
-
-![qihao image-6 接线/配置](../assets/products/qihao/qihao-wiring-006-8dfc7c0f.jpg)
-
-## 来源备注
-
-主要来源：`out/p/7hao.md`。
+来源文件：
+  - out/p/7hao.md

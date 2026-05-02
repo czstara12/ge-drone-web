@@ -1,128 +1,147 @@
-# 五好学生无人机
+---
+title: 五好学生
+category: 产品资料
+product: 五好学生
+source_docs:
+  - out/p/5hao.md
+assets_manifest:
+  - docs/content-library/assets/products/wuhao/_manifest.md
+updated: 2026-05-01
+---
 
-## 基础信息
 
-- slug：`wuhao`
-- 来源文件：`out/p/5hao.md`、`out/p/456wiki.md`
-- 关联 Wiki：`wiki/456-series-operation-guide.md`
-- 当前网站位置：`/products/wuhao`，产品卡片数据在 `src/data/products.ts`
+# 五好学生
 
-## 快速摘要
+本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
-五好学生是共轴双桨设计的高安全性、高载重、稳定飞行无人机平台。第二版从二维雷达升级为 Mid360 三维激光雷达，定位方式由 T265 改为 Mid360 激光雷达定位。
+第一版介绍：[共轴双桨四旋翼设计_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1r4421U7Rk/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
-## 产品定位
 
-适合需要更高载重、更强稳定性和更多导航方案的竞赛、科研、开发用户。它可以理解为比四好学生更大型、更强承载能力的平台。
+![image-1](../assets/products/wuhao/wuhao-hardware-001-81ffb8fe.jpg)
 
-## 核心卖点
 
-- 共轴双桨设计，强调安全性、载重能力和稳定性。
-- Mid360 三维激光雷达。
-- Intel NUC 13 i5，16GB 内存，512GB 固态硬盘。
-- 支持多种 Ego Planner 导航方式。
-- 支持 Mid360 建图和 USB 摄像头 + YOLO 识别。
-- 来源提供多条 B 站实测或功能演示链接。
+**第二版相较于第一版的区别**
 
-## 关键参数
+**1.雷达从二维雷达升级到了 mid360 三维激光雷达**
 
-| 参数 | 数值 | 备注 |
-| --- | --- | --- |
-| 飞控 | Holybro Pixhawk 4 + PM06 | 来源说明 Pixhawk 6C 有一些 bug，因此继续采用 Pixhawk 4。 |
-| 雷达 | Mid360 三维激光雷达 | 保留来源参数。 |
-| 机载电脑 | Intel NUC 13 i5，16GB 内存，512GB 固态硬盘 | 保留来源参数。 |
-| 深度相机 | D435 | 保留来源参数。 |
-| 电调 | 四合一电调 60A x 2 | 保留来源参数。 |
-| USB 摄像头 | 星光级 1080P，无畸变 | 保留来源参数。 |
-| 遥控器 | Radiomaster POCKET | 常规美国手操作。 |
-| 整机重量 | 约 3kg | 保留来源参数。 |
-| 电池 | 发货电池 6S 5200mAh | 保留来源参数。 |
-| 载重 | 3-4kg，带电池 | 保留来源参数。 |
-| 续航 | 6S 5200mAh 约 7min；6S 12000mAh 约 13min；6S 22000mAh 约 20min | 来源为定点悬停时间。 |
-| 最大平飞速度 | 约 2.5m/s | 保留来源参数。 |
-| 轴距 | 360mm | 保留来源参数。 |
-| 外形尺寸 | 50 x 50cm | 保留来源参数。 |
-| 定位精度 | 1-3cm | 保留来源参数。 |
+**2.拿掉了 T265， 定位方式由 T265 更换为 mid360 激光雷达定位**
 
-## 功能能力
+**3.其它的都一致**
 
-- Mid360 定位 + Mid360 点云，基于航点程序进行 Ego Planner 飞行。
-- Mid360 定位 + D435 深度图像，基于航点程序进行 Ego Planner 飞行。
-- 基于 Rviz 打点进行 Ego Planner 飞行。
-- 基于 Mid360 建图。
-- USB 摄像头 + YOLO 识别。
+五好学生无人机，是一款共轴双桨设计的高安全性、 载重能力强、飞的特稳的无人机平台。
 
-## 适用场景
+四好学生是五好学生的小型化。
 
-- 较高载重测试。
-- 竞赛和科研平台。
-- 多传感器导航实验。
-- 稳定室内或半室内导航。
 
-## 价格与交付信息
+![image-2](../assets/products/wuhao/wuhao-hardware-002-2cceab3a.jpg)
 
-来源资料没有给出公开价格。来源说明包含 NUC 软件环境、完全二次开发、机载代码、使用支持、教程视频、备用防摔机架、发票、公司账户付款、B 站小店下单和 QQ 咨询。
 
-网站可用性：备用机架和支持内容可作为卖点；付款和 QQ 文案需要改写。
 
-## 网页修改参考
+![image-3](../assets/products/wuhao/wuhao-wiring-003-8a252efc.jpg)
 
-- 当前产品页和卡片可强调“第二版升级 Mid360”。
-- 和四好学生的对比要简洁：四好更小，五好更稳、载重更强。
-- 详细操作内容链接到 `wiki/456-series-operation-guide.md`。
 
-## 图片资产
 
-图片来源清单：`docs/content-library/assets/products/wuhao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+## 详细介绍
 
-### image-1：硬件
 
-- 来源：`out/p/5hao.md`
-- 文件：`docs/content-library/assets/products/wuhao/wuhao-hardware-001-81ffb8fe.jpg`
-- 备注：已下载
+### 1.所使用的模块
+> 1.飞控：Holybro pixhawk 4+PM06电源模块（pixhawk 6c 有一些 bug,所以继续采用pixhawk 4，使用起来更加丝滑和顺手）
+>
+> 2.雷达：mid360 三维激光雷达
+>
+> 3.机载电脑：Intel NUC 13 i5-13 代芯片 16G 运行内存 512G 固态硬盘
+>
+> 4.深度相机：D435
+>
+> 5.电调：四合一电调（60A）× 2
+>
+> 6.USB 摄像头：星光级1080P无畸变
+>
+> 7.遥控器：Radiomaster POCKET遥控器（常规的美国手操作）
+>
+>
+>
 
-![wuhao image-1 硬件](../assets/products/wuhao/wuhao-hardware-001-81ffb8fe.jpg)
 
-### image-2：硬件
+### 2.电池、载重、续航、速度、体积 、定位精度
+> 五好学生整机重量3kg 左右。
+>
 
-- 来源：`out/p/5hao.md`
-- 文件：`docs/content-library/assets/products/wuhao/wuhao-hardware-002-2cceab3a.jpg`
-- 备注：已下载
+电池：发货电池为 6S 5200mah 电池。
 
-![wuhao image-2 硬件](../assets/products/wuhao/wuhao-hardware-002-2cceab3a.jpg)
+载重：3-4kg （带电池）。甚至可搭载  6s 22000mah （重量 2.65kg）电池 定点飞行。
 
-### image-3：接线/配置
+[语雀卡片链接](https://www.yuque.com/woshihenyouxiude/lwkpvm/ou0mage3khx4t58g#a2dFK)
 
-- 来源：`out/p/5hao.md`
-- 文件：`docs/content-library/assets/products/wuhao/wuhao-wiring-003-8a252efc.jpg`
-- 备注：已下载
+续航： 6S 5200mah 电池定点悬停时间约 7 分钟；6S 12000mah 电池定点悬停时间约 13 分钟；
 
-![wuhao image-3 接线/配置](../assets/products/wuhao/wuhao-wiring-003-8a252efc.jpg)
+6S 22000mah 电池定点悬停时间约 20 分钟
 
-### image-4：图片
+速度：最大平飞速度 2.5m/s 左右
 
-- 来源：`out/p/5hao.md`
-- 文件：`docs/content-library/assets/products/wuhao/wuhao-image-004-2141b9a6.jpg`
-- 备注：已下载
+体积：轴距为 360mm, 外形为 50*50cm
 
-![wuhao image-4 图片](../assets/products/wuhao/wuhao-image-004-2141b9a6.jpg)
+定位精度：1 - 3cm。      超稳定点飞行视频：[每 天 都 要 飞 飞 机_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1YaxseEEqh/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
-### image-5：图片
 
-- 来源：`out/p/5hao.md`
-- 文件：`docs/content-library/assets/products/wuhao/wuhao-image-005-b644cfc0.png`
-- 备注：已下载
+### 3.功能
+**导航**
 
-![wuhao image-5 图片](../assets/products/wuhao/wuhao-image-005-b644cfc0.png)
+1.    Mid360提供定位数据,  Mid360提供点云数据  基于航点程序进行Ego _planner飞行。
+2.    Mid360提供定位数据,  深度相机d435提供深度图像数据  基于航点程序进行Ego _planner飞行。
+3.    Mid360提供定位数据,  Mid360提供点云数据  基于Rviz打点进行Ego _planner飞行。
+4.   Mid360提供定位数据, 无避障导航飞行。
 
-### image-6：硬件
+**建图**
 
-- 来源：`out/p/5hao.md`
-- 文件：`docs/content-library/assets/products/wuhao/wuhao-hardware-006-872e1108.png`
-- 备注：已下载
+ 基于 Mid360 建图
 
-![wuhao image-6 硬件](../assets/products/wuhao/wuhao-hardware-006-872e1108.png)
+**识别**
 
-## 来源备注
+ 基于 USB 摄像头 + YOLO
 
-主要来源：`out/p/5hao.md`。关联操作资料：`out/p/456wiki.md`。
+[语雀卡片链接](https://www.yuque.com/woshihenyouxiude/lwkpvm/ou0mage3khx4t58g#xaaBg)
+
+>
+>
+>
+
+
+![image-4](../assets/products/wuhao/wuhao-image-004-2141b9a6.jpg)
+
+
+>
+> 发货配套内容：
+>
+>
+
+
+![image-5](../assets/products/wuhao/wuhao-image-005-b644cfc0.png)
+
+
+>
+>
+
+
+![image-6](../assets/products/wuhao/wuhao-hardware-006-872e1108.png)
+
+
+>
+
+
+## 售价
+> 1. 机载NUC软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
+>
+> 2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
+>
+> 3.赠送一台备用防摔机架.
+>
+> 4.支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
+>
+
+## 网站可用性与来源备注
+
+本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
+
+来源文件：
+  - out/p/5hao.md

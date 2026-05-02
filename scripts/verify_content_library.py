@@ -29,11 +29,9 @@ REQUIRED_DOCS = [
     "products/liuhao.md",
     "products/qihao.md",
     "products/liyumen-x8.md",
-    "products/sim-platform.md",
     "wiki/456-series-operation-guide.md",
     "wiki/sim-wsl-install-guide.md",
     "wiki/sim-matlab-vm-guide.md",
-    "wiki/liyumen-x8-user-guide.md",
     "sources/source-inventory.md",
     "sources/image-inventory.md",
 ]
@@ -133,12 +131,63 @@ def check_chinese_document_labels() -> None:
                 fail(f"发现未中文化模板标题 `{phrase}`：{doc.relative_to(ROOT)}")
 
 
+def content_docs() -> list[Path]:
+    return sorted((LIB_ROOT / "products").glob("*.md")) + sorted((LIB_ROOT / "wiki").glob("*.md"))
+
+
+def iter_markdown_images(text: str) -> list[tuple[str, str]]:
+    return re.findall(r"!\[([^\]]*)\]\(([^)]+)\)", text)
+
+
+def normalize_markdown_destination(destination: str) -> str:
+    destination = destination.strip()
+    if destination.startswith("<") and destination.endswith(">"):
+        destination = destination[1:-1]
+    return destination
+
+
+def is_external_image(destination: str) -> bool:
+    return destination.startswith(("http://", "https://"))
+
+
+def check_inline_image_structure() -> None:
+    for doc in content_docs():
+        text = doc.read_text(encoding="utf-8")
+        rel = doc.relative_to(ROOT)
+        if "<img" in text.lower():
+            fail(f"文档仍残留 HTML 图片标签：{rel}")
+        if "## 图片资产" in text:
+            fail(f"文档仍包含旧的末尾图片资产堆叠章节：{rel}")
+
+        images = iter_markdown_images(text)
+        if not images:
+            fail(f"正文文档没有任何图片引用：{rel}")
+
+        for _, destination in images:
+            destination = normalize_markdown_destination(destination)
+            if is_external_image(destination):
+                continue
+            image_path = (doc.parent / destination).resolve()
+            try:
+                image_path.relative_to(ROOT)
+            except ValueError:
+                fail(f"图片引用越过项目目录：{rel} -> {destination}")
+            if not image_path.exists():
+                fail(f"图片引用不存在：{rel} -> {destination}")
+
+        pending_section = text.find("## 待替换原始图片")
+        source_section = text.find("## 网站可用性与来源备注")
+        if pending_section != -1 and source_section != -1 and pending_section > source_section:
+            fail(f"待替换原始图片清单应位于来源备注前，便于整理：{rel}")
+
+
 def main() -> int:
     check_required_docs()
     check_source_inventory()
     check_manifests()
     check_sensitive_readiness_notes()
     check_chinese_document_labels()
+    check_inline_image_structure()
     print("content library verification passed")
     return 0
 

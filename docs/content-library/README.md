@@ -15,10 +15,17 @@
 
 - 语雀远程图片必须下载到 `assets/`，并使用稳定、不重名的文件名。
 - `out/media/media` 中的本地导出图片迁入 `assets/`，并记录原始路径。
+- 如果图片已被确认为重复或无关并从 `assets/` 删除，重建文档时会在正文原位置保留原始链接，并在文档末尾生成 `待替换原始图片` 清单，便于后续逐一替换。
 - 不移动、不覆盖 `public/images/products` 中当前网站正在使用的图片。
 - 每个图片目录必须有 `_manifest.md`。
 - 每张图片都要标注网站可用状态：`待审核`、`可用` 或 `不可用`。
 - 如果多处来源引用同一张图片，只保留一个本地 canonical 文件，并在清单里记录所有来源。
+
+## 重建与校验
+
+- 运行 `python3 scripts/rebuild_content_library_docs.py` 可从 `out/` 原始正文重建产品和 Wiki 文档，并按原文位置内联图片。
+- 运行 `python3 scripts/rebuild_content_library_docs.py --check` 可检查当前文档是否与原始资料重建结果一致；如果已经手动替换、删除或调整图片，当前文档可以和重建结果不同。
+- 运行 `python3 scripts/verify_content_library.py` 可检查必要文档、图片清单、本地图片引用和旧的末尾图片堆叠章节。
 
 ## 未来 Wiki 模块预留
 

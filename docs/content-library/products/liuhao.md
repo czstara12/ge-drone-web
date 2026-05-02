@@ -1,104 +1,200 @@
-# 六好学生无人机
+---
+title: 六好学生
+category: 产品资料
+product: 六好学生
+source_docs:
+  - out/p/6hao.md
+assets_manifest:
+  - docs/content-library/assets/products/liuhao/_manifest.md
+updated: 2026-05-01
+---
 
-## 基础信息
 
-- slug：`liuhao`
-- 来源文件：`out/p/6hao.md`、`out/p/456wiki.md`
-- 关联 Wiki：`wiki/456-series-operation-guide.md`
-- 当前网站位置：当前 `src/pages/products` 中未确认有独立路由
+# 六好学生
 
-## 快速摘要
+本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
-六好学生是高性能、多功能、小巧灵活的通用无人机平台。新版本使用 7 寸桨和半固态电池，适配 FastLivo2 的雷达定位能力，在性能、续航和体积之间取得平衡。
+因六好学生原始版本是5寸桨和普通电池 续航会很低 现在的新机架用的是7寸桨和半固态电池
 
-## 产品定位
+六好学生无人机，是一款高性能，多功能、小巧灵活的通用无人机平台,适配了最新的 fastlivo2（只包含雷达定位部分，SLAM 定位精度更加强悍）！性能、续航、体积之间做到了优质的平衡！
 
-适合需要小体积、高性能、完整算法能力和更好续航平衡的用户。它囊括四好学生的基础功能，并加入结构减震、防炸机保护、视觉识别优化等更新。
+更新：机体中间和下方加入了减震优化结构；加入了防炸机保护，检测到无人机定位数据紊乱后自动切换降落保护模式，用起来更安心；优化了视觉识别内容，速度更快，内存占用更小。
 
-## 核心卖点
 
-- 小巧灵活，轴距 210mm，最外围约 30 x 30cm。
-- Mid360 + Jetson Orin NX Super。
-- 适配 FastLivo2 雷达定位，来源称定位精度更强。
-- 结构减震优化和定位异常降落保护。
-- 支持 SLAM、避障导航、自主探索、智能识别、网络工具和 Wi-Fi 更换流程。
-- 可从 5 寸桨 9 分钟续航升级为 7 寸桨约 13 分钟。
+![image-1](../assets/products/liuhao/liuhao-hardware-001-4e55b162.jpg)
 
-## 关键参数
 
-| 参数 | 数值 | 备注 |
-| --- | --- | --- |
-| 飞控 | 工业级 PX4 飞控或 Nxt PX4 | 来源说明塔式飞控已升级。 |
-| 雷达 | Mid360 | 保留来源参数。 |
-| 机载电脑 | Jetson Orin NX Super | 保留来源参数。 |
-| USB 摄像头 | 星光级 1080P，2.6mm 无畸变，水平 100 度 | 支持硬件同步并提供同步驱动源码。 |
-| 遥控器 | Radiomaster POCKET | 常规美国手操作。 |
-| 电池 | 4S 5300mAh | 保留来源参数。 |
-| 最大起飞重量 | 1.9kg | 保留来源参数。 |
-| 续航 | 5 寸桨 9min；可改 7 寸桨约 13min | 保留来源参数。 |
-| 轴距 | 210mm | 保留来源参数。 |
-| 最外围尺寸 | 30 x 30cm | 保留来源参数。 |
-| 定位精度 | FastLivo2 下小于 0.5cm | 保留来源参数。 |
-| 飞机重量 | 900g，不含电池 | 保留来源参数。 |
 
-## 功能能力
+![image-2](../assets/products/liuhao/liuhao-wiring-002-8b3fc354.jpg)
 
-- SLAM 定位和三维扫描建图。
-- 自主避障导航。
-- Rviz 打点导航流程。
-- 自主探索。
-- 动态障碍物检测。
-- YOLO 视觉识别。
-- 网络代理快捷指令和 Wi-Fi 设置说明。
 
-## 适用场景
 
-- 小型科研平台。
-- 室内自主导航。
-- SLAM 和建图实验。
-- 视觉检测与避障。
-- 需要小体积高能力平台的二次开发场景。
+## 详细介绍
 
-## 价格与交付信息
 
-来源资料没有给出公开价格。来源说明包含 Jetson Orin Super NX 软件环境、完全二次开发、使用支持、教程视频、发票、公司账户付款、B 站小店下单和 QQ 咨询。
+### 1.所使用的模块
+> 1.飞控：塔式飞控（PX4）已升级至工业级飞控 或 Nxt PX4！
+>
+> 2.雷达：mid360
+>
+> 3.机载电脑：jetson orin nx super
+>
+>
 
-网站可用性：原始 shell 命令不应放在产品页，应放入 Wiki。
 
-## 网页修改参考
+![image-3](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
 
-- 如果产品矩阵扩展，可考虑新增为独立产品。
-- 产品页重点强调：小体积、高性能 SLAM、7 寸桨续航升级、安全保护。
-- 详细命令流程链接到 `wiki/456-series-operation-guide.md`。
 
-## 图片资产
+>
+> 4.USB 摄像头：星光级1080P_2.6mm无畸变[水平100度](支持硬件同步且提供同步驱动源码)
+>
+> 5.遥控器：Radiomaster POCKET遥控器（常规的美国手操作）
+>
 
-图片来源清单：`docs/content-library/assets/products/liuhao/_manifest.md`。以下按来源文档中的图片顺序保留，便于结合前文判断用途。
+[自己进来找不同吧|相机小型化|fastlivo2改_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1SBT6zPEqk/)
 
-### image-1：硬件
+[[开源]精美彩点云|小小小相机同步驱动|优雅地飞行_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yagDzfEmF/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
-- 来源：`out/p/6hao.md`
-- 文件：`docs/content-library/assets/products/liuhao/liuhao-hardware-001-4e55b162.jpg`
-- 备注：已下载
+基于地面站进行室内自主巡检
 
-![liuhao image-1 硬件](../assets/products/liuhao/liuhao-hardware-001-4e55b162.jpg)
+[我们工作室的无人机终于有专属的地面站了！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1wUvFzVEAy/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
-### image-2：接线/配置
 
-- 来源：`out/p/6hao.md`
-- 文件：`docs/content-library/assets/products/liuhao/liuhao-wiring-002-8b3fc354.jpg`
-- 备注：已下载
+### 2.电池、载重、续航、体积 、定位精度
+> 六好学生整机重量
+>
 
-![liuhao image-2 接线/配置](../assets/products/liuhao/liuhao-wiring-002-8b3fc354.jpg)
+电池：4s 5300mah
 
-### image-3：接线/配置
+最大起飞重量：1.9kg
 
-- 来源：`out/p/6hao.md`
-- 文件：`docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
-- 备注：重复图片；canonical 文件为 `docs/content-library/assets/products/sihao/sihao-wiring-001-e01dafa0.png`
+续航： 5 寸桨飞 9 分钟（可改装为七寸桨，飞 13 分钟）
 
-![liuhao image-3 接线/配置](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
+体积：轴距 210mm  最外围 30 * 30cm
 
-## 来源备注
+定位精度：<0.5 cm（Fast livo2）。
 
-主要来源：`out/p/6hao.md`。关联操作资料：`out/p/456wiki.md`。
+飞机重量：900g（不包含电池）
+
+六好学生囊括了四好学生的所有功能哦！基础操作部分同下：
+
+[【发货使用】“四好学生”通用无人机平台详细说明](https://www.yuque.com/woshihenyouxiude/lwkpvm/kuld1zdq69o0d0gt)
+
+** SLAM 功能**
+
+```plain
+./3DSLAM.sh   获取无人机的定位数据并进行三维扫描建图（一键启动）
+```
+
+```c
+./fastlivo2.sh   获取无人机的定位数据并进行三维建图（一键启动）
+```
+
+**自主避障导航功能**
+
+```plain
+./3DSLAM.sh   获取无人机的定位数据（记得检查定位数据是否正常输出）
+roslaunch ego_planner single_run_in_expmid.launch   启动egoplanner(mid360提供的障碍物点云信息)；
+roslaunch egoctrl_v1 egoctrl.launch   启动ego控制器，上至航点程序，下至egoplanner算法；
+roslaunch egoctrl_v1 run_mid_ego.launch 启动 task_node 综合指令发布程序；
+解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下，按照task_node 综合指令发布程序自主飞行
+```
+
+```plain
+新手建议：
+./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+roslaunch ego_planner single_run_in_expmid.launch   启动egoplanner(mid360提供的障碍物点云信息)；
+roslaunch egoctrl_v1 egoctrl_yuanshi.launch   启动控制器，上至rviz，下至egoplanner算法；
+解锁无人机 按下 offboard 模式按键 无人机将在机载电脑的控制下飞到 1 m,然后按照 rviz 打点的位置进行飞行。
+在rviz上打点飞行
+```
+
+```plain
+启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+遥控器切换到定点模式
+解锁无人机
+油门杆向上推动，0-50%的范围无效，50%-100%的范围内开始启动，缓慢推动加速无人机起飞，飞到一定高度后，将油门杆回中，此时无人机将保持悬停状态。
+遥控器控制运动
+遥控器拨到降落模式降落
+```
+
+```plain
+启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
+roslaunch onboard_detector detector_with_learning_module.launch 开启动态障碍物检测
+roslaunch remote_control dynamic_navigation_rviz.launch 打开显示地图的rviz
+roslaunch autonomous_flight dynamic_navigation.launch 执行导航 无人机自动解锁并飞到1m
+,等待rviz打点飞行, 按ctrl+c降落。
+```
+
+```plain
+启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+roslaunch remote_control navigation_rviz.launch所有地图的rviz
+roslaunch autonomous_flight navigation.launch 执行导航 无人机自动解锁并飞到1m
+,等待rviz打点飞行, 按ctrl+c降落。
+```
+
+**自主探索+避障导航功能**
+
+```plain
+启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+
+
+## qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
+
+
+## roslaunch onboard_detector detector_with_learning_module.launch 第二行和第三行启不启动都可以,默认别启动
+roslaunch remote_control exploration_rviz.launch 打开显示地图的rviz
+roslaunch autonomous_flight dynamic_exploration.launch 执行探索 无人机自动解锁并飞到1m
+,等待用户按回车指令继续, 按ctrl+c降落）。
+```
+
+**智能识别功能**
+
+```plain
+无人机不需要起飞，给机载电脑上电和mid360上电，这是单独的一个纯检测功能。
+启动 ./3DSLAM.sh 获取无人机的定位数据（记得检查定位数据是否正常输出）
+qidongd435   （快捷指令）此指令将启动深度相机并将像素强制改为640*480
+roslaunch onboard_detector detector_with_learning_module.launch 开启动态障碍物检测
+```
+
+```plain
+cd ~/YOLO/
+python YOLO.py
+
+
+## 在YOLO.py中替换为你的权重文件 数字是你的USB摄像头编号，识别结果可保存为视频、图片、文字输出等
+```
+
+**便捷网络功能**
+
+```plain
+tizi 快捷指令，连接本地的clash(在./bashrc内填写ip和端口号即可)
+```
+
+**便捷 更换 wifi 功能**
+
+```plain
+sudo nmcli radio wifi on 开启wifi
+sudo iwlist wlan0 scan | grep ESSID
+
+sudo nmcli dev wifi connect "你的WiFi名称" password "你的WiFi密码"
+sudo nmcli dev wifi connect "summer" password "11111111"
+```
+
+所有 offboard 模式起飞前，都建议切换到定点模式，油门遥感在最低位起飞，这样再退出offboard 模式后，无人机会丝滑地缓慢下降！
+
+
+## 售价
+> 1. 机载jetson orin super nx 软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
+>
+> 2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
+>
+> 3.支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
+>
+## 网站可用性与来源备注
+
+本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
+
+来源文件：
+  - out/p/6hao.md
