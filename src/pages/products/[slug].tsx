@@ -115,6 +115,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     'wuhao',
     'sim-platform',
     'qihao',
+    'sihao',
+    'liuhao',
   ];
   const paths = products
     .filter((product) => !excludeSlugs.includes(product.slug))

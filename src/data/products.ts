@@ -117,7 +117,7 @@ export const products: Product[] = [
       '基于 WSL2 的 XTDrone 预装环境，集成 PX4、Gazebo、ROS，开箱即用的无人机仿真开发平台，支持 GPU 加速，适用于算法研究、教学演示、竞赛训练。',
     price: '询价',
     category: '仿真软件',
-    image: '/images/products/sim-platform.jpg',
+    image: '/images/products/sim-platform-wiring.png',
     features: [
       '开箱即用，零配置',
       'PX4 + Gazebo + ROS',
@@ -167,6 +167,66 @@ export const products: Product[] = [
       badgeClassName: 'bg-orange-500 text-white',
       accentClassName: 'text-orange-400',
       buttonClassName: 'bg-orange-500 text-white hover:bg-orange-400',
+    },
+  },
+  {
+    id: '6',
+    slug: 'sihao',
+    name: '四好学生',
+    description:
+      '高性价比通用无人机开发平台，搭载 Pix4、Mid360、Jetson Orin NX Super 和 D435，覆盖定位、建图、导航、探索与智能识别。',
+    price: '询价',
+    category: '通用开发',
+    image: '/images/products/sihao/sihao-flight.jpg',
+    features: [
+      'Jetson Orin NX Super 117T 算力',
+      'Mid360 三维激光雷达',
+      'D435 深度相机',
+      '定位、建图、导航、探索、识别',
+    ],
+    specs: {
+      整机重量: '1.46kg',
+      最大起飞重量: '1.9kg',
+      续航时间: '9-10min',
+      轴距: '250mm',
+      定位精度: '1cm',
+    },
+    theme: {
+      cardClassName:
+        'border border-cyan-500/20 bg-gradient-to-br from-cyan-900/40 via-dark-800 to-blue-950 shadow-glow-sm',
+      badgeClassName: 'bg-cyan-500 text-white',
+      accentClassName: 'text-cyan-400',
+      buttonClassName: 'bg-cyan-500 text-white hover:bg-cyan-400',
+    },
+  },
+  {
+    id: '7',
+    slug: 'liuhao',
+    name: '六好学生',
+    description:
+      '高性能、多功能、小巧灵活的通用无人机平台，适配 FastLivo2 雷达定位能力，在性能、续航和体积之间取得平衡。',
+    price: '询价',
+    category: '高性能平台',
+    image: '/images/products/liuhao/liuhao-hardware.jpg',
+    features: [
+      'FastLivo2 雷达定位能力',
+      '工业级飞控或 Nxt PX4',
+      'Jetson Orin NX Super',
+      '视觉识别速度与内存优化',
+    ],
+    specs: {
+      飞机重量: '900g',
+      最大起飞重量: '1.9kg',
+      续航时间: '9/13min',
+      轴距: '210mm',
+      定位精度: '<0.5cm',
+    },
+    theme: {
+      cardClassName:
+        'border border-emerald-500/20 bg-gradient-to-br from-emerald-900/40 via-dark-800 to-teal-950 shadow-glow-sm',
+      badgeClassName: 'bg-emerald-500 text-white',
+      accentClassName: 'text-emerald-400',
+      buttonClassName: 'bg-emerald-500 text-white hover:bg-emerald-400',
     },
   },
 ];
