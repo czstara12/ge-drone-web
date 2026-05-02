@@ -38,7 +38,8 @@ REQUIRED_DOCS = [
 
 FORBIDDEN_CONTENT_PATTERNS = [
     "描述已自动生成",
-    "可信度",
+    "中度可信度描述已自动生成",
+    "低可信度描述已自动生成",
     "网站可用性与来源备注",
     "来源文件：",
     "本文档按原始资料",
@@ -46,10 +47,22 @@ FORBIDDEN_CONTENT_PATTERNS = [
     "assets_manifest:",
     "```plain",
     "```text",
-    "```c",
 ]
 
 ALLOWED_FRONTMATTER_KEYS = {"title", "category", "product", "updated"}
+
+SHELL_IN_C_FENCE_PATTERNS = [
+    "./",
+    "roslaunch",
+    "rosrun",
+    "source ",
+    "cd ",
+    "python ",
+    "sudo ",
+    "qidongd435",
+    "tizi",
+    "nmcli",
+]
 
 
 def fail(message: str) -> None:
@@ -154,12 +167,16 @@ def content_docs() -> list[Path]:
     )
 
 
-def frontmatter_keys(text: str) -> set[str]:
+def line_number(text: str, index: int) -> int:
+    return text.count("\n", 0, index) + 1
+
+
+def frontmatter_keys(text: str, rel: Path) -> set[str]:
     if not text.startswith("---\n"):
         return set()
     end = text.find("\n---", 4)
     if end == -1:
-        fail("frontmatter 未闭合")
+        fail(f"frontmatter 未闭合：{rel}")
     keys: set[str] = set()
     for line in text[4:end].splitlines():
         if not line.strip() or line.startswith("  "):
@@ -169,17 +186,29 @@ def frontmatter_keys(text: str) -> set[str]:
     return keys
 
 
+def check_shell_commands_in_c_fences(text: str, rel: Path) -> None:
+    for match in re.finditer(r"^```c[ \t]*\n(.*?)(?:^```|\Z)", text, re.MULTILINE | re.DOTALL):
+        body = match.group(1)
+        if any(pattern in body for pattern in SHELL_IN_C_FENCE_PATTERNS):
+            fail(f"c 代码块疑似包含 shell 命令：{rel}:{line_number(text, match.start())}")
+
+
 def check_clean_markdown_contract() -> None:
     for doc in content_docs():
         text = doc.read_text(encoding="utf-8")
         rel = doc.relative_to(ROOT)
-        keys = frontmatter_keys(text)
+        keys = frontmatter_keys(text, rel)
         unexpected = keys - ALLOWED_FRONTMATTER_KEYS
         if unexpected:
             fail(f"frontmatter 包含内部字段：{rel} -> {sorted(unexpected)}")
         for pattern in FORBIDDEN_CONTENT_PATTERNS:
-            if pattern in text:
-                fail(f"正文仍包含脚手架或错误代码块 `{pattern}`：{rel}")
+            index = text.find(pattern)
+            if index != -1:
+                fail(
+                    f"正文仍包含脚手架或错误代码块 `{pattern}`："
+                    f"{rel}:{line_number(text, index)}"
+                )
+        check_shell_commands_in_c_fences(text, rel)
         for lineno, line in enumerate(text.splitlines(), start=1):
             if re.match(r"^\|\s*$", line):
                 fail(f"发现孤立表格竖线：{rel}:{lineno}")
