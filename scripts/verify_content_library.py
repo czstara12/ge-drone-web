@@ -212,6 +212,8 @@ def check_clean_markdown_contract() -> None:
         for lineno, line in enumerate(text.splitlines(), start=1):
             if re.match(r"^\|\s*$", line):
                 fail(f"发现孤立表格竖线：{rel}:{lineno}")
+            if re.match(r"^ {2,}\S.* {2,}\S", line):
+                fail(f"发现疑似固定宽度表格残留：{rel}:{lineno}")
             if re.match(r"^ {4,}\S", line) and not line.startswith("    - "):
                 fail(f"发现可疑缩进代码块：{rel}:{lineno}")
 

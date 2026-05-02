@@ -5,9 +5,7 @@ product: 六好学生
 updated: 2026-05-01
 ---
 
-
 # 六好学生
-
 
 因六好学生原始版本是5寸桨和普通电池 续航会很低 现在的新机架用的是7寸桨和半固态电池
 
@@ -15,40 +13,33 @@ updated: 2026-05-01
 
 更新：机体中间和下方加入了减震优化结构；加入了防炸机保护，检测到无人机定位数据紊乱后自动切换降落保护模式，用起来更安心；优化了视觉识别内容，速度更快，内存占用更小。
 
-
 ![image-1](../assets/products/liuhao/liuhao-hardware-001-4e55b162.jpg)
-
-
 
 ![image-2](../assets/products/liuhao/liuhao-wiring-002-8b3fc354.jpg)
 
-
-
 ## 详细介绍
 
-
 ### 1.所使用的模块
+
 1. 飞控：塔式飞控（PX4）已升级至工业级飞控 或 Nxt PX4！
 2. 雷达：mid360
 3. 机载电脑：jetson orin nx super
 
-
 ![image-3](../assets/products/sihao/sihao-wiring-001-e01dafa0.png)
-
 
 4. USB 摄像头：星光级1080P_2.6mm无畸变[水平100度](支持硬件同步且提供同步驱动源码)
 5. 遥控器：Radiomaster POCKET遥控器（常规的美国手操作）
 
-[自己进来找不同吧|相机小型化|fastlivo2改_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1SBT6zPEqk/)
+[自己进来找不同吧|相机小型化|fastlivo2改\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1SBT6zPEqk/)
 
-[[开源]精美彩点云|小小小相机同步驱动|优雅地飞行_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1yagDzfEmF/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
+[[开源]精美彩点云|小小小相机同步驱动|优雅地飞行\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1yagDzfEmF/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
 基于地面站进行室内自主巡检
 
-[我们工作室的无人机终于有专属的地面站了！_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1wUvFzVEAy/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
-
+[我们工作室的无人机终于有专属的地面站了！\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1wUvFzVEAy/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
 ### 2.电池、载重、续航、体积 、定位精度
+
 六好学生整机重量
 
 电池：4s 5300mah
@@ -57,7 +48,7 @@ updated: 2026-05-01
 
 续航： 5 寸桨飞 9 分钟（可改装为七寸桨，飞 13 分钟）
 
-体积：轴距 210mm  最外围 30 * 30cm
+体积：轴距 210mm 最外围 30 \* 30cm
 
 定位精度：<0.5 cm（Fast livo2）。
 
@@ -155,7 +146,7 @@ roslaunch egoctrl_v1 egoctrl_yuanshi.launch
 ./3DSLAM.sh
 ```
 
-快捷指令，此指令将启动深度相机并将像素强制改为640*480。
+快捷指令，此指令将启动深度相机并将像素强制改为640\*480。
 
 ```bash
 qidongd435
@@ -205,7 +196,7 @@ roslaunch autonomous_flight navigation.launch
 ./3DSLAM.sh
 ```
 
-快捷指令，此指令将启动深度相机并将像素强制改为640*480。
+快捷指令，此指令将启动深度相机并将像素强制改为640\*480。
 
 ```bash
 qidongd435
@@ -239,7 +230,7 @@ roslaunch autonomous_flight dynamic_exploration.launch
 ./3DSLAM.sh
 ```
 
-快捷指令，此指令将启动深度相机并将像素强制改为640*480。
+快捷指令，此指令将启动深度相机并将像素强制改为640\*480。
 
 ```bash
 qidongd435
@@ -257,7 +248,6 @@ python YOLO.py
 ```
 
 在 YOLO.py 中替换为你的权重文件。数字是你的 USB 摄像头编号，识别结果可保存为视频、图片、文字输出等。
-
 
 **便捷网络功能**
 
@@ -290,8 +280,8 @@ sudo nmcli dev wifi connect "summer" password "11111111"
 
 所有 offboard 模式起飞前，都建议切换到定点模式，油门遥感在最低位起飞，这样再退出offboard 模式后，无人机会丝滑地缓慢下降！
 
-
 ## 售价
+
 1. 机载jetson orin super nx 软件环境，支持完全二次开发，所有的代码都在无人机上的机载电脑内。
 2. 提供完善的设备维护和使用支持，官方提供标准机型用户操作视频供参考，教程视频会通过百度网盘链接提供。
 3. 支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
