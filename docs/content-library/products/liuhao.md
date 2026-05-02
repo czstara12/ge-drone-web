@@ -2,17 +2,12 @@
 title: 六好学生
 category: 产品资料
 product: 六好学生
-source_docs:
-  - out/p/6hao.md
-assets_manifest:
-  - docs/content-library/assets/products/liuhao/_manifest.md
 updated: 2026-05-01
 ---
 
 
 # 六好学生
 
-本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
 因六好学生原始版本是5寸桨和普通电池 续航会很低 现在的新机架用的是7寸桨和半固态电池
 
@@ -192,9 +187,3 @@ sudo nmcli dev wifi connect "summer" password "11111111"
 >
 > 3.支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
 >
-## 网站可用性与来源备注
-
-本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
-
-来源文件：
-  - out/p/6hao.md

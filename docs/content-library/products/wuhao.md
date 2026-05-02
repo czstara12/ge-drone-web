@@ -2,17 +2,12 @@
 title: 五好学生
 category: 产品资料
 product: 五好学生
-source_docs:
-  - out/p/5hao.md
-assets_manifest:
-  - docs/content-library/assets/products/wuhao/_manifest.md
 updated: 2026-05-01
 ---
 
 
 # 五好学生
 
-本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
 第一版介绍：[共轴双桨四旋翼设计_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1r4421U7Rk/?vd_source=4289c781adc3a9ced242221ce6b3f4e0)
 
@@ -138,10 +133,3 @@ updated: 2026-05-01
 >
 > 4.支持任意发票，可直接向我的公司账户付款，也可在 B 站工房内下单，详情请咨询狗弟工作室 QQ:480475357。
 >
-
-## 网站可用性与来源备注
-
-本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
-
-来源文件：
-  - out/p/5hao.md

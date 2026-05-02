@@ -2,17 +2,12 @@
 title: GDStudio MATLAB 虚拟机资料
 category: 使用教程
 product: GDStudio MATLAB 虚拟机资料
-source_docs:
-  - out/p/gd-sim-matlab.md
-assets_manifest:
-  - docs/content-library/assets/products/sim-platform/_manifest.md
 updated: 2026-05-01
 ---
 
 
 # GDStudio MATLAB 虚拟机资料
 
-本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
 此文档为长期维护版本，以此版本为准哦~
 
@@ -147,11 +142,3 @@ roslaunch simulation ros_Auto2Dnav_demo_px4.launch
 **无人机利用GPS得到无人机的定位数据叫做GPS定位。**
 
 根据你实际的情况来切换 EKF 配置，从而调整定位模式。桌面上的使用
-
-
-## 网站可用性与来源备注
-
-本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
-
-来源文件：
-  - out/p/gd-sim-matlab.md

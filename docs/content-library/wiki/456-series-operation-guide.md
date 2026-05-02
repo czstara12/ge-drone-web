@@ -2,17 +2,12 @@
 title: 四/五/六系列使用与交付说明
 category: 使用教程
 product: 四/五/六系列使用与交付说明
-source_docs:
-  - out/p/456wiki.md
-assets_manifest:
-  - docs/content-library/assets/wiki/456-series-operation-guide/_manifest.md
 updated: 2026-05-01
 ---
 
 
 # 四/五/六系列使用与交付说明
 
-本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
 **目录：**
 
@@ -808,11 +803,3 @@ source /opt/ros/noetic/setup.sh
 补充说明 5：旋转角度说明：雷达  pitch抬头为负 低头为正 往左偏 roll为负 ，yaw正值是逆时针 负值顺时针
 
 ##
-
-
-## 网站可用性与来源备注
-
-本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
-
-来源文件：
-  - out/p/456wiki.md

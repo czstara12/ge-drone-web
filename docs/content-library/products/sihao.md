@@ -2,17 +2,12 @@
 title: 四好学生
 category: 产品资料
 product: 四好学生
-source_docs:
-  - out/p/4hao.md
-assets_manifest:
-  - docs/content-library/assets/products/sihao/_manifest.md
 updated: 2026-05-01
 ---
 
 
 # 四好学生
 
-本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
 四好学生无人机：**为大幅降低开发门槛，提高开发效率，使开发人员能够专注于高价值的任务和功能优化。**
 
@@ -126,10 +121,3 @@ updated: 2026-05-01
 >
 > 3.支持任意发票。
 >
-
-## 网站可用性与来源备注
-
-本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
-
-来源文件：
-  - out/p/4hao.md

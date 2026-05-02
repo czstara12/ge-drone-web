@@ -2,18 +2,12 @@
 title: 鲤鱼门 X8 使用资料
 category: 使用教程
 product: 鲤鱼门 X8
-source_docs:
-  - out/p/liyumenx8.md
-  - out/liyumenx8.md
-assets_manifest:
-  - docs/content-library/assets/products/liyumen-x8/_manifest.md
 updated: 2026-05-01
 ---
 
 
 # 鲤鱼门 X8 使用资料
 
-本文档按原始资料的图文顺序重建，图片保留在对应上下文位置，便于作为中文知识库继续整理。
 
 
 ## liyumenx8
@@ -366,7 +360,6 @@ Point+Normal cloud (*.pn)；Point+Value cloud (*.pv) 。
 
 ## liyumenx8
 
-中度可信度描述已自动生成
 
 
 ![image-1](../assets/products/liyumen-x8/liyumen-x8-pointcloud-001-357552fb.jpg)
@@ -376,7 +369,6 @@ LiyumenX8工业级勘测无人机
 
 致力于解决地下隧道、矿山、林业等复杂受限空间中面临的**"进不去、看不清、联不通"**等核心痛点。具备在无GNSS信号、极度弱光、强磁干扰及严重弱网环境下，实现高可靠自主飞行、三维彩色点云"一比一现实还原"建图、以及航迹精准复飞的智能勘测功能。
 
-| 中度可信度描述已自动生成
 
 
 ![image-2](../assets/products/liyumen-x8/liyumen-x8-image-002-70d85c23.jpg)
@@ -387,7 +379,6 @@ LiyumenX8工业级勘测无人机
 
 
 | **俯视图**                                                                      | **后侧俯视图**                                                                |
-| 中度可信度描述已自动生成
 
 
 ![image-3](../assets/products/liyumen-x8/liyumen-x8-image-003-8b3dc034.jpg)
@@ -407,7 +398,6 @@ LiyumenX8工业级勘测无人机
 突破传统RGBD相机和原始点云局限，支持实时查看 **"一比一现实还原"
 三维彩色点云**
 
-        描述已自动生成
 
 
 ![隧道扫描](../assets/products/liyumen-x8/liyumen-x8-pointcloud-004-73ec7004.png)
@@ -415,7 +405,6 @@ LiyumenX8工业级勘测无人机
 
                                    **隧道扫描**
 
-       描述已自动生成
 
 
 ![image-5](../assets/products/liyumen-x8/liyumen-x8-pointcloud-005-e6e658a2.png)
@@ -423,7 +412,6 @@ LiyumenX8工业级勘测无人机
 
                                    **桥梁扫描**
 
-   中度可信度描述已自动生成
 
 
 ![image-6](../assets/products/liyumen-x8/liyumen-x8-pointcloud-006-93af7d53.png)
@@ -431,7 +419,6 @@ LiyumenX8工业级勘测无人机
 
                                    **车辆扫描**
 
-    低可信度描述已自动生成
 
 
 ![image-7](../assets/products/liyumen-x8/liyumen-x8-pointcloud-007-66ff731b.png)
@@ -455,7 +442,6 @@ LiyumenX8工业级勘测无人机
 
 **强悍性能**
 
-描述已自动生成
 
 
 ![image-9](../assets/products/liyumen-x8/liyumen-x8-product-009-927619fb.png)
@@ -477,7 +463,6 @@ LiyumenX8工业级勘测无人机
 
 Liyumen无人机深度融合了颠覆性Odin1模组，赋予无人机长期稳定的环境认知和定位建图能力
 
-低可信度描述已自动生成
 
 
 ![image-10](../assets/products/liyumen-x8/liyumen-x8-remote-control-010-b76ffa7a.png)
@@ -496,7 +481,6 @@ Liyumen无人机深度融合了颠覆性Odin1模组，赋予无人机长期稳�
 
 **突破传统**
 
-描述已自动生成
 
 
 ![image-11](../assets/products/liyumen-x8/liyumen-x8-pointcloud-011-58416449.png)
@@ -513,13 +497,11 @@ Liyumen无人机深度融合了颠覆性Odin1模组，赋予无人机长期稳�
 支持通过配套电脑软件MindCloud
 Studio，对无人机扫描数据进行处理。（高效空间数据标注与处理、回环检测、平差优化、运动物体滤除、SOR滤波处理等）。
 
-低可信度描述已自动生成
 
 
 ![image-12](../assets/products/liyumen-x8/liyumen-x8-pointcloud-012-59f81fab.png)
 
 
-描述已自动生成
 
 
 ![image-13](../assets/products/liyumen-x8/liyumen-x8-image-013-452bef40.png)
@@ -646,12 +628,3 @@ Liyumen无人机作为一款**通用型勘测无人机**，可以在山坡、隧
   安全等级           防尘/防泼溅/防爆
 
   避障能力           前向或360度
-
-
-## 网站可用性与来源备注
-
-本文档保留原始图文结构作为知识库参考；公开到网站前仍需检查价格、账号、密码、购买渠道、QQ、激活码等敏感信息。
-
-来源文件：
-  - out/p/liyumenx8.md
-  - out/liyumenx8.md
