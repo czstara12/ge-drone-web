@@ -32,11 +32,24 @@ REQUIRED_DOCS = [
     "wiki/456-series-operation-guide.md",
     "wiki/sim-wsl-install-guide.md",
     "wiki/sim-matlab-vm-guide.md",
-    "sources/source-inventory.md",
-    "sources/image-inventory.md",
+    "internal/sources/source-inventory.md",
+    "internal/sources/image-inventory.md",
 ]
 
-SENSITIVE_TERMS = ["密码", "激活码", "QQ", "付款", "购买"]
+FORBIDDEN_CONTENT_PATTERNS = [
+    "描述已自动生成",
+    "可信度",
+    "网站可用性与来源备注",
+    "来源文件：",
+    "本文档按原始资料",
+    "source_docs:",
+    "assets_manifest:",
+    "```plain",
+    "```text",
+    "```c",
+]
+
+ALLOWED_FRONTMATTER_KEYS = {"title", "category", "product", "updated"}
 
 
 def fail(message: str) -> None:
@@ -53,9 +66,9 @@ def check_required_docs() -> None:
 
 
 def check_source_inventory() -> None:
-    inventory = (LIB_ROOT / "sources" / "source-inventory.md").read_text(
-        encoding="utf-8"
-    )
+    inventory = (
+        LIB_ROOT / "internal" / "sources" / "source-inventory.md"
+    ).read_text(encoding="utf-8")
     for source in REQUIRED_SOURCES:
         if source not in inventory:
             fail(f"来源清单缺少：{source}")
@@ -70,17 +83,29 @@ def manifest_rows(path: Path) -> list[str]:
 
 
 def resolve_manifest_path(manifest: Path, local_name: str) -> Path:
-    if "/" in local_name:
-        return ROOT / local_name
-    return manifest.parent / local_name
+    local = local_name.strip()
+    if local.startswith("docs/") or local.startswith("out/"):
+        return ROOT / local
+    if local.startswith("assets/"):
+        return LIB_ROOT / local
+    if "/" in local:
+        return LIB_ROOT / "assets" / local
+
+    try:
+        relative_manifest_parent = manifest.parent.relative_to(
+            LIB_ROOT / "internal" / "manifests"
+        )
+    except ValueError:
+        return manifest.parent / local
+    return LIB_ROOT / "assets" / relative_manifest_parent / local
 
 
 def check_manifests() -> None:
-    image_inventory = LIB_ROOT / "sources" / "image-inventory.md"
+    image_inventory = LIB_ROOT / "internal" / "sources" / "image-inventory.md"
     if not image_inventory.exists():
         fail("缺少图片总清单")
 
-    manifests = list((LIB_ROOT / "assets").glob("**/_manifest.md"))
+    manifests = list((LIB_ROOT / "internal" / "manifests").glob("**/_manifest.md"))
     if not manifests:
         fail("没有找到任何图片 manifest")
 
@@ -106,14 +131,6 @@ def check_manifests() -> None:
         fail("图片总清单记录数量异常")
 
 
-def check_sensitive_readiness_notes() -> None:
-    for doc in (LIB_ROOT / "products").glob("*.md"):
-        text = doc.read_text(encoding="utf-8")
-        if any(term in text for term in SENSITIVE_TERMS):
-            if "网站可用性" not in text:
-                fail(f"产品文档含敏感销售/账号信息但缺少网站可用性说明：{doc}")
-
-
 def check_chinese_document_labels() -> None:
     forbidden = [
         "Quick Summary",
@@ -132,7 +149,42 @@ def check_chinese_document_labels() -> None:
 
 
 def content_docs() -> list[Path]:
-    return sorted((LIB_ROOT / "products").glob("*.md")) + sorted((LIB_ROOT / "wiki").glob("*.md"))
+    return sorted((LIB_ROOT / "products").glob("*.md")) + sorted(
+        (LIB_ROOT / "wiki").glob("*.md")
+    )
+
+
+def frontmatter_keys(text: str) -> set[str]:
+    if not text.startswith("---\n"):
+        return set()
+    end = text.find("\n---", 4)
+    if end == -1:
+        fail("frontmatter 未闭合")
+    keys: set[str] = set()
+    for line in text[4:end].splitlines():
+        if not line.strip() or line.startswith("  "):
+            continue
+        if ":" in line:
+            keys.add(line.split(":", 1)[0].strip())
+    return keys
+
+
+def check_clean_markdown_contract() -> None:
+    for doc in content_docs():
+        text = doc.read_text(encoding="utf-8")
+        rel = doc.relative_to(ROOT)
+        keys = frontmatter_keys(text)
+        unexpected = keys - ALLOWED_FRONTMATTER_KEYS
+        if unexpected:
+            fail(f"frontmatter 包含内部字段：{rel} -> {sorted(unexpected)}")
+        for pattern in FORBIDDEN_CONTENT_PATTERNS:
+            if pattern in text:
+                fail(f"正文仍包含脚手架或错误代码块 `{pattern}`：{rel}")
+        for lineno, line in enumerate(text.splitlines(), start=1):
+            if re.match(r"^\|\s*$", line):
+                fail(f"发现孤立表格竖线：{rel}:{lineno}")
+            if re.match(r"^ {4,}\S", line) and not line.startswith("    - "):
+                fail(f"发现可疑缩进代码块：{rel}:{lineno}")
 
 
 def iter_markdown_images(text: str) -> list[tuple[str, str]]:
@@ -185,8 +237,8 @@ def main() -> int:
     check_required_docs()
     check_source_inventory()
     check_manifests()
-    check_sensitive_readiness_notes()
     check_chinese_document_labels()
+    check_clean_markdown_contract()
     check_inline_image_structure()
     print("content library verification passed")
     return 0
