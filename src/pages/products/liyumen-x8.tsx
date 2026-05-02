@@ -365,6 +365,62 @@ const LiyumenX8 = () => (
       </div>
     </Section>
 
+    {/* 升级亮点 */}
+    <Section title="X8 升级亮点" className="bg-white">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {[
+          {
+            id: 'sensing-upgrade',
+            icon: '⚡',
+            title: '感知能力大幅升级',
+            description:
+              '配备64线高精度激光雷达，提供更密集的点云数据和更精准的环境感知',
+          },
+          {
+            id: 'flight-performance',
+            icon: '🚀',
+            title: '飞行性能优化',
+            description:
+              '最大飞行时间延长至42分钟，续航能力业界领先，支持更长距离任务',
+          },
+          {
+            id: 'real-time-transmission',
+            icon: '📡',
+            title: '实时传输能力',
+            description: '支持5G/4G网络实时回传点云和视频，远程监测零延迟',
+          },
+          {
+            id: 'protection-upgrade',
+            icon: '🛡️',
+            title: '防护等级提升',
+            description: '整机防水防尘等级达IP45，适应复杂恶劣环境长期工作',
+          },
+          {
+            id: 'precise-positioning',
+            icon: '🎯',
+            title: '精准定位导航',
+            description: '多种定位模式可选，RTK模式精度可达2cm，室内外无缝定位',
+          },
+          {
+            id: 'maintenance-integration',
+            icon: '🔧',
+            title: '易维护易集成',
+            description:
+              '模块化设计，支持快速更换配件，SDK接口完整，与行业应用无缝集成',
+          },
+        ].map((item) => (
+          <div
+            key={item.id}
+            className="rounded-lg border border-gray-200 bg-gray-50 p-6 transition-all hover:border-primary-300 hover:shadow-md"
+          >
+            <div className="mb-4 text-4xl">{item.icon}</div>
+            <h3 className="mb-2 font-semibold text-gray-900">{item.title}</h3>
+            <p className="text-sm text-gray-600">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </Section>
+
     {/* 产品特点 */}
     <Section>
       <div className="mb-12 text-center">
